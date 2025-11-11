@@ -1,0 +1,52 @@
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import Product from "../modules/product/product.model";
+import Category from "../modules/category/category.model";
+import Blog from "../modules/blog/blog.model";
+import About from "../modules/about/about.model";
+import User from "../modules/user/user.model";
+
+import { categoriesData } from "./data/categories";
+import { productsData } from "./data/products";
+import { blogsData } from "./data/blogs";
+import { aboutData } from "./data/about";
+import { usersData } from "./data/users";
+
+dotenv.config();
+
+const seedDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI!);
+    console.log("✅ Connected to MongoDB for seeding");
+
+    await Category.deleteMany({});
+    await Product.deleteMany({});
+    await Blog.deleteMany({});
+    await About.deleteMany({});
+    await User.deleteMany({});
+    console.log("🗑️ Cleared existing data");
+
+    const categories = await Category.insertMany(categoriesData);
+    console.log(`✅ Inserted ${categories.length} categories`);
+
+    const products = await Product.insertMany(productsData);
+    console.log(`✅ Inserted ${products.length} products`);
+
+    const blogs = await Blog.insertMany(blogsData);
+    console.log(`✅ Inserted ${blogs.length} blogs`);
+
+    const about = await About.insertMany(aboutData);
+    console.log(`✅ Inserted ${about.length} abouts`);
+
+    const users = await User.insertMany(usersData);
+    console.log(`✅ Inserted ${users.length} users`);
+
+    console.log("🎉 Seeding completed successfully!");
+    process.exit(0);
+  } catch (error) {
+    console.error("❌ Seeding error:", error);
+    process.exit(1);
+  }
+};
+
+seedDB();
