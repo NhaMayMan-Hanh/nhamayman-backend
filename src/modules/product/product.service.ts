@@ -16,7 +16,7 @@ export const getAllProducts = async (query: ProductQuery): Promise<IProduct[]> =
     filter.name = { $regex: query.search, $options: "i" };
   }
 
-  return Product.find(filter).sort({ createdAt: -1 });
+  return Product.find(filter).select("-createdAt -updatedAt").sort({ createdAt: -1 });
 };
 
 export const getProductById = async (id: string): Promise<IProduct | null> => {

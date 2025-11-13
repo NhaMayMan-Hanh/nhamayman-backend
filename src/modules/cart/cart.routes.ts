@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { protect } from "../../middlewares/auth.middleware";
 import {
   getCartController,
   addToCartController,
@@ -9,19 +10,11 @@ import {
 
 const router = Router();
 
-// GET /cart - Lấy giỏ hàng
-router.get("/", getCartController);
-
-// POST /cart - Thêm vào giỏ
-router.post("/", addToCartController);
-
-// PUT /cart - Cập nhật quantity
-router.put("/", updateCartItemController);
-
-// DELETE /cart/:productId - Xóa item
-router.delete("/:productId", removeFromCartController);
-
-// DELETE /cart - Xóa toàn bộ
-router.delete("/", clearCartController);
+// Áp dụng protect cho tất cả routes cần auth
+router.get("/", protect, getCartController);
+router.post("/", protect, addToCartController);
+router.put("/", protect, updateCartItemController);
+router.delete("/:productId", protect, removeFromCartController);
+router.delete("/", protect, clearCartController);
 
 export default router;

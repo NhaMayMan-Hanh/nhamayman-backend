@@ -1,19 +1,25 @@
-// src/modules/auth/auth.service.ts (Service - register, login, forgot logic)
 import User from "../user/user.model";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
 
-export const register = async (userData: { name: string; email: string; password: string }) => {
-  const { name, email, password } = userData;
-  const existingUser = await User.findOne({ email });
+export const register = async (userData: {
+  name: string;
+  username: string;
+  email: string;
+  password: string;
+}) => {
+  const { name, username, email, password } = userData;
+  const existingUser = await User.findOne({
+    $or: [{ username }, { email }],
+  });
+
   if (existingUser) {
-    throw new Error("Email đã tồn tại");
+    throw new Error("Tên đăng nhập hoặc email đã tồn tại");
   }
 
-  const user = new User({ name, email, password });
+  const user = new User({ name, username, email, password });
   await user.save();
 
-  // Generate token for email verification (placeholder)
   const token = crypto.randomBytes(20).toString("hex");
   user.verifyEmailToken = token;
   await user.save();
@@ -21,15 +27,15 @@ export const register = async (userData: { name: string; email: string; password
   return user;
 };
 
-export const login = async (email: string, password: string) => {
-  const user = await User.findOne({ email });
+export const login = async (username: string, password: string) => {
+  const user = await User.findOne({ username });
   if (!user || !(await user.comparePassword(password))) {
-    throw new Error("Email hoặc mật khẩu không đúng");
+    throw new Error("Tài khoản hoặc mật khẩu không đúng");
   }
 
-  if (!user.isVerified) {
-    throw new Error("Tài khoản chưa được xác thực");
-  }
+  // if (!user.isVerified) {
+  //   throw new Error("Tài khoản chưa được xác thực");
+  // }
 
   const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET!, {
     expiresIn: "7d",
@@ -70,5 +76,10 @@ export const resetPassword = async (token: string, password: string) => {
   user.resetPasswordExpire = undefined;
   await user.save();
 
+  return user;
+};
+
+export const profile = async (userId: string) => {
+  const user = await User.findById(userId).select("-password");
   return user;
 };

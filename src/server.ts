@@ -1,4 +1,3 @@
-// src/server.ts (Cập nhật - mount central routers)
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";

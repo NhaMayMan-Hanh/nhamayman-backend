@@ -15,7 +15,7 @@ export const productsData = [
     category: "Sản phẩm may",
     image: "/img/products/may/may-2.jpg",
     stock: 12,
-  }, // Thêm 6 sản phẩm may
+  },
   {
     name: "Váy đầm linen vintage",
     description: "Váy đầm may từ vải linen, phong cách cổ điển, thoải mái",
@@ -63,16 +63,17 @@ export const productsData = [
     category: "Sản phẩm may",
     image: "/img/products/may/may-8.jpg",
     stock: 5,
-  }, // SP Tranh sơn dầu
+  },
 
+  // SP Tranh sơn dầu
   {
     name: "Tranh sơn dầu phong cảnh",
-    description: "Tranh sơn dầu vẽ phong cảnh núi non, kích thước 50x70cm", // Short desc cho list
+    description: "Tranh sơn dầu vẽ phong cảnh núi non, kích thước 50x70cm",
     detailedDescription:
       "Tranh sơn dầu phong cảnh được vẽ tay bởi nghệ nhân giàu kinh nghiệm, sử dụng màu dầu cao cấp trên canvas chất lượng cao. Kích thước 50x70cm, phù hợp treo tường phòng khách hoặc phòng ngủ, mang đến không gian yên bình và nghệ thuật. Sản phẩm đi kèm khung gỗ tự nhiên, có thể tùy chỉnh kích thước. Đây là món quà ý nghĩa cho người yêu thích nghệ thuật hoặc dịp khai trương, tân gia. Thời gian hoàn thành: 7-10 ngày.", // Detailed cho chi tiết page
     price: 1200000,
     category: "SP Tranh sơn dầu",
-    image: "/img/products/sondau/tranh-1.jpg", // Giữ 1 img
+    image: "/img/products/sondau/tranh-1.jpg",
     stock: 3,
   },
   {
@@ -82,13 +83,13 @@ export const productsData = [
     category: "SP Tranh sơn dầu",
     image: "/img/products/sondau/tranh-2.png",
     stock: 5,
-  }, // Thêm 6 sản phẩm tranh sơn dầu
+  },
   {
     name: "Tranh trừu tượng màu sắc",
     description: "Tranh sơn dầu trừu tượng, gam màu nóng, kích thước 60x60cm",
     price: 950000,
     category: "SP Tranh sơn dầu",
-    image: "/img/products/sondau/tranh-3.jpg",
+    image: "/img/products/sondau/tranh-3.png",
     stock: 4,
   },
   {
@@ -96,7 +97,7 @@ export const productsData = [
     description: "Tranh tĩnh vật bình hoa ly, chi tiết chân thực, kích thước 40x50cm",
     price: 700000,
     category: "SP Tranh sơn dầu",
-    image: "/img/products/sondau/tranh-4.jpg",
+    image: "/img/products/sondau/tranh-4.png",
     stock: 6,
   },
   {
@@ -104,7 +105,7 @@ export const productsData = [
     description: "Tranh sơn dầu tái hiện góc phố cổ, màu sắc hoài niệm",
     price: 1500000,
     category: "SP Tranh sơn dầu",
-    image: "/img/products/sondau/tranh-5.jpg",
+    image: "/img/products/sondau/tranh-5.png",
     stock: 2,
   },
   {
@@ -112,7 +113,7 @@ export const productsData = [
     description: "Tranh sơn dầu vẽ hổ, chi tiết mạnh mẽ, kích thước lớn 80x100cm",
     price: 2100000,
     category: "SP Tranh sơn dầu",
-    image: "/img/products/sondau/tranh-6.jpg",
+    image: "/img/products/sondau/tranh-6.png",
     stock: 1,
   },
   {
@@ -120,7 +121,7 @@ export const productsData = [
     description: "Tranh sơn dầu cảnh biển hoàng hôn, yên bình",
     price: 1100000,
     category: "SP Tranh sơn dầu",
-    image: "/img/products/sondau/tranh-7.jpg",
+    image: "/img/products/sondau/tranh-7.png",
     stock: 3,
   },
   {
@@ -128,10 +129,11 @@ export const productsData = [
     description: "Tranh sơn dầu với 2-3 màu chủ đạo, phong cách tối giản",
     price: 600000,
     category: "SP Tranh sơn dầu",
-    image: "/img/products/sondau/tranh-8.jpg",
+    image: "/img/products/sondau/tranh-8.png",
     stock: 5,
-  }, // Sản phẩm bánh
+  },
 
+  // Sản phẩm bánh
   {
     name: "Bánh kem handmade sinh nhật",
     description: "Bánh kem tự làm với topping trái cây tươi",
@@ -145,15 +147,15 @@ export const productsData = [
     description: "Hộp bánh quy bơ giòn tan, đóng gói quà tặng",
     price: 150000,
     category: "Sản phẩm bánh",
-    image: "/img/products/banh/banh-2.jpg",
+    image: "/img/products/banh/banh-2.png",
     stock: 20,
-  }, // Thêm 6 sản phẩm bánh
+  },
   {
     name: "Bánh mì hoa cúc tự làm",
     description: "Bánh mì hoa cúc (Brioche) mềm, thơm mùi bơ tự nhiên",
     price: 85000,
     category: "Sản phẩm bánh",
-    image: "/img/products/banh/banh-3.jpg",
+    image: "/img/products/banh/banh-3.png",
     stock: 30,
   },
   {
@@ -161,7 +163,7 @@ export const productsData = [
     description: "Set 10 bánh Macaron đủ màu sắc và hương vị",
     price: 200000,
     category: "Sản phẩm bánh",
-    image: "/img/products/banh/banh-4.jpg",
+    image: "/img/products/banh/banh-4.png",
     stock: 12,
   },
   {
@@ -169,7 +171,7 @@ export const productsData = [
     description: "Bánh Brownie đậm vị chocolate, có hạt óc chó",
     price: 120000,
     category: "Sản phẩm bánh",
-    image: "/img/products/banh/banh-5.jpg",
+    image: "/img/products/banh/banh-5.png",
     stock: 25,
   },
   {
@@ -177,7 +179,7 @@ export const productsData = [
     description: "Bánh Tart nhân kem trứng béo ngậy, phủ dâu tây tươi",
     price: 280000,
     category: "Sản phẩm bánh",
-    image: "/img/products/banh/banh-6.jpg",
+    image: "/img/products/banh/banh-6.png",
     stock: 10,
   },
   {
@@ -185,7 +187,7 @@ export const productsData = [
     description: "Bánh Flan mềm mịn, caramel ngọt dịu",
     price: 60000,
     category: "Sản phẩm bánh",
-    image: "/img/products/banh/banh-7.jpg",
+    image: "/img/products/banh/banh-7.png",
     stock: 40,
   },
   {
@@ -193,10 +195,11 @@ export const productsData = [
     description: "Bánh mì lên men tự nhiên, tốt cho sức khỏe",
     price: 95000,
     category: "Sản phẩm bánh",
-    image: "/img/products/banh/banh-8.jpg",
+    image: "/img/products/banh/banh-8.png",
     stock: 18,
-  }, // SP Đá
+  },
 
+  // SP Đá
   {
     name: "Đèn đá muối Himalaya",
     description: "Đèn ngủ từ đá muối tự nhiên, cải thiện không khí",
@@ -218,7 +221,7 @@ export const productsData = [
     description: "Vòng tay phong thủy, đá thạch anh hồng tự nhiên, mang lại tình duyên",
     price: 420000,
     category: "SP Đá",
-    image: "/img/products/mynghe/da-3.png",
+    image: "/img/products/mynghe/da-3.jpg",
     stock: 15,
   },
   {
@@ -226,7 +229,7 @@ export const productsData = [
     description: "Mặt dây chuyền làm từ đá mắt hổ, bảo vệ và mang lại tài lộc",
     price: 250000,
     category: "SP Đá",
-    image: "/img/products/mynghe/da-4.png",
+    image: "/img/products/mynghe/da-4.jpg",
     stock: 18,
   },
   {
@@ -242,7 +245,7 @@ export const productsData = [
     description: "Đá Selenite tự nhiên, dùng để thanh tẩy năng lượng",
     price: 150000,
     category: "SP Đá",
-    image: "/img/products/mynghe/da-6.png",
+    image: "/img/products/mynghe/da-6.jpg",
     stock: 22,
   },
   {
@@ -260,70 +263,5 @@ export const productsData = [
     category: "SP Đá",
     image: "/img/products/mynghe/da-8.png",
     stock: 11,
-  }, // Mỹ nghệ
-
-  {
-    name: "Bình gốm mỹ nghệ",
-    description: "Bình gốm thủ công với họa tiết dân gian",
-    price: 220000,
-    category: "Mỹ nghệ",
-    image: "/img/products/sondau/my-nghe-1.jpg",
-    stock: 6,
-  },
-  {
-    name: "Khay trà gỗ mỹ nghệ",
-    description: "Khay trà gỗ chạm khắc tinh xảo",
-    price: 400000,
-    category: "Mỹ nghệ",
-    image: "/img/products/sondau/my-nghe-2.jpg",
-    stock: 4,
-  }, // Thêm 6 sản phẩm mỹ nghệ
-  {
-    name: "Tượng gỗ điêu khắc chim công",
-    description: "Tượng gỗ mini chạm khắc hình chim công tinh xảo",
-    price: 550000,
-    category: "Mỹ nghệ",
-    image: "/img/products/mynghe/my-nghe-3.jpg",
-    stock: 3,
-  },
-  {
-    name: "Đĩa sứ vẽ tay Bát Tràng",
-    description: "Đĩa sứ tráng men cao cấp, họa tiết vẽ tay thủ công",
-    price: 180000,
-    category: "Mỹ nghệ",
-    image: "/img/products/mynghe/my-nghe-4.jpg",
-    stock: 12,
-  },
-  {
-    name: "Hộp trang sức sơn mài",
-    description: "Hộp sơn mài truyền thống, dùng đựng trang sức",
-    price: 300000,
-    category: "Mỹ nghệ",
-    image: "/img/products/mynghe/my-nghe-5.jpg",
-    stock: 8,
-  },
-  {
-    name: "Tranh lụa thêu tay",
-    description: "Tranh lụa thêu hình hoa sen, khung gỗ cao cấp",
-    price: 850000,
-    category: "Mỹ nghệ",
-    image: "/img/products/mynghe/my-nghe-6.jpg",
-    stock: 5,
-  },
-  {
-    name: "Chuông gió tre nứa",
-    description: "Chuông gió làm từ tre nứa tự nhiên, âm thanh thư giãn",
-    price: 120000,
-    category: "Mỹ nghệ",
-    image: "/img/products/mynghe/my-nghe-7.jpg",
-    stock: 20,
-  },
-  {
-    name: "Mô hình thuyền buồm gỗ",
-    description: "Mô hình thuyền buồm làm từ gỗ tự nhiên, trang trí bàn làm việc",
-    price: 620000,
-    category: "Mỹ nghệ",
-    image: "/img/products/mynghe/my-nghe-8.jpg",
-    stock: 7,
   },
 ];

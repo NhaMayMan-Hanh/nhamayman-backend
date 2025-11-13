@@ -2,6 +2,7 @@ import Cart, { ICart } from "./cart.model";
 import Product from "../product/product.model";
 
 export const getCartByUserId = async (userId: string): Promise<ICart | null> => {
+  if (userId === "guest") return null;
   return Cart.findOne({ userId });
 };
 
@@ -10,6 +11,10 @@ export const addToCart = async (
   productId: string,
   quantity: number = 1
 ): Promise<ICart> => {
+  if (userId === "guest") {
+    throw new Error("Guest cart handled in frontend");
+  }
+
   const product = await Product.findById(productId);
   if (!product) {
     throw new Error("Sản phẩm không tồn tại");
@@ -37,6 +42,10 @@ export const updateCartItem = async (
   productId: string,
   quantity: number
 ): Promise<ICart | null> => {
+  if (userId === "guest") {
+    throw new Error("Guest cart handled in frontend");
+  }
+
   const cart = await Cart.findOne({ userId });
   if (!cart) return null;
 
@@ -55,6 +64,10 @@ export const updateCartItem = async (
 };
 
 export const removeFromCart = async (userId: string, productId: string): Promise<ICart | null> => {
+  if (userId === "guest") {
+    throw new Error("Guest cart handled in frontend");
+  }
+
   const cart = await Cart.findOne({ userId });
   if (!cart) return null;
 

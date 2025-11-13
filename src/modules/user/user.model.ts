@@ -1,23 +1,28 @@
-// src/modules/user/user.model.ts (Model cho user - cần cho auth)
 import mongoose, { Schema, Document } from "mongoose";
 import bcrypt from "bcrypt";
 
 export interface IUser extends Document {
   name: string;
+  username: string;
   email: string;
   password: string;
-  role: string; // 'user' or 'admin'
+  avatar?: string;
+  role: string;
   verifyEmailToken?: string;
   isVerified?: boolean;
   resetPasswordToken?: string;
   resetPasswordExpire?: Date;
+
+  comparePassword(enteredPassword: string): Promise<boolean>;
 }
 
 const userSchema: Schema = new Schema(
   {
     name: { type: String, required: true },
+    username: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    avatar: { type: String, default: "/img/default-avatar.jpg" },
     role: { type: String, enum: ["user", "admin"], default: "user" },
     verifyEmailToken: { type: String },
     isVerified: { type: Boolean, default: false },
@@ -28,15 +33,15 @@ const userSchema: Schema = new Schema(
 );
 
 // Hash password before save
-userSchema.pre("save", async function (next) {
+userSchema.pre<IUser>("save", async function (next) {
   if (!this.isModified("password")) return next();
-  this.password = await bcrypt.hash(this.password, 12);
+  this.password = await bcrypt.hash(this.password as string, 12);
   next();
 });
 
 // Compare password method
 userSchema.methods.comparePassword = async function (enteredPassword: string): Promise<boolean> {
-  return await bcrypt.compare(enteredPassword, this.password);
+  return await bcrypt.compare(enteredPassword, this.password as string);
 };
 
 export default mongoose.model<IUser>("User", userSchema);

@@ -16,7 +16,7 @@ router.use("/categories", categoryRoutes);
 router.use("/blogs", blogRoutes);
 router.use("/about", aboutRoutes);
 router.use("/cart", cartRoutes);
-router.use("/checkout", orderRoutes);
+router.use("/orders", orderRoutes);
 router.use("/auth", authRoutes);
 
 router.get("/home", async (req, res) => {
@@ -24,7 +24,7 @@ router.get("/home", async (req, res) => {
     const categories = await getAllCategories();
     const allProducts = await getAllProducts({});
 
-    // Group products by category name (limit 6 each)
+    // Group products by category name (limit 8 each)
     const productsByCategory: { [key: string]: any[] } = {};
     allProducts.forEach((product: any) => {
       const catName = product.category;
@@ -33,14 +33,15 @@ router.get("/home", async (req, res) => {
         productsByCategory[catName] = [];
       }
 
-      // Chỉ push nếu chưa quá 6 sản phẩm
-      if (productsByCategory[catName].length < 6) {
+      // Chỉ push nếu chưa quá 8 sản phẩm
+      if (productsByCategory[catName].length < 8) {
         productsByCategory[catName].push(product);
       }
     });
 
     res.json({
       success: true,
+      message: "Successfully get data home",
       data: {
         categories,
         productsByCategory,
@@ -49,7 +50,7 @@ router.get("/home", async (req, res) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy data trang chủ",
+      message: "Failed to get data home",
       error: (error as Error).message,
     });
   }

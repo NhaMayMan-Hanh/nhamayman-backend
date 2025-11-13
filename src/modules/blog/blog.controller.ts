@@ -6,12 +6,13 @@ export const getBlogsController = async (req: Request, res: Response) => {
     const blogs = await getAllBlogs();
     res.json({
       success: true,
+      message: "Successfully get blogs",
       data: blogs,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy blogs",
+      message: "Failed to get blogs",
       error: (error as Error).message,
     });
   }
@@ -24,7 +25,7 @@ export const getBlogBySlugController = async (req: Request, res: Response) => {
     if (!blog) {
       return res.status(404).json({
         success: false,
-        message: "Không tìm thấy bài viết",
+        message: "Failed to get blog",
       });
     }
     res.json({
@@ -34,7 +35,7 @@ export const getBlogBySlugController = async (req: Request, res: Response) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy bài viết",
+      message: "Failed to get blog",
       error: (error as Error).message,
     });
   }

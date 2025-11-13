@@ -14,7 +14,7 @@ const blogSchema: Schema = new Schema(
     img: { type: String, required: true },
     slug: { type: String, required: true, unique: true, lowercase: true, trim: true },
     description: { type: String },
-    content: { type: String, required: true }, // Nội dung đầy đủ (HTML/Markdown)
+    content: { type: String, required: true },
   },
   { timestamps: true }
 );
