@@ -1,4 +1,3 @@
-// src/modules/product/product.controller.ts (Controller xử lý logic response)
 import { Request, Response } from "express";
 import {
   getAllProducts,

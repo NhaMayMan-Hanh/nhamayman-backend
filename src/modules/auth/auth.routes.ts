@@ -5,6 +5,7 @@ import {
   forgotPasswordController,
   resetPasswordController,
   getProfileController,
+  logoutController,
 } from "./auth.controller";
 import { validate } from "../../middlewares/validation.middleware";
 import { registerSchema, loginSchema, forgotSchema, resetSchema } from "./validation.schemas";
@@ -21,5 +22,7 @@ router.post("/forgot", validate(forgotSchema), forgotPasswordController);
 router.post("/reset", validate(resetSchema), resetPasswordController);
 
 router.get("/profile", protect, getProfileController);
+
+router.post("/logout", protect, logoutController);
 
 export default router;

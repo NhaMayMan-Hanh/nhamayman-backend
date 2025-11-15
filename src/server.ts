@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import { swaggerUi, swaggerSpec } from "./config/swagger";
 import { connectDB } from "./config/db.ts";
 import clientRoutes from "./routes/client/client.routes.ts";
 // import adminRoutes from "./routes/admin/admin.routes.ts";
@@ -21,6 +22,8 @@ app.use(
 
 connectDB();
 
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 // Client Routes (public)
 app.use("/api/client", clientRoutes);
 
@@ -37,4 +40,5 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server is running at http://localhost:${PORT}`);
+  console.log(`✔️ Swagger: http://localhost:${PORT}/api-docs`);
 });

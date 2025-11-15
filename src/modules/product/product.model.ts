@@ -1,4 +1,3 @@
-// src/modules/product/product.model.ts (Cập nhật nhỏ: bỏ createdAt khỏi interface vì timestamps tự add)
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface IProduct extends Document {

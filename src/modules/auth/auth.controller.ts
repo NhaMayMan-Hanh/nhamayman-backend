@@ -87,10 +87,11 @@ export const getProfileController = async (req: Request, res: Response) => {
   try {
     const userId = req.user?.id;
     if (!userId) {
+      console.log("Unauthorized");
       return res.status(401).json({ success: false, message: "Unauthorized" });
     }
 
-    const user = await profile(userId); // Exclude password
+    const user = await profile(userId);
     if (!user) {
       return res.status(404).json({ success: false, message: "User không tồn tại" });
     }
@@ -112,4 +113,15 @@ export const getProfileController = async (req: Request, res: Response) => {
       message: (error as Error).message,
     });
   }
+};
+
+export const logoutController = async (req: Request, res: Response) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    sameSite: "strict",
+  });
+  res.json({
+    success: true,
+    message: "Đăng xuất thành công",
+  });
 };
