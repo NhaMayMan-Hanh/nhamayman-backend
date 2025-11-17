@@ -6,34 +6,54 @@ interface ProductQuery {
   search?: string;
 }
 
-export const getAllProducts = async (query: ProductQuery): Promise<IProduct[]> => {
+export const getAllProducts = async (
+  query: ProductQuery = {},
+  options: { excludeFields?: string[]; limit?: number } = {}
+): Promise<IProduct[]> => {
   let filter: any = {};
 
-  if (query.category) {
-    filter.category = query.category;
-  }
-  if (query.search) {
-    filter.name = { $regex: query.search, $options: "i" };
-  }
+  if (query.category) filter.category = query.category;
+  if (query.search) filter.name = { $regex: query.search, $options: "i" };
 
-  return Product.find(filter).select("-createdAt -updatedAt").sort({ createdAt: -1 });
+  const products = await Product.find(filter)
+    .select(
+      `-createdAt -updatedAt ${
+        options.excludeFields ? options.excludeFields.map((f) => `-${f}`).join(" ") : ""
+      }`
+    )
+    .sort({ createdAt: -1 })
+    .limit((options.limit ?? 0) as number);
+
+  return products;
 };
 
-export const getProductById = async (id: string): Promise<IProduct | null> => {
-  return Product.findById(id);
+export const getProductById = async (
+  id: string
+  // Không cần options exclude nữa, vì detail luôn full
+): Promise<IProduct | null> => {
+  // Detail luôn full, không exclude gì ngoài timestamps
+  return Product.findById(id).select("-createdAt -updatedAt");
 };
 
 export const getRelatedProducts = async (
   category: string,
   excludeId: string,
-  limit: number = 4
+  options: { excludeFields?: string[]; limit?: number } = {
+    excludeFields: ["description", "detailedDescription"],
+    limit: 4,
+  }
 ): Promise<IProduct[]> => {
   return Product.find({
     category,
-    _id: { $ne: excludeId }, // Loại trừ sản phẩm hiện tại
+    _id: { $ne: excludeId },
   })
-    .limit(limit)
-    .sort({ createdAt: -1 });
+    .select(
+      `-createdAt -updatedAt ${
+        options.excludeFields ? options.excludeFields.map((f) => `-${f}`).join(" ") : ""
+      }`
+    )
+    .sort({ createdAt: -1 })
+    .limit((options.limit ?? 0) as number);
 };
 
 export const createProduct = async (productData: Partial<IProduct>): Promise<IProduct> => {

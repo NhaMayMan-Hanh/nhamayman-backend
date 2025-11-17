@@ -10,6 +10,8 @@ export interface IProduct extends Document {
   stock: number;
 }
 
+export interface IRelatedProduct extends IProduct {}
+
 const productSchema: Schema = new Schema(
   {
     name: { type: String, required: true },

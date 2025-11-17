@@ -1,23 +1,25 @@
 import { Router } from "express";
-import productRoutes from "../../modules/product/product.routes.ts";
-import categoryRoutes from "../../modules/category/category.routes.ts";
-import blogRoutes from "../../modules/blog/blog.routes.ts";
-import aboutRoutes from "../../modules/about/about.routes.ts";
+import productPublicRoutes from "../../modules/product/productPublic.routes.ts";
+import categoryPublicRoutes from "../../modules/category/categoryPublic.routes";
+import blogPublicRoutes from "../../modules/blog/blogPublic.routes";
 import cartRoutes from "../../modules/cart/cart.routes.ts";
-import orderRoutes from "../../modules/order/order.routes.ts";
-import authRoutes from "../../modules/auth/auth.routes.ts";
+import orderPublicRoutes from "../../modules/order/orderPublic.routes.ts";
+import authPublicRoutes from "../../modules/auth/authPublic.routes.ts";
+import aboutPublicRouter from "../../modules/about/aboutPublic.routes";
+import userProtectedRoutes from "../../modules/user/userProtected.routes";
 import { getAllCategories } from "../../modules/category/category.service";
 import { getAllProducts } from "../../modules/product/product.service";
 
 const router = Router();
 
-router.use("/products", productRoutes);
-router.use("/categories", categoryRoutes);
-router.use("/blogs", blogRoutes);
-router.use("/about", aboutRoutes);
+router.use("/products", productPublicRoutes);
+router.use("/categories", categoryPublicRoutes);
+router.use("/blogs", blogPublicRoutes);
+router.use("/about", aboutPublicRouter);
 router.use("/cart", cartRoutes);
-router.use("/orders", orderRoutes);
-router.use("/auth", authRoutes);
+router.use("/orders", orderPublicRoutes);
+router.use("/auth", authPublicRoutes);
+router.use("/users", userProtectedRoutes);
 
 router.get("/home", async (req, res) => {
   try {

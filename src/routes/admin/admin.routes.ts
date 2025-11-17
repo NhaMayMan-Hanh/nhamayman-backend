@@ -1,28 +1,18 @@
-// src/routes/admin/admin.routes.ts (Central router cho admin - với middleware auth chung)
 import { Router } from "express";
-import productRoutes from "../../modules/product/product.routes.ts";
-// import categoryRoutes from "../../modules/category/category.routes.ts";
-// Import thêm modules khác nếu cần, ví dụ: userRoutes, orderRoutes, etc.
+import categoryAdminRoutes from "../../modules/category/categoryAdmin.routes";
+import productAdminRoutes from "../../modules/product/productAdmin.routes";
+import userAdminRoutes from "../../modules/user/userAdmin.routes";
+import aboutAdminRouter from "../../modules/about/aboutAdmin.routes";
+import blogAdminRouter from "../../modules/blog/blogAdmin.routes";
+import orderAdminRouter from "../../modules/order/orderAdmin.routes";
 
 const router = Router();
 
-// Middleware auth admin chung (placeholder - sẽ tích hợp JWT sau)
-const requireAdminAuth = (req, res, next) => {
-  // TODO: Kiểm tra token và role = 'admin'
-  const token = req.headers.authorization?.split(" ")[1];
-  if (!token) {
-    return res.status(401).json({ success: false, message: "Unauthorized" });
-  }
-  next();
-};
-
-// Áp dụng middleware cho toàn bộ admin routes
-router.use(requireAdminAuth);
-
-// Mount module routes (protected)
-router.use("/products", productRoutes);
-// router.use("/categories", categoryRoutes);
-// router.use("/users", userRoutes);
-// router.use("/orders", orderRoutes);
+router.use("/categories", categoryAdminRoutes);
+router.use("/products", productAdminRoutes);
+router.use("/users", userAdminRoutes);
+router.use("/about", aboutAdminRouter);
+router.use("/blogs", blogAdminRouter);
+router.use("/orders", orderAdminRouter);
 
 export default router;

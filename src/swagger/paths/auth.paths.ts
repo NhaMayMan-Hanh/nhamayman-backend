@@ -156,25 +156,6 @@
 
 /**
  * @swagger
- * /api/client/auth/profile:
- *   get:
- *     summary: Lấy thông tin hồ sơ người dùng hiện tại
- *     tags: [Auth]
- *     security:
- *       - bearerAuth: []
- *     responses:
- *       200:
- *         description: Thành công
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/User'
- *       401:
- *         description: Không được phép
- */
-
-/**
- * @swagger
  * /api/client/auth/logout:
  *   post:
  *     summary: Đăng xuất người dùng

@@ -1,5 +1,10 @@
 import { Request, Response } from "express";
-import { register, login, forgotPassword, resetPassword, profile } from "./auth.service";
+import {
+  register,
+  login,
+  forgotPassword,
+  resetPassword /* logout nếu giữ */,
+} from "./auth.service";
 
 export const registerController = async (req: Request, res: Response) => {
   try {
@@ -8,7 +13,16 @@ export const registerController = async (req: Request, res: Response) => {
     res.status(201).json({
       success: true,
       message: "Đăng ký thành công",
-      // data: { userId: user._id, name: user.name, username: user.username, email: user.email },
+      data: {
+        user: {
+          id: user._id,
+          name: user.name,
+          username: user.username,
+          email: user.email,
+          role: user.role,
+        },
+      },
+      // Optional: Send verify email với token
     });
   } catch (error) {
     res.status(400).json({
@@ -25,8 +39,8 @@ export const loginController = async (req: Request, res: Response) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      // secure: true, // bật khi dùng HTTPS
       sameSite: "strict",
+      // secure: process.env.NODE_ENV === 'production',
     });
 
     res.json({
@@ -83,45 +97,8 @@ export const resetPasswordController = async (req: Request, res: Response) => {
   }
 };
 
-export const getProfileController = async (req: Request, res: Response) => {
-  try {
-    const userId = req.user?.id;
-    if (!userId) {
-      console.log("Unauthorized");
-      return res.status(401).json({ success: false, message: "Unauthorized" });
-    }
-
-    const user = await profile(userId);
-    if (!user) {
-      return res.status(404).json({ success: false, message: "User không tồn tại" });
-    }
-
-    res.json({
-      success: true,
-      data: {
-        id: user._id,
-        name: user.name,
-        username: user.username,
-        email: user.email,
-        avatar: user.avatar,
-        role: user.role,
-      },
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: (error as Error).message,
-    });
-  }
-};
-
+// Logout: Có thể giữ ở đây hoặc di chuyển sang user (vì liên quan token clear)
 export const logoutController = async (req: Request, res: Response) => {
-  res.clearCookie("token", {
-    httpOnly: true,
-    sameSite: "strict",
-  });
-  res.json({
-    success: true,
-    message: "Đăng xuất thành công",
-  });
+  res.clearCookie("token", { httpOnly: true, sameSite: "strict" });
+  res.json({ success: true, message: "Đăng xuất thành công" });
 };
