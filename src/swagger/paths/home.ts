@@ -1,6 +1,6 @@
 /**
  * @swagger
- * /home:
+ * /api/client/home:
  *   get:
  *     summary: Lấy dữ liệu trang Home
  *     tags: [Client Home]

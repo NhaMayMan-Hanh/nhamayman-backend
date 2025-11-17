@@ -2,12 +2,17 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 import { swaggerUi, swaggerSpec } from "./config/swagger";
 import { connectDB } from "./config/db.ts";
 import clientRoutes from "./routes/client/client.routes.ts";
-// import adminRoutes from "./routes/admin/admin.routes.ts";
+import adminRoutes from "./routes/admin/admin.routes.ts";
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -22,18 +27,14 @@ app.use(
 
 connectDB();
 
+app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-
-// Client Routes (public)
 app.use("/api/client", clientRoutes);
-
-// Admin Routes (protected)
-// app.use("/api/admin", adminRoutes);
+app.use("/api/admin", adminRoutes);
 
 app.get("/", (req, res) => {
-  return res.json({
-    message: "✅ NhaMayMan-Hanh Backend is running!",
-  });
+  res.json({ message: "NhaMayMan-Hanh Backend is running!" });
 });
 
 // Start server
