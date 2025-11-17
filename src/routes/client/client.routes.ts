@@ -5,6 +5,7 @@ import blogPublicRoutes from "../../modules/blog/blogPublic.routes";
 import cartRoutes from "../../modules/cart/cart.routes.ts";
 import orderPublicRoutes from "../../modules/order/orderPublic.routes.ts";
 import authPublicRoutes from "../../modules/auth/authPublic.routes.ts";
+import authProtectedRoutes from "../../modules/auth/authProtected.routes.ts";
 import aboutPublicRouter from "../../modules/about/aboutPublic.routes";
 import userProtectedRoutes from "../../modules/user/userProtected.routes";
 import { getAllCategories } from "../../modules/category/category.service";
@@ -18,6 +19,7 @@ router.use("/blogs", blogPublicRoutes);
 router.use("/about", aboutPublicRouter);
 router.use("/cart", cartRoutes);
 router.use("/orders", orderPublicRoutes);
+router.use("/auth/logout", authProtectedRoutes);
 router.use("/auth", authPublicRoutes);
 router.use("/users", userProtectedRoutes);
 

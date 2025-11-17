@@ -1,296 +1,325 @@
 export const blogsData = [
   {
-    name: "Hướng dẫn làm quà handmade đơn giản tại nhà",
-    img: "/img/blogs/blog-1.jpg",
-    slug: "huong-dan-lam-qua-handmade-don-gian-tai-nha",
-    description: "Học cách tự tay tạo món quà ý nghĩa với nguyên liệu dễ tìm.",
+    name: "💖 CÂU CHUYỆN VƯỢT KHÓ: TỪ NẠN NHÂN TRỞ THÀNH NGHỆ NHÂN",
+    img: "/img/blogs/Blog1-image1.jpg",
+    slug: "cau-chuyen-vuot-kho-tu-nan-nhan-tro-thanh-nghe-nhan",
+    description:
+      "Bệ Phóng Cho Những Ước Mơ – Nơi những người khuyết tật và trẻ em khó khăn tìm thấy động lực để vượt lên chính mình và viết lại câu chuyện đời.",
     content: `
-      <h2>📖 Sổ Tay Handmade - Nơi lưu giữ mọi khoảnh khắc</h2>
-      <p>Sổ tay là vật dụng không thể thiếu để ghi chép, lập kế hoạch hoặc đơn giản là lưu giữ những kỷ niệm, ý tưởng bất chợt. Thay vì mua một cuốn sổ làm sẵn, tại sao bạn không thử tự tay làm một cuốn sổ tay **DIY (Do It Yourself)**? Việc này không chỉ giúp bạn có một vật phẩm **cá nhân hóa** mà còn là một hoạt động thư giãn tuyệt vời.</p>
-      
-      <h2>🛠️ Chuẩn bị Nguyên liệu và Dụng cụ</h2>
-      <p>Để bắt đầu dự án làm sổ tay đơn giản này, bạn cần chuẩn bị các nguyên liệu cơ bản sau. Hầu hết chúng đều dễ dàng tìm thấy ở nhà hoặc các cửa hàng văn phòng phẩm:</p>
-      <ul>
-        <li>**Giấy Ruột:** Khoảng 20-30 tờ giấy A4 thường (hoặc giấy kraft, giấy màu theo sở thích).</li>
-        <li>**Giấy Bìa:** 2 tấm bìa cứng hơn (có thể dùng bìa carton mỏng hoặc bìa giấy mỹ thuật dày).</li>
-        <li>**Dụng cụ Cắt:** Kéo và Dao rọc giấy (Lưu ý: Cần cẩn thận khi sử dụng).</li>
-        <li>**Dụng cụ Cố định:** Keo dán giấy hoặc Keo sữa (Keo sữa sẽ giữ chắc hơn).</li>
-        <li>**Dụng cụ Đục lỗ & May:** Dụng cụ đục lỗ (hoặc dùi nhọn), Kim và Chỉ dày (chỉ thêu hoặc chỉ nha khoa).</li>
-      </ul>
-      
-      <h3>Bước 1: Cắt và Gấp Giấy Ruột</h3>
-      <p>Trước tiên, hãy cắt giấy ruột của bạn. Nếu dùng giấy A4, hãy cắt đôi chúng theo chiều ngang để có kích thước A5. Sau đó, **gấp đôi tất cả các tờ giấy** này lại để tạo thành các tập nhỏ.</p>
-      <img src="/img/diy-step-1.jpg" alt="Cắt và gấp giấy A4 thành tập nhỏ" style="width: 100%; max-width: 400px; display: block; margin: 15px auto; border-radius: 8px;">
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Bệ Phóng Cho Những Ước Mơ</h2>
+        <p class="mb-4">Maison Chance không chỉ là một nơi cư ngụ, mà còn là bệ phóng cho những ước mơ. Nơi đây, những người khuyết tật và trẻ em có hoàn cảnh khó khăn tìm thấy không chỉ sự chăm sóc mà còn là nguồn động lực mạnh mẽ để viết lại câu chuyện đời mình bằng lòng kiên trì và tài năng. Sự kiên cường của họ đã chứng minh rằng, khuyết tật về thể chất không thể ngăn cản một ý chí sắt đá.</p>
+      </div>
+      <img src="/img/blogs/Blog1-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
 
-      <h2>🔗 Bước 2: Tạo Lỗ và Liên Kết Ruột Sổ (Khâu Sách)</h2>
-      <p>Đây là bước quan trọng nhất để cố định ruột sổ:</p>
-      <ol>
-        <li>Xếp chồng các tập giấy nhỏ đã gấp lại với nhau.</li>
-        <li>Dùng thước kẻ, đánh dấu 3-5 điểm cách đều nhau dọc theo nếp gấp (gáy sổ).</li>
-        <li>Dùng dụng cụ đục lỗ (hoặc dùi nhọn) đục xuyên qua tất cả các tập giấy theo các điểm đã đánh dấu.</li>
-        <li>Sử dụng kim và chỉ để **khâu lại** theo kiểu khâu sách đơn giản. Đảm bảo chỉ được kéo căng và thắt nút chắc chắn ở hai đầu.</li>
-      </ol>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Những Bước Chân Không Ngừng Nghỉ</h2>
+        <p class="mb-4">Cuộc sống mang đến những thử thách lớn, nhưng tinh thần chiến binh của các học viên Maison Chance chưa bao giờ khuất phục. Hãy tưởng tượng câu chuyện của anh Lâm, một người bị tai nạn lao động khiến anh mất đi khả năng sử dụng đôi tay. Thay vì đầu hàng số phận, anh đã học cách cầm cọ bằng miệng. Anh đã mất gần một năm để làm quen với từng nét vẽ, nhưng giờ đây, tranh của anh đã được trưng bày và bán ra quốc tế, trở thành nguồn thu nhập ổn định và là niềm tự hào của anh.</p>
+      </div>
+      <img src="/img/blogs/Blog1-image2.png" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
 
-      <h2>🎨 Bước 3: Hoàn thiện Bìa Sổ và Trang trí</h2>
-      <p>Bìa sổ không chỉ bảo vệ mà còn thể hiện phong cách của bạn. Cắt hai tấm bìa cứng có kích thước lớn hơn ruột sổ một chút.</p>
-      <p><strong>Cách chèn ảnh vào bìa:</strong> Bạn có thể in ảnh cá nhân, ảnh họa tiết yêu thích ra giấy thường, sau đó dùng keo dán phủ lên tấm bìa cứng. Hoặc đơn giản hơn, dùng giấy màu, washi tape, hoặc vẽ trực tiếp lên bìa. Sau khi trang trí xong, dùng keo sữa dán chặt bìa trước và bìa sau vào ruột sổ đã khâu.</p>
-      <img src="/img/diy-final-product.jpg" alt="Cuốn sổ tay handmade đã hoàn thành" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; border-radius: 8px;">
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Quá Trình Đào Tạo Đặc Thù Và Thành Công</h2>
+        <p class="mb-4">Mỗi ngày tại đây là một bài học về sự vượt lên chính mình. Các chương trình đào tạo nghề của chúng tôi không chỉ giới hạn ở thủ công mỹ nghệ. Maison Chance cung cấp các khóa học chuyên sâu về tin học văn phòng, thiết kế đồ họa, may mặc, và cả kỹ năng vận hành khách sạn tại Làng Chăm Mát. Những khóa học này được thiết kế linh hoạt, phù hợp với tình trạng thể chất riêng biệt của từng học viên, đảm bảo họ có thể phát triển tối đa tiềm năng.</p>
+        <p class="mb-4">Thành công của học viên tiêu biểu là minh chứng rõ ràng nhất cho sứ mệnh của Maison Chance. Khoảng 70% học viên đã tốt nghiệp các lớp nghề hiện đã có việc làm ổn định, một số người đã tự mở xưởng sản xuất nhỏ. Điều này khẳng định triết lý của Maison Chance: Trao cần câu, không trao con cá.</p>
+      </div>
 
-      <p>Vậy là bạn đã hoàn thành cuốn sổ tay handmade độc đáo của riêng mình! Chúc bạn có những trải nghiệm sáng tạo thú vị. Hãy bắt đầu ghi chép ngay thôi! ✨</p>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed border-t pt-4">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Kêu gọi Hành động</h2>
+        <p class="mb-4">Bạn muốn trở thành một phần của những câu chuyện phi thường này? Hãy ủng hộ ngay hôm nay để Maison Chance có thêm nguồn lực tiếp tục hỗ trợ các học viên và mang đến ánh sáng hy vọng cho nhiều cuộc đời hơn nữa!</p>
+      </div>
     `,
   },
   {
-    name: "Câu chuyện đằng sau mỗi sản phẩm của chúng tôi",
-    img: "/img/blogs/blog-2.jpg",
-    slug: "cau-chuyen-dang-sau-moi-san-pham-cua-chung-toi",
-    description: "Khám phá hành trình sáng tạo và tình yêu thương trong từng chi tiết.",
+    name: "🏞️ DỰ ÁN LÀNG CHĂM MÁT ĐẮK NÔNG: MÔ HÌNH CỘNG ĐỒNG TỰ CHỦ",
+    img: "/img/blogs/Blog2-image1.jpg",
+    slug: "du-an-lang-cham-mat-dak-nong-mo-hinh-cong-dong-tu-chu",
+    description:
+      "Xây Dựng Tương Lai Bền Vững Giữa Thiên Nhiên – Mô hình cộng đồng tự cung tự cấp tại Đắk Nông, nơi người khuyết tật và trẻ em khó khăn hướng tới độc lập tài chính qua nông nghiệp hữu cơ và du lịch nhân ái.",
     content: `
-      <h2>Bắt đầu từ đam mê</h2>
-      <p>NhaMayMan-Hanh ra đời từ niềm đam mê handmade của những người bạn trẻ. Mỗi sản phẩm là một câu chuyện riêng.</p>
-      
-      <h2>Hành trình sản xuất</h2>
-      <p>Từ ý tưởng đến hoàn thiện, chúng tôi dành hàng giờ để đảm bảo chất lượng.</p>
-      
-      <h2>Yêu thương lan tỏa</h2>
-      <p>Mỗi món quà không chỉ đẹp mà còn chứa đựng thông điệp ấm áp.</p>
-      
-      <p>Cảm ơn bạn đã đồng hành cùng chúng tôi! 💛</p>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Xây Dựng Tương Lai Bền Vững Giữa Thiên Nhiên</h2>
+        <p class="mb-4">Nằm giữa khung cảnh thiên nhiên hùng vĩ, yên bình của tỉnh Đắk Nông, Làng Chăm Mát (Shelter Village) là dự án đầy tham vọng và nhân ái của Maison Chance. Đây không chỉ là một khu nhà ở mà là một mô hình cộng đồng tự cung tự cấp, nơi gần 100 người khuyết tật và trẻ em có hoàn cảnh đặc biệt đang xây dựng lại cuộc đời theo hướng hoàn toàn độc lập và bền vững.</p>
+      </div>
+      <img src="/img/blogs/Blog2-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Tự Cung Tự Cấp: Hướng Tới Độc Lập Tài Chính</h2>
+        <p class="mb-4">Dự án Làng Chăm Mát ra đời với mục tiêu cung cấp một môi trường sống chất lượng cao, hòa nhập và thân thiện với thiên nhiên. Khác với các cơ sở ở TP.HCM, Làng Chăm Mát tập trung vào phát triển nông nghiệp hữu cơ và du lịch nhân ái để tạo ra nguồn thu nhập bền vững. Mô hình này giúp giảm thiểu sự phụ thuộc vào các nguồn tài trợ bên ngoài theo thời gian, hướng đến sự tự chủ hoàn toàn.</p>
+      </div>
+      <img src="/img/blogs/Blog2-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Các Trụ Cột Kinh Tế và Xã hội</h2>
+        <ol class="list-decimal list-inside mb-4 space-y-2">
+          <li><strong>Nông nghiệp sạch & Chăn nuôi:</strong> Cư dân tham gia trồng trọt rau củ theo phương pháp hữu cơ và chăn nuôi gia cầm. Sản phẩm không chỉ phục vụ bữa ăn tại chỗ mà còn được bán ra thị trường, tạo ra một chu trình kinh tế khép kín.</li>
+          <li><strong>Xưởng nghề quy mô lớn:</strong> Bao gồm xưởng mộc, xưởng may và các lớp học kỹ năng dịch vụ, đáp ứng nhu cầu nhân lực cho khu du lịch nội bộ.</li>
+          <li><strong>Khách sạn Nhân ái (Resort):</strong> Đây là điểm nhấn quan trọng nhất. Khách sạn được chính người khuyết tật vận hành (ở các vị trí phù hợp như lễ tân, dọn phòng, phục vụ bếp). Việc đón tiếp du khách tạo cơ hội việc làm thực tế, giúp họ tự tin giao tiếp và có thu nhập ổn định.</li>
+        </ol>
+        <h2 class="text-2xl font-semibold mb-2 py-1">Tái Hòa Nhập và Sống Có Ý Nghĩa</h2>
+        <p class="mb-4">Làng Chăm Mát giúp cư dân tại đây có được sự tự chủ hoàn toàn. Họ được tham gia vào mọi công đoạn từ sản xuất đến vận hành, cảm nhận rõ ràng giá trị lao động của bản thân. Điển hình là câu chuyện của chị Hoa, một người bị bại liệt nhẹ, hiện đang là quản lý phụ trách mảng nhà hàng của resort, điều mà chị chưa từng dám mơ tới.</p>
+      </div>
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed border-t pt-4">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Kêu gọi Hành động</h2>
+        <p class="mb-4">Hãy đến thăm Làng Chăm Mát Đắk Nông để tận mắt chứng kiến mô hình bền vững này! Bạn có thể nghỉ lại tại khách sạn của Làng hoặc mua sắm sản phẩm. Sự hiện diện và chi tiêu của bạn chính là nguồn vốn trực tiếp giúp duy trì mô hình tự chủ này.</p>
+      </div>
     `,
   },
   {
-    name: "Mẹo chọn quà tặng phù hợp cho mọi dịp",
-    img: "/img/blogs/blog-3.jpg",
-    slug: "meo-chon-qua-tang-phu-hop-cho-moi-dip",
-    description: "Gợi ý từ đội ngũ NhaMayMan-Hanh để lan tỏa yêu thương hiệu quả.",
+    name: "🌍 TÌNH NGUYỆN VIÊN QUỐC TẾ: NHỮNG TRÁI TIM KHÔNG BIÊN GIỚI",
+    img: "/img/blogs/Blog3-image1.jpg",
+    slug: "tinh-nguyen-vien-quoc-te-nhung-trai-tim-khong-bien-gioi",
+    description:
+      "Ngôi Nhà Chung Đa Văn Hóa – Maison Chance chào đón tình nguyện viên quốc tế từ khắp nơi, mang kiến thức và lòng nhiệt thành để hỗ trợ y tế, giáo dục và kỹ thuật cho cộng đồng khuyết tật.",
     content: `
-      <h2>Sinh nhật</h2>
-      <p>Chọn thiệp cá nhân hóa hoặc bánh handmade để thêm phần bất ngờ.</p>
-      
-      <h2>Valentine</h2>
-      <p>Túi xách may tay hoặc tranh sơn dầu sẽ là món quà lãng mạn.</p>
-      
-      <h2>Tết Nguyên Đán</h2>
-      <p>Bình gốm mỹ nghệ tượng trưng cho sự thịnh vượng.</p>
-      
-      <h2>Kết luận</h2>
-      <p>Quan trọng nhất là tấm lòng. Chúc bạn thành công! 💛</p>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Ngôi Nhà Chung Đa Văn Hóa</h2>
+        <p class="mb-4">Maison Chance tự hào là một môi trường đa văn hóa, nơi tình yêu thương vượt qua mọi rào cản địa lý và ngôn ngữ. Hàng năm, chúng tôi chào đón hàng trăm Tình Nguyện Viên Quốc tế (TNV) từ khắp các châu lục. Họ mang theo không chỉ lòng nhiệt thành mà còn là kiến thức, kỹ năng chuyên môn cao để chia sẻ với cộng đồng, tạo nên một sự trao đổi văn hóa và tri thức vô cùng giá trị.</p>
+      </div>
+      <img src="/img/blogs/Blog3-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Những Đóng Góp Chuyên Môn Sâu Sắc</h2>
+        <p class="mb-4">Tình nguyện viên đến từ nhiều quốc gia như Pháp, Mỹ, Canada, Thụy Sĩ,... với đa dạng kinh nghiệm. Vai trò của họ không chỉ là người hỗ trợ chung mà còn là những chuyên gia mang lại giá trị gia tăng lớn:</p>
+        <ul class="list-disc list-inside mb-4 space-y-2">
+          <li><strong>Hỗ trợ Y tế chuyên sâu:</strong> Các bác sĩ, chuyên gia vật lý trị liệu từ nước ngoài đến lưu trú dài hạn để trực tiếp hỗ trợ và đào tạo lại đội ngũ y tế địa phương về các phương pháp phục hồi chức năng tiên tiến.</li>
+          <li><strong>Giáo dục và Đào tạo:</strong> Dạy các khóa học chuyên sâu về Ngoại ngữ (Anh/Pháp), Tin học, và các kỹ năng mềm, giúp học viên nâng cao năng lực cạnh tranh khi tái hòa nhập thị trường lao động.</li>
+          <li><strong>Hỗ trợ Kỹ thuật & Sản xuất:</strong> Các kỹ sư, thợ thủ công lành nghề tham gia vào xưởng mộc và xưởng may để cải tiến quy trình sản xuất, nâng cao chất lượng sản phẩm theo tiêu chuẩn quốc tế.</li>
+        </ul>
+      </div>
+      <img src="/img/blogs/Blog3-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Gắn Kết và Thấu Hiểu</h2>
+        <p class="mb-4">Các TNV sống và sinh hoạt chung với người khuyết tật và trẻ em trong cơ sở. Sự gắn bó này tạo ra một sự thấu hiểu sâu sắc, giúp các học viên cảm thấy được tôn trọng và hòa nhập, xóa bỏ mặc cảm. Ngược lại, nó cũng giúp TNV hiểu rõ hơn về văn hóa Việt Nam và những thách thức mà người khuyết tật phải đối mặt.</p>
+      </div>
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed border-t pt-4">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Kêu gọi Hành động</h2>
+        <p class="mb-4">Bạn có kỹ năng, thời gian và lòng nhiệt thành? Hãy đăng ký làm Tình nguyện viên và trải nghiệm sự khác biệt mà bạn có thể tạo ra tại Maison Chance! Thông tin chi tiết về các vị trí đang tuyển và yêu cầu tối thiểu được đăng tải trên trang web chính thức của chúng tôi.</p>
+      </div>
     `,
   },
   {
-    name: "Tự làm nến thơm: Thư giãn và trang trí nhà cửa",
-    img: "/img/blogs/blog-3jpg",
-    slug: "tu-lam-nen-thom-thu-gian-va-trang-tri-nha-cua",
-    description: "Khám phá cách tự tạo mùi hương yêu thích cho không gian sống của bạn.",
+    name: "🤝 NHÀ TÀI TRỢ: NỀN TẢNG CỦA NIỀM TIN VÀ SỰ PHÁT TRIỂN",
+    img: "/img/blogs/Blog4-image1.jpg",
+    slug: "nha-tai-tro-nen-tang-cua-niem-tin-va-su-phat-trien",
+    description:
+      "Đối Tác Của Lòng Nhân Ái – Maison Chance phát triển nhờ sự ủng hộ từ nhà tài trợ toàn cầu, với cam kết minh bạch và các chương trình CSR ý nghĩa để hỗ trợ giáo dục, y tế và vận hành cộng đồng.",
     content: `
-      <h2>Nguyên liệu cơ bản</h2>
-      <p>Sáp ong, tinh dầu, bấc nến và cốc thủy tinh chịu nhiệt.</p>
-      
-      <h2>Quy trình thực hiện</h2>
-      <p>Đun chảy sáp, thêm tinh dầu, cố định bấc và rót vào cốc.</p>
-      
-      <h2>Lưu ý</h2>
-      <p>Nhiệt độ đun sáp và tỷ lệ tinh dầu là chìa khóa thành công.</p>
-      
-      <h2>Thành quả</h2>
-      <p>Một góc nhà thơm lừng và ấm áp đã sẵn sàng ✨</p>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Đối Tác Của Lòng Nhân Ái</h2>
+        <p class="mb-4">Maison Chance hoạt động và phát triển dựa trên một nền tảng duy nhất: Sự tin tưởng và ủng hộ vô điều kiện từ các cá nhân, doanh nghiệp và tổ chức trên toàn thế giới. Các nhà tài trợ không chỉ cung cấp tài chính mà còn là những đối tác chiến lược, giúp chúng tôi duy trì các hoạt động cứu trợ, giáo dục và đào tạo nghề một cách liên tục và chất lượng cao.</p>
+      </div>
+      <img src="/img/blogs/Blog4-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Phân Tích Chi Phí: Nguồn Sống Của Tổ Chức</h2>
+        <p class="mb-4">Mọi hoạt động tại Maison Chance, từ việc cung cấp bữa ăn hàng ngày, chi phí chăm sóc y tế, đến việc duy trì các lớp học nghề, đều phụ thuộc vào nguồn tài trợ. Chúng tôi công bố chi tiết về cách khoản quyên góp được sử dụng, đảm bảo tính minh bạch tuyệt đối.</p>
+        <h3 class="text-xl font-semibold mb-2 py-1">Đóng Góp Của Bạn Tạo Nên Sự Khác Biệt Cụ Thể:</h3>
+        <ul class="list-disc list-inside mb-4 space-y-2">
+          <li><strong>Bảo trợ Giáo dục ($30/tháng):</strong> Chi phí này bao gồm sách vở, đồng phục, học phí, và hỗ trợ giáo viên cho một em nhỏ trong vòng một tháng.</li>
+          <li><strong>Chăm sóc Y tế ($100/tháng):</strong> Đảm bảo chi phí vật lý trị liệu, thuốc điều trị và các dụng cụ y tế chuyên dụng hàng tháng cho một người khuyết tật nặng.</li>
+          <li><strong>Hỗ trợ Vận hành Bếp ăn ($150/ngày):</strong> Cung cấp 3 bữa ăn dinh dưỡng đầy đủ và an toàn vệ sinh thực phẩm cho hơn 300 người trong cộng đồng.</li>
+        </ul>
+      </div>
+      <img src="/img/blogs/Blog4-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Đối Tác CSR và Cam Kết Minh Bạch</h2>
+        <p class="mb-4">Đối với các doanh nghiệp, trở thành nhà tài trợ của Maison Chance là một phần quan trọng và ý nghĩa trong chiến lược Trách nhiệm Xã hội Doanh nghiệp (CSR). Chúng tôi cung cấp các chương trình tài trợ đa dạng, từ bảo trợ toàn bộ một dự án đến việc đặt mua các sản phẩm thủ công làm quà tặng đối tác.</p>
+        <p class="mb-4">Chúng tôi cam kết sử dụng mọi khoản đóng góp một cách minh bạch và hiệu quả nhất. Báo cáo tài chính thường niên của chúng tôi được kiểm toán bởi các tổ chức uy tín, đảm bảo niềm tin cho mọi nhà tài trợ về tính chính trực trong quản lý quỹ.</p>
+      </div>
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed border-t pt-4">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Kêu gọi Hành động</h2>
+        <p class="mb-4">Hãy cùng chúng tôi xây dựng một tương lai bền vững. Liên hệ với chúng tôi để thiết lập quan hệ đối tác CSR lâu dài và ý nghĩa! Mọi sự đóng góp, dù lớn hay nhỏ, đều là nguồn sức mạnh to lớn giúp chúng tôi duy trì hoạt động.</p>
+      </div>
     `,
   },
   {
-    name: "5 mẹo để làm sạch nhà bếp hiệu quả và nhanh chóng",
-    img: "/img/blogs/blog-3jpg",
-    slug: "5-meo-lam-sach-nha-bep-hieu-qua-va-nhanh-chong",
-    description: "Giữ căn bếp luôn sáng bóng mà không tốn quá nhiều thời gian và công sức.",
+    name: "✨ SẢN PHẨM THỦ CÔNG: KHI NGHỊ LỰC HÓA THÀNH NGHỆ THUẬT",
+    img: "/img/blogs/Blog5-image1.jpg",
+    slug: "san-pham-thu-cong-khi-nghi-luc-hoa-thanh-nghe-thuat",
+    description:
+      "Liệu Pháp Tinh Thần và Sinh Kế Bền Vững – Các sản phẩm thủ công từ Maison Chance không chỉ là nghệ thuật mà còn là câu chuyện kiên trì của những nghệ nhân khuyết tật, mang lại thu nhập độc lập và giá trị nhân văn.",
     content: `
-      <h2>Mẹo 1: Vệ sinh thường xuyên</h2>
-      <p>Lau chùi ngay sau khi nấu nướng để tránh vết bẩn cứng đầu tích tụ.</p>
-      
-      <h2>Mẹo 2: Dùng giấm trắng</h2>
-      <p>Giấm là chất tẩy rửa tự nhiên tuyệt vời cho bồn rửa và mặt bếp.</p>
-      
-      <h2>Mẹo 3: Tận dụng Baking Soda</h2>
-      <p>Dùng Baking Soda để khử mùi tủ lạnh và làm sạch lò nướng.</p>
-      
-      <h2>Mẹo 4: Sắp xếp thông minh</h2>
-      <p>Sử dụng các ngăn kéo và móc treo để tạo không gian gọn gàng.</p>
-      
-      <h2>Tóm tắt</h2>
-      <p>Căn bếp sạch sẽ là nguồn cảm hứng cho bữa ăn ngon miệng 🥗</p>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Liệu Pháp Tinh Thần và Sinh Kế Bền Vững</h2>
+        <p class="mb-4">Tại Maison Chance, việc dạy nghề không chỉ là cách tạo ra thu nhập mà còn là liệu pháp tinh thần, là con đường để các học viên bộc lộ tài năng và cảm xúc sau những biến cố cuộc đời. Những đôi tay, thậm chí là đôi chân hay khuôn miệng, đã tạo nên những tác phẩm nghệ thuật có giá trị thẩm mỹ và nhân văn sâu sắc.</p>
+      </div>
+      <img src="/img/blogs/Blog5-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Nghệ Thuật Của Sự Kiên Trì</h2>
+        <p class="mb-4">Các sản phẩm thủ công của Maison Chance rất đa dạng, được sản xuất dưới sự giám sát của các chuyên gia nghề truyền thống. Quá trình đào tạo bao gồm từ cơ bản đến nâng cao, biến những người chưa từng có kinh nghiệm thành những thợ thủ công lành nghề.</p>
+        <ul class="list-disc list-inside mb-4 space-y-2">
+          <li><strong>Xưởng Tranh Vẽ:</strong> Các tác phẩm sơn dầu, acrylic và tranh lụa được thực hiện bởi những nghệ nhân bị liệt tứ chi, sử dụng các kỹ thuật vẽ bằng miệng hoặc chân. Mỗi bức tranh là kết quả của sự kiên trì phi thường.</li>
+          <li><strong>Xưởng Đồ Gỗ Mỹ Nghệ:</strong> Tập trung vào các sản phẩm chạm khắc tinh xảo và đồ gia dụng như hộp đựng, tượng nhỏ, và đồ nội thất, kết hợp thiết kế hiện đại với kỹ thuật truyền thống.</li>
+          <li><strong>Xưởng May Mặc & Túi Xách:</strong> Tạo ra các sản phẩm thời trang và phụ kiện chất lượng cao từ vải thổ cẩm, da, hoặc chất liệu tái chế, đạt tiêu chuẩn thị trường.</li>
+        </ul>
+      </div>
+      <img src="/img/blogs/Blog5-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Mua Sắm Có Ý Nghĩa: Ủng Hộ Lòng Tự Trọng</h2>
+        <p class="mb-4">Triết lý của Maison Chance là tạo ra sự trao đổi công bằng: Người mua nhận được sản phẩm chất lượng, người làm ra nhận được thù lao xứng đáng. Khi bạn mua một sản phẩm từ Maison Chance, bạn không chỉ sở hữu một món đồ đẹp mà còn trực tiếp ủng hộ sinh kế bền vững của người nghệ nhân.</p>
+        <p class="mb-4">Toàn bộ lợi nhuận từ việc bán hàng (sau khi trừ chi phí nguyên vật liệu) được dùng để trả lương cho chính học viên, giúp họ độc lập về tài chính và có thể nuôi sống bản thân, gia đình. Đây là hình thức hỗ trợ nhân đạo bền vững, tôn trọng công sức lao động của họ.</p>
+      </div>
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed border-t pt-4">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Kêu gọi Hành động</h2>
+        <p class="mb-4">Hãy khám phá bộ sưu tập sản phẩm nghệ thuật độc đáo của chúng tôi! Mua sắm tại Maison Chance không chỉ là tiêu dùng mà còn là một hành động nhân ái trực tiếp và bền vững. Bạn có thể mua hàng trực tuyến hoặc ghé thăm cửa hàng tại cơ sở của chúng tôi.</p>
+      </div>
     `,
   },
   {
-    name: "Kỹ thuật trồng cây xanh trong nhà dễ sống sót",
-    img: "/img/blogs/blog-3jpg",
-    slug: "ky-thuat-trong-cay-xanh-trong-nha-de-song-sot",
-    description: "Bí quyết biến ngôi nhà thành không gian xanh mát và đầy sức sống.",
+    name: "❤️ KÊU GỌI QUYÊN GÓP: SỰ SỐNG CÒN NẰM TRONG LÒNG TỐT CỦA BẠN",
+    img: "/img/blogs/Blog6-image1.jpg",
+    slug: "keu-goi-quyen-gop-su-song-con-nam-trong-long-tot-cua-ban",
+    description:
+      "Nhu Cầu Cấp Bách Hàng Ngày – Hãy ủng hộ Maison Chance để duy trì bữa ăn, y tế và giáo dục cho hơn 300 người khuyết tật và trẻ em khó khăn, với cam kết minh bạch tuyệt đối.",
     content: `
-      <h2>Chọn loại cây</h2>
-      <p>Ưu tiên các loại cây chịu bóng râm tốt như lưỡi hổ, trầu bà, kim tiền.</p>
-      
-      <h2>Tưới nước đúng cách</h2>
-      <p>Kiểm tra độ ẩm đất trước khi tưới. Không nên tưới quá nhiều dễ gây úng rễ.</p>
-      
-      <h2>Ánh sáng</h2>
-      <p>Đặt cây gần cửa sổ hoặc nơi có ánh sáng tán xạ, tránh nắng gắt trực tiếp.</p>
-      
-      <h2>Bón phân</h2>
-      <p>Bón phân tan chậm hoặc phân nước theo định kỳ (2-3 tháng/lần).</p>
-      
-      <h2>Lời khuyên</h2>
-      <p>Một chút quan tâm mỗi ngày sẽ giúp cây phát triển xanh tốt 🌿</p>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Nhu Cầu Cấp Bách Hàng Ngày</h2>
+        <p class="mb-4">Bạn đã đọc những câu chuyện truyền cảm hứng về sự kiên cường tại Maison Chance. Giờ đây, chúng tôi cần bạn giúp chúng tôi viết tiếp những câu chuyện đó. Sự sống còn và phát triển của Maison Chance hoàn toàn phụ thuộc vào sự ủng hộ từ những tấm lòng hảo tâm như bạn. Mỗi đồng tiền của bạn là một sự đầu tư vào nhân phẩm, sự tự chủ và tương lai.</p>
+      </div>
+      <img src="/img/blogs/Blog6-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">🆘 Chi Tiết Các Khoản Chi Tiêu Thiết Yếu</h2>
+        <p class="mb-4">Mặc dù chúng tôi nỗ lực tạo sinh kế, chi phí vận hành hàng ngày vẫn rất lớn, đặc biệt là các khoản chi tiêu thiết yếu cho hơn 300 người. Sự hỗ trợ của bạn có thể trực tiếp giải quyết các vấn đề sau:</p>
+        <ul class="list-disc list-inside mb-4 space-y-2">
+          <li><strong>Duy trì Bếp ăn Cộng đồng (Khoảng $30,000/tháng):</strong> Đây là nhu cầu cơ bản nhất. Đảm bảo cung cấp 3 bữa ăn dinh dưỡng chất lượng, an toàn vệ sinh thực phẩm mỗi ngày cho toàn bộ cộng đồng, đặc biệt quan trọng với người khuyết tật cần chế độ dinh dưỡng đặc biệt.</li>
+          <li><strong>Chăm sóc Y tế Chuyên biệt (Khoảng $15,000/tháng):</strong> Đây là khoản chi phí không thể thiếu. Nó bao gồm mua sắm thuốc men đặc trị, vật lý trị liệu, dụng cụ chỉnh hình và chi trả lương cho đội ngũ y bác sĩ, giúp người khuyết tật nặng giảm đau đớn và cải thiện chất lượng cuộc sống.</li>
+          <li><strong>Giáo dục và Học nghề:</strong> Đảm bảo lớp học, sách vở, đồng phục và nguyên vật liệu cho các lớp dạy nghề luôn đầy đủ.</li>
+        </ul>
+      </div>
+      <img src="/img/blogs/Blog6-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">🔍 Minh Bạch Là Nền Tảng Của Niềm Tin</h2>
+        <p class="mb-4">Chúng tôi hiểu rằng khi quyên góp, sự tin tưởng là quan trọng nhất. Maison Chance cam kết sử dụng nguồn quỹ một cách minh bạch và hiệu quả tuyệt đối. Chúng tôi duy trì tỷ lệ chi phí hành chính rất thấp (thường dưới 10%) để tối đa hóa số tiền được đưa trực tiếp đến người thụ hưởng. Báo cáo tài chính chi tiết, được kiểm toán bởi các công ty độc lập và uy tín, luôn sẵn có để bạn tra cứu trên trang web chính thức.</p>
+        <h2 class="text-2xl font-semibold mb-2 py-1">Tác Động Của Bạn: Biến Đổi Cuộc Đời</h2>
+        <p class="mb-4">Việc quyên góp không chỉ là cho đi tài chính; đó là việc bạn trao cơ hội, trao hy vọng để một người khuyết tật có thể tự lập, một em nhỏ có thể được đến trường.</p>
+      </div>
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed border-t pt-4">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Kêu gọi Hành động Mạnh mẽ</h2>
+        <p class="mb-4">Xin đừng chần chừ. Sự giúp đỡ của bạn hôm nay sẽ quyết định bữa ăn, chăm sóc y tế và tương lai học tập của một ai đó ngày mai. Hãy hành động ngay bây giờ để mang lại sự khác biệt thực sự!</p>
+      </div>
     `,
   },
   {
-    name: "Các bước cơ bản để may vá một chiếc túi tote đơn giản",
-    img: "/img/blogs/blog-3jpg",
-    slug: "cac-buoc-co-ban-may-tui-tote-don-gian",
-    description: "Tự may chiếc túi vải thân thiện với môi trường theo phong cách riêng của bạn.",
+    name: "💡 NGƯỜI SÁNG LẬP: CÔ TIM ALINE REBEAUD – NGỌN HẢI ĐĂNG CỦA LÒNG NHÂN ÁI",
+    img: "/img/blogs/Blog7-image1.jpg",
+    slug: "nguoi-sang-lap-co-tim-aline-rebeaud-ngon-hai-dang-cua-long-nhan-ai",
+    description:
+      "Hành Trình Vĩ Đại Từ Một Trái Tim Lớn – Câu chuyện về Cô Tim Aline Rebeaud, người sáng lập Maison Chance, với triết lý 'Tự chủ' giúp biến nạn nhân thành nghệ nhân và xây dựng cộng đồng bền vững.",
     content: `
-      <h2>Vật liệu cần</h2>
-      <p>Vải bố (canvas), kim, chỉ, kéo, máy may (nếu có).</p>
-      
-      <h2>Cắt vải</h2>
-      <p>Cắt 2 miếng hình chữ nhật lớn (thân túi) và 2 miếng nhỏ (quai xách).</p>
-      
-      <h2>May thân túi</h2>
-      <p>Úp hai mặt phải của vải vào nhau, may 3 cạnh (đáy và hai bên hông).</p>
-      
-      <h2>Gắn quai</h2>
-      <p>Lật mặt phải túi ra, ghim và may quai xách vào miệng túi.</p>
-      
-      <h2>Kết quả</h2>
-      <p>Một chiếc túi tote đa năng đã hoàn thành! 🧵</p>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Hành Trình Vĩ Đại Từ Một Trái Tim Lớn</h2>
+        <p class="mb-4">Maison Chance là một dự án vĩ đại, và đằng sau nó là một câu chuyện còn vĩ đại hơn: câu chuyện về Cô Tim Aline Rebeaud, một phụ nữ Thụy Sĩ đã dành trọn hơn ba thập kỷ cuộc đời để cống hiến tại Việt Nam. Sự hy sinh và tầm nhìn xa của cô không chỉ tạo ra một tổ chức, mà còn kiến tạo nên một mô hình nhân đạo độc đáo và bền vững trên mảnh đất này.</p>
+      </div>
+      <img src="/img/blogs/Blog7-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Từ Người Lữ Khách Đến Người Mẹ Của Những Số Phận</h2>
+        <p class="mb-4">Cô Tim đến Việt Nam vào cuối những năm 1980 với tư cách là một người du lịch. Nhưng cảnh tượng những đứa trẻ mồ côi, người khuyết tật nặng phải sống lang thang trên đường phố Sài Gòn đã lay động cô sâu sắc. Cô quyết định thay đổi cuộc đời mình: bán đi tài sản ở Thụy Sĩ và bắt đầu dự án tại một ngôi nhà thuê nhỏ. Maison Chance khởi đầu là một nơi trú ẩn, nhưng Cô Tim nhận ra rằng chỉ cung cấp chỗ ở là chưa đủ.</p>
+        <h2 class="text-2xl font-semibold mb-2 py-1">Tầm Nhìn Vượt Thời Gian và Triết Lý "Tự Chủ"</h2>
+        <p class="mb-4">Triết lý của Cô Tim là biến "Nạn nhân thành Nghệ nhân". Cô không muốn họ phụ thuộc vào lòng từ thiện mãi mãi, mà phải có khả năng tự lập và tái hòa nhập xã hội. Điều này dẫn đến việc xây dựng mô hình toàn diện:</p>
+        <ol class="list-decimal list-inside mb-4 space-y-2">
+          <li><strong>Tự chủ (Autonomy):</strong> Đào tạo nghề chuyên sâu (vẽ, mộc, may) để học viên tự kiếm thu nhập từ chính sức lao động của mình.</li>
+          <li><strong>Phát triển Bền vững:</strong> Xây dựng các dự án kinh tế lớn như Làng Chăm Mát (Shelter Village) và khách sạn nhân ái để tự tạo ra nguồn tài chính, giảm thiểu rủi ro từ sự biến động của nguồn tài trợ.</li>
+          <li><strong>Tôn trọng:</strong> Đảm bảo nhân phẩm và sự tôn trọng tuyệt đối. Cộng đồng được xây dựng trên sự đoàn kết và bình đẳng.</li>
+        </ol>
+      </div>
+      <img src="/img/blogs/Blog7-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Ngọn Hải Đăng Của Lòng Nhân Ái</h2>
+        <p class="mb-4">Cô Tim Aline là ngọn hải đăng cho toàn bộ cộng đồng Maison Chance, là minh chứng sống cho thấy một trái tim nhân hậu có thể thay đổi thế giới như thế nào.</p>
+      </div>
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed border-t pt-4">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Kêu gọi Hành động</h2>
+        <p class="mb-4">Để tiếp nối tầm nhìn của Cô Tim và đảm bảo Maison Chance tiếp tục hoạt động, chúng tôi cần sự đồng hành vững chắc của bạn. Hãy cùng nhau xây dựng di sản này bằng cách ủng hộ tài chính hoặc tham gia tình nguyện.</p>
+      </div>
     `,
   },
   {
-    name: "Hướng dẫn làm xà phòng thủ công từ nguyên liệu tự nhiên",
-    img: "/img/blogs/blog-3jpg",
-    slug: "huong-dan-lam-xa-phong-thu-cong-tu-nguyen-lieu-tu-nhien",
-    description: "Tự chế xà phòng dưỡng da an toàn, không chứa hóa chất độc hại.",
+    name: "🎨 SẢN PHẨM ĐẶC TRƯNG: TRANH VẼ VÀ ĐỒ GỖ - KHI NGHỊ LỰC LÀ CHẤT LIỆU NGHỆ THUẬT",
+    img: "/img/blogs/Blog8-image1.jpg",
+    slug: "san-pham-dac-trung-tranh-ve-va-do-go-khi-nghi-luc-la-chat-lieu-nghe-thuat",
+    description:
+      "Nghệ Thuật Của Sự Hồi Sinh – Khám phá tranh vẽ bằng miệng/chân và đồ gỗ mỹ nghệ từ Maison Chance, nơi nghị lực biến thành tác phẩm nghệ thuật độc đáo, mang giá trị nhân văn và hỗ trợ sinh kế bền vững.",
     content: `
-      <h2>Phương pháp</h2>
-      <p>Sử dụng phương pháp "Melt and Pour" (Nấu và Đổ) cho người mới bắt đầu.</p>
-      
-      <h2>Nguyên liệu chính</h2>
-      <p>Phôi xà phòng glycerin, màu khoáng tự nhiên, tinh dầu.</p>
-      
-      <h2>Các bước</h2>
-      <p>Cắt nhỏ phôi, đun chảy, thêm tinh dầu/màu, đổ vào khuôn và để nguội.</p>
-      
-      <h2>Lợi ích</h2>
-      <p>Xà phòng handmade giúp dưỡng ẩm, làm dịu da nhạy cảm.</p>
-      
-      <h2>Lời khuyên</h2>
-      <p>Sử dụng tinh dầu Oải Hương hoặc Tràm Trà để tăng tính thư giãn 🛁</p>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Nghệ Thuật Của Sự Hồi Sinh</h2>
+        <p class="mb-4">Maison Chance không chỉ là trung tâm bảo trợ xã hội; chúng tôi còn là một học viện nghệ thuật và thủ công đặc biệt. Các sản phẩm đặc trưng tại đây, từ những bức tranh sơn dầu đầy cảm xúc đến các món đồ gỗ mỹ nghệ tinh xảo, mang một giá trị nghệ thuật thực thụ và là minh chứng cho sự hồi sinh của những cuộc đời.</p>
+      </div>
+      <img src="/img/blogs/Blog8-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Tranh Vẽ: Sắc Màu Từ Nội Tâm và Kỹ Thuật Đặc Biệt</h2>
+        <p class="mb-4">Điểm độc đáo của xưởng vẽ Maison Chance là các nghệ nhân thường sử dụng miệng hoặc chân để sáng tác. Quá trình này đòi hỏi một khóa huấn luyện nghiêm ngặt về kiểm soát hơi thở, cơ cổ và cơ vai, kéo dài nhiều năm. Kết quả là những tác phẩm giàu cảm xúc và kỹ thuật:</p>
+        <ul class="list-disc list-inside mb-4 space-y-2">
+          <li><strong>Tranh Ký ức & Phong cảnh:</strong> Thường là các bức tranh phong cảnh, tĩnh vật, lãng mạn, mang đậm nét Việt Nam, thể hiện niềm hy vọng về một cuộc sống mới, thường được thực hiện với độ chi tiết cao.</li>
+          <li><strong>Tranh Trừu tượng:</strong> Thể hiện cảm xúc mạnh mẽ, là liệu pháp tinh thần giúp các nghệ nhân vượt qua nỗi đau thể xác, bộc lộ nội tâm thông qua màu sắc và hình khối.</li>
+        </ul>
+      </div>
+      <img src="/img/blogs/Blog8-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Đồ Gỗ: Tinh Hoa của Sự Tỉ Mỉ và Ứng Dụng</h2>
+        <p class="mb-4">Xưởng mộc của Maison Chance được trang bị máy móc hiện đại và đội ngũ thợ lành nghề, trong đó có cả các chuyên gia quốc tế từng tham gia đào tạo. Các học viên được học về an toàn lao động, kỹ thuật chế tác gỗ và thiết kế, giúp họ tạo ra những sản phẩm có tính ứng dụng cao.</p>
+        <ul class="list-disc list-inside mb-4 space-y-2">
+          <li><strong>Sản phẩm đa dạng:</strong> Từ các món quà lưu niệm chạm khắc nhỏ, đến các sản phẩm nội thất như bàn, ghế.</li>
+          <li><strong>Đơn hàng Doanh nghiệp:</strong> Xưởng thường nhận các đơn đặt hàng từ doanh nghiệp để sản xuất quà tặng cho đối tác, bởi sản phẩm Maison Chance luôn mang ý nghĩa nhân văn sâu sắc.</li>
+        </ul>
+        <p class="mb-4">Khi mua các sản phẩm này, bạn đang mua cả nghệ thuật, câu chuyện và tương lai đằng sau nó.</p>
+      </div>
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed border-t pt-4">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Kêu gọi Hành động</h2>
+        <p class="mb-4">Hãy khám phá những tác phẩm nghệ thuật độc đáo này. Mua sắm một sản phẩm của Maison Chance là cách bạn mang yêu thương về nhà, sở hữu một món đồ đẹp và lan tỏa ánh sáng của sự kiên cường.</p>
+      </div>
     `,
   },
   {
-    name: "Tái chế đồ cũ: Biến chai nhựa thành chậu cây mini",
-    img: "/img/blogs/blog-3jpg",
-    slug: "tai-che-do-cu-bien-chai-nhua-thanh-chau-cay-mini",
-    description: "Góp phần bảo vệ môi trường bằng cách biến rác thải thành vật dụng hữu ích.",
+    name: "📚 GIÁO DỤC LÀ ÁNH SÁNG: PHÁ VỠ CHU KỲ NGHÈO ĐÓI",
+    img: "/img/blogs/Blog10-image1.jpg",
+    slug: "giao-duc-la-anh-sang-pha-vo-chu-ky-ngheo-doi",
+    description:
+      "Nơi Ước Mơ Bắt Đầu – Giáo dục tại Maison Chance là chìa khóa phá vỡ chu kỳ nghèo đói, mang đến chương trình toàn diện, hòa nhập cho trẻ em khuyết tật và nghèo khó, thắp sáng tương lai qua kiến thức và kỹ năng sống.",
     content: `
-      <h2>Chuẩn bị</h2>
-      <p>Chai nhựa cũ, kéo, sơn acrylic và đất trồng cây.</p>
-      
-      <h2>Cắt chai</h2>
-      <p>Cắt chai nhựa làm đôi, phần đáy chai sẽ là chậu cây.</p>
-      
-      <h2>Trang trí</h2>
-      <p>Sơn màu sắc, vẽ mặt ngộ nghĩnh hoặc dùng dây thừng quấn quanh.</p>
-      
-      <h2>Hoàn thiện</h2>
-      <p>Đục lỗ thoát nước dưới đáy, cho đất vào và trồng cây nhỏ.</p>
-      
-      <h2>Thông điệp</h2>
-      <p>Sáng tạo nhỏ tạo ra khác biệt lớn cho hành tinh xanh 🌍</p>
-    `,
-  },
-  {
-    name: "Bí quyết chụp ảnh sản phẩm Handmade đẹp bằng điện thoại",
-    img: "/img/blogs/blog-3.jpg",
-    slug: "bi-quyet-chup-anh-san-pham-handmade-dep-bang-dien-thoai",
-    description: "Nâng cao chất lượng hình ảnh sản phẩm để thu hút khách hàng trực tuyến.",
-    content: `
-      <h2>Ánh sáng tự nhiên</h2>
-      <p>Luôn tận dụng ánh sáng mặt trời gần cửa sổ, tránh dùng đèn flash.</p>
-      
-      <h2>Phông nền tối giản</h2>
-      <p>Sử dụng phông nền màu trắng, gỗ hoặc vải linen để làm nổi bật sản phẩm.</p>
-      
-      <h2>Góc chụp</h2>
-      <p>Thử nghiệm các góc chụp 45 độ, từ trên xuống và cận cảnh chi tiết.</p>
-      
-      <h2>Chỉnh sửa cơ bản</h2>
-      <p>Tăng độ sáng, độ tương phản và độ bão hòa màu sắc một cách nhẹ nhàng.</p>
-      
-      <h2>Kết luận</h2>
-      <p>Hình ảnh đẹp là yếu tố then chốt để bán hàng thành công 📸</p>
-    `,
-  },
-  {
-    name: "Làm đèn ngủ từ que kem (Ice Cream Stick)",
-    img: "/img/blogs/blog-3.jpg",
-    slug: "lam-den-ngu-tu-que-kem",
-    description: "Một dự án DIY vui nhộn, biến que kem bỏ đi thành đèn ngủ độc đáo.",
-    content: `
-      <h2>Vật liệu</h2>
-      <p>Que kem, keo nến, bộ đèn LED nhỏ (đèn Fairy Light).</p>
-      
-      <h2>Lắp ghép</h2>
-      <p>Dùng keo nến dán các que kem thành hình khối vuông hoặc lục giác (khung đèn).</p>
-      
-      <h2>Hoàn thiện</h2>
-      <p>Lồng bộ đèn LED vào bên trong khung đèn que kem đã tạo.</p>
-      
-      <h2>Ứng dụng</h2>
-      <p>Có thể đặt ở đầu giường hoặc bàn làm việc tạo không gian ấm cúng.</p>
-      
-      <h2>Mẹo nhỏ</h2>
-      <p>Sơn màu hoặc dán sticker để đèn thêm phần sinh động 💡</p>
-    `,
-  },
-  {
-    name: "Hướng dẫn làm Bookmark (đánh dấu sách) từ giấy và len",
-    img: "/img/blogs/blog-3.jpg",
-    slug: "huong-dan-lam-bookmark-tu-giay-va-len",
-    description: "Tạo ra những chiếc đánh dấu sách cá tính làm quà tặng cho người yêu sách.",
-    content: `
-      <h2>Chuẩn bị</h2>
-      <p>Giấy bìa cứng, kéo, keo dán, len màu, và dụng cụ bấm lỗ.</p>
-      
-      <h2>Cắt giấy</h2>
-      <p>Cắt giấy bìa thành các hình chữ nhật dài (kích thước khoảng 5x15 cm).</p>
-      
-      <h2>Đính len</h2>
-      <p>Đục một lỗ ở đỉnh bookmark, sau đó luồn len qua và thắt nút tạo tua rua.</p>
-      
-      <h2>Trang trí</h2>
-      <p>Vẽ họa tiết, viết câu trích dẫn yêu thích hoặc dán sticker trang trí.</p>
-      
-      <h2>Lời khuyên</h2>
-      <p>Bookmark là món quà tặng ý nghĩa và thiết thực cho bạn bè 🎁</p>
-    `,
-  },
-  {
-    name: "Làm sạch trang sức bạc tại nhà chỉ với 3 bước",
-    img: "/img/blogs/blog-3.jpg",
-    slug: "lam-sach-trang-suc-bac-tai-nha-chi-voi-3-buoc",
-    description: "Các bước đơn giản giúp trang sức bạc của bạn lấy lại vẻ sáng bóng như mới.",
-    content: `
-      <h2>Bước 1: Chuẩn bị dung dịch</h2>
-      <p>Pha loãng nước ấm với một ít nước rửa chén hoặc Baking Soda.</p>
-      
-      <h2>Bước 2: Ngâm và cọ rửa</h2>
-      <p>Ngâm trang sức khoảng 10-15 phút, sau đó dùng bàn chải mềm cọ nhẹ.</p>
-      
-      <h2>Bước 3: Rửa sạch và làm khô</h2>
-      <p>Rửa lại bằng nước sạch và dùng khăn mềm (như khăn cotton) lau khô hoàn toàn.</p>
-      
-      <h2>Lưu ý quan trọng</h2>
-      <p>Tránh dùng khăn giấy hoặc vải thô ráp vì có thể gây xước bề mặt bạc.</p>
-      
-      <h2>Thành quả</h2>
-      <p>Trang sức bạc lấp lánh như vừa mới mua ✨</p>
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Nơi Ước Mơ Bắt Đầu</h2>
+        <p class="mb-4">Giáo dục là chìa khóa mở ra tương lai, và tại Maison Chance, chúng tôi tin rằng mọi đứa trẻ đều xứng đáng có được chì khóa đó, bất kể hoàn cảnh hay khiếm khuyết thể chất. Hàng ngày, tại lớp học nhỏ nhưng ấm cúng của chúng tôi, những đứa trẻ mồ côi, trẻ em khuyết tật và trẻ em nghèo từ các khu vực lân cận đang viết nên câu chuyện về Hy vọng, Kiến thức và Sự thay đổi.</p>
+      </div>
+      <img src="/img/blogs/Blog10-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Chương Trình Giáo Dục Toàn Diện và Hòa Nhập</h2>
+        <p class="mb-4">Đối với nhiều em nhỏ, trường học Maison Chance là nơi đầu tiên chúng được tiếp cận với một nền giáo dục chính quy, miễn phí. Chương trình giảng dạy của chúng tôi không chỉ tuân theo chuẩn Bộ Giáo dục mà còn được bổ sung bằng các môn học quan trọng khác:</p>
+        <ul class="list-disc list-inside mb-4 space-y-2">
+          <li><strong>Kiến thức Học thuật:</strong> Dạy từ cấp tiểu học đến trung học, với mục tiêu giúp các em đạt đủ điều kiện để chuyển tiếp vào các trường công lập khi có thể. Giáo viên được đào tạo để có thể dạy học hòa nhập, hỗ trợ tối đa cho học sinh khuyết tật.</li>
+          <li><strong>Kỹ năng Sống & Nghệ thuật:</strong> Các lớp học về giao tiếp, quản lý tài chính cơ bản, bơi lội và nghệ thuật (vẽ, âm nhạc) giúp các em phát triển toàn diện cả về thể chất và tâm hồn.</li>
+          <li><strong>Ngoại ngữ & Tin học:</strong> Các lớp tiếng Anh và tin học được chú trọng, đây là những kỹ năng thiết yếu giúp các em có lợi thế cạnh tranh khi tìm kiếm việc làm sau này.</li>
+        </ul>
+      </div>
+      <img src="/img/blogs/Blog10-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Tạo Ra Tương Lai Bền Vững</h2>
+        <p class="mb-4">Mục tiêu cuối cùng của giáo dục tại Maison Chance là giúp các em tự tin bước vào cuộc sống độc lập. Với trẻ em nghèo, chúng tôi phá vỡ chu kỳ nghèo đói bằng cách cung cấp một nền tảng giáo dục vững chắc. Câu chuyện của em An, một học sinh mồ côi, đã hoàn thành tốt chương trình phổ thông và được hỗ trợ học nghề, giúp em có thể tự kiếm sống một cách tử tế.</p>
+      </div>
+
+      <div class="py-4 mb-4 text-gray-700 leading-relaxed border-t pt-4">
+        <h2 class="text-2xl font-semibold mb-2 py-1">Kêu gọi Hành động</h2>
+        <p class="mb-4">Chỉ với một khoản hỗ trợ nhỏ hàng tháng (ví dụ: $30 USD), bạn có thể giúp một em nhỏ có đầy đủ sách vở, dụng cụ học tập và đảm bảo em được đi học đều đặn. Hãy trở thành người bảo trợ giáo dục và thắp sáng tương lai cho các em!</p>
+      </div>
     `,
   },
 ];
