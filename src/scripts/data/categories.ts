@@ -6,7 +6,7 @@ export const categoriesData = [
     description: "Các sản phẩm may mặc handmade tinh xảo",
   },
   {
-    name: "SP Tranh sơn dầu",
+    name: "Tranh sơn dầu",
     img: "/img/categories/tranh-1.png",
     slug: "tranh-son-dau",
     description: "Tranh sơn dầu nghệ thuật độc đáo",
@@ -18,7 +18,7 @@ export const categoriesData = [
     description: "Bánh handmade ngọt ngào, tự nhiên",
   },
   {
-    name: "SP Đá",
+    name: "Sản phẩm đá",
     img: "/img/categories/da-1.jpg",
     slug: "san-pham-da",
     description: "Sản phẩm từ đá tự nhiên, mỹ nghệ",

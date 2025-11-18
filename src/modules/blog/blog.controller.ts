@@ -16,10 +16,13 @@ export const getBlogsController = async (req: Request, res: Response) => {
     const blogs = await getAllBlogs({ search: search as string });
 
     // Prepend URL cho imgs
-    const responseData = blogs.map((blog) => ({
-      ...blog.toObject(),
-      img: buildImageUrl(blog.img),
-    }));
+    const responseData = blogs.map((blog) => {
+      const { content, ...rest } = blog.toObject();
+      return {
+        ...rest,
+        img: buildImageUrl(rest.img),
+      };
+    });
 
     res.json({
       success: true,

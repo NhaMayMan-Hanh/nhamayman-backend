@@ -7,7 +7,6 @@ export const getProfileController = async (req: Request, res: Response) => {
   try {
     const userId = req.user?.id;
     if (!userId) return res.status(401).json({ success: false, message: "Unauthorized" });
-
     const user = await getProfile(userId);
     if (!user) return res.status(404).json({ success: false, message: "User không tồn tại" });
 

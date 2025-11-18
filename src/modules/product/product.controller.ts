@@ -40,6 +40,7 @@ export const getProductsController = async (req: Request, res: Response) => {
     res.json({
       success: true,
       message: "Lấy sản phẩm thành công",
+      categoryName,
       data: responseData, // Shape: _id, name, price, category, image, stock (không description)
     });
   } catch (error) {
