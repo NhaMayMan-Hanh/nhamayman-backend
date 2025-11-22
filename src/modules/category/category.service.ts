@@ -1,5 +1,6 @@
 import Category from "./category.model";
 import { ICategory } from "./category.model";
+import fs from "fs";
 
 export const getAllCategories = async (query: { search?: string } = {}): Promise<ICategory[]> => {
   let filter: any = {};
@@ -32,10 +33,11 @@ export const updateCategory = async (
 export const deleteCategory = async (id: string): Promise<ICategory | null> => {
   // Optional: Xóa ảnh cũ nếu có
   const category = await getCategoryById(id);
+
   if (category?.img && category.img.startsWith("/uploads/categories/")) {
-    const fs = require("fs");
     const oldPath = `.${category.img}`;
     if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
   }
+
   return Category.findByIdAndDelete(id);
 };

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { getBlogsController, getBlogBySlugController } from "./blog.controller";
-import { validateQuery } from "../../middlewares/validation.middleware";
+import { validateQuery } from "@/middlewares/validation.middleware";
 import { getBlogsQuerySchema } from "./validation.schemas";
 
 const router = Router();

@@ -6,9 +6,9 @@ import {
   updateAboutController,
   deleteAboutController,
 } from "./about.controller";
-import { authenticate, isAdmin } from "../../middlewares/auth.middleware";
-import { handleMulterError, uploadAboutImage } from "../../middlewares/upload.middleware";
-import { validate, validateParams } from "../../middlewares/validation.middleware";
+import { authenticate, isAdmin } from "@/middlewares/auth.middleware";
+import { handleMulterError, uploadAboutImage } from "@/middlewares/upload.middleware";
+import { validate, validateParams } from "@/middlewares/validation.middleware";
 import { createAboutSchema, updateAboutSchema, aboutIdSchema } from "./validation.schemas";
 
 const router = Router();

@@ -12,7 +12,7 @@ export const validate = (schema: ZodSchema) => {
 
         return res.status(400).json({
           success: false,
-          message: errorMessages || "Dữ liệu không hợp lệ",
+          message: errorMessages || "Body request error",
           errors: error.issues.map((e) => ({
             field: e.path.join("."),
             message: e.message,
@@ -21,7 +21,7 @@ export const validate = (schema: ZodSchema) => {
       }
       res.status(400).json({
         success: false,
-        message: "Lỗi validation",
+        message: "Error validate body request",
       });
     }
   };
@@ -38,14 +38,14 @@ export const validateQuery = (schema: ZodSchema) => {
         const errorMessages = error.issues.map((e) => e.message).join(", ");
         return res.status(400).json({
           success: false,
-          message: errorMessages || "Query params không hợp lệ",
+          message: errorMessages || "Query params error",
           errors: error.issues.map((e) => ({
             field: e.path.join("."),
             message: e.message,
           })),
         });
       }
-      res.status(400).json({ success: false, message: "Lỗi validation query" });
+      res.status(400).json({ success: false, message: "Error validate query" });
     }
   };
 };
@@ -62,14 +62,14 @@ export const validateParams = (schema: ZodSchema) => {
         const errorMessages = error.issues.map((e) => e.message).join(", ");
         return res.status(400).json({
           success: false,
-          message: errorMessages || "Params không hợp lệ",
+          message: errorMessages || "Params error",
           errors: error.issues.map((e) => ({
             field: e.path.join("."),
             message: e.message,
           })),
         });
       }
-      res.status(400).json({ success: false, message: "Lỗi validation params" });
+      res.status(400).json({ success: false, message: "Error validate params" });
     }
   };
 };

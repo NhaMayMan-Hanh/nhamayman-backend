@@ -5,13 +5,12 @@ import {
   updateOrderController,
   deleteOrderController,
 } from "./order.controller";
-import { authenticate, isAdmin } from "../../middlewares/auth.middleware";
-import { validate, validateQuery, validateParams } from "../../middlewares/validation.middleware";
+import { authenticate, isAdmin } from "@/middlewares/auth.middleware";
+import { validate, validateQuery, validateParams } from "@/middlewares/validation.middleware";
 import { updateOrderSchema, getOrdersQuerySchema, orderIdSchema } from "./validation.schemas";
 
 const router = Router();
 
-// Auth + Admin middleware cho toàn bộ
 router.use(authenticate, isAdmin);
 
 // GET /admin/orders (all orders, optional ?status=shipped&search=John&userId=xxx)

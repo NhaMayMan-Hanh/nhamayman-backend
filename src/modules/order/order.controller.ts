@@ -17,7 +17,7 @@ export const createOrderController = async (req: Request, res: Response) => {
 
     res.status(201).json({
       success: true,
-      message: "Tạo order thành công",
+      message: "Successfully create order",
       data: newOrder,
     });
   } catch (error) {
@@ -40,6 +40,7 @@ export const getOrdersController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "Successfully get orders",
       data: orders,
     });
   } catch (error) {
@@ -62,6 +63,7 @@ export const getAllOrdersAdminController = async (req: Request, res: Response) =
 
     res.json({
       success: true,
+      message: "Successfully get orders",
       data: orders,
     });
   } catch (error) {
@@ -82,6 +84,7 @@ export const getOrderByIdController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "Successfully get order",
       data: order,
     });
   } catch (error) {
@@ -102,7 +105,7 @@ export const updateOrderController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Cập nhật order thành công",
+      message: "Successfully update order",
       data: updatedOrder,
     });
   } catch (error) {
@@ -118,11 +121,11 @@ export const deleteOrderController = async (req: Request, res: Response) => {
   try {
     const deletedOrder = await deleteOrder(req.params.id);
     if (!deletedOrder) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy order" });
+      return res.status(404).json({ success: false, message: "Order not found" });
     }
     res.json({
       success: true,
-      message: "Xóa order thành công",
+      message: "Successfully delete order",
     });
   } catch (error) {
     res.status(500).json({

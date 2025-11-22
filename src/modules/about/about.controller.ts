@@ -7,7 +7,7 @@ import {
   updateAbout,
   deleteAbout,
 } from "./about.service";
-import { buildImageUrl } from "../../utils/buildImageUrl";
+import { buildImageUrl } from "@/utils/buildImageUrl";
 
 // Public: GET single (latest hoặc by slug)
 export const getAboutController = async (req: Request, res: Response) => {
@@ -16,7 +16,7 @@ export const getAboutController = async (req: Request, res: Response) => {
     const about = await getAbout({ slug: slug as string });
 
     if (!about) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy about" });
+      return res.status(404).json({ success: false, message: "About not found" });
     }
 
     // Prepend URL cho img
@@ -27,13 +27,13 @@ export const getAboutController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Lấy about thành công",
+      message: "Successfully get about",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy about",
+      message: "Error get about",
       error: (error as Error).message,
     });
   }
@@ -52,12 +52,13 @@ export const getAllAboutController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "Successfully get abouts",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy danh sách about",
+      message: "Error get abouts",
       error: (error as Error).message,
     });
   }
@@ -68,7 +69,7 @@ export const getAboutByIdController = async (req: Request, res: Response) => {
   try {
     const about = await getAboutById(req.params.id);
     if (!about) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy about" });
+      return res.status(404).json({ success: false, message: "About not found" });
     }
 
     const responseData = {
@@ -83,7 +84,7 @@ export const getAboutByIdController = async (req: Request, res: Response) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy about",
+      message: "Error get about",
       error: (error as Error).message,
     });
   }
@@ -105,13 +106,13 @@ export const createAboutController = async (req: Request, res: Response) => {
 
     res.status(201).json({
       success: true,
-      message: "Tạo about thành công",
+      message: "Successfully create about",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi tạo about",
+      message: "Error create about",
       error: (error as Error).message,
     });
   }
@@ -134,7 +135,7 @@ export const updateAboutController = async (req: Request, res: Response) => {
 
     const updatedAbout = await updateAbout(req.params.id, updateData);
     if (!updatedAbout) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy about" });
+      return res.status(404).json({ success: false, message: "About not found" });
     }
 
     const responseData = {
@@ -144,13 +145,13 @@ export const updateAboutController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Cập nhật about thành công",
+      message: "Successfully update about",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi cập nhật about",
+      message: "Error update about",
       error: (error as Error).message,
     });
   }
@@ -161,11 +162,11 @@ export const deleteAboutController = async (req: Request, res: Response) => {
   try {
     const deletedAbout = await deleteAbout(req.params.id);
     if (!deletedAbout) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy about" });
+      return res.status(404).json({ success: false, message: "About not found" });
     }
     res.json({
       success: true,
-      message: "Xóa about thành công",
+      message: "Successfully delete about",
     });
   } catch (error) {
     res.status(500).json({

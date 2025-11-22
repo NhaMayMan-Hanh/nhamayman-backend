@@ -1,10 +1,10 @@
 import { Router } from "express";
-import categoryAdminRoutes from "../../modules/category/categoryAdmin.routes";
-import productAdminRoutes from "../../modules/product/productAdmin.routes";
-import userAdminRoutes from "../../modules/user/userAdmin.routes";
-import aboutAdminRouter from "../../modules/about/aboutAdmin.routes";
-import blogAdminRouter from "../../modules/blog/blogAdmin.routes";
-import orderAdminRouter from "../../modules/order/orderAdmin.routes";
+import categoryAdminRoutes from "@/modules/category/categoryAdmin.routes";
+import productAdminRoutes from "@/modules/product/productAdmin.routes";
+import userAdminRoutes from "@/modules/user/userAdmin.routes";
+import aboutAdminRouter from "@/modules/about/aboutAdmin.routes";
+import blogAdminRouter from "@/modules/blog/blogAdmin.routes";
+import orderAdminRouter from "@/modules/order/orderAdmin.routes";
 
 const router = Router();
 

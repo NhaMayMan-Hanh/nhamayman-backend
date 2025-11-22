@@ -1,5 +1,6 @@
 import Cart, { ICart } from "./cart.model";
 import Product from "../product/product.model";
+import { Types } from "mongoose";
 
 export const getCartByUserId = async (userId: string): Promise<ICart | null> => {
   if (userId === "guest") return null;
@@ -26,10 +27,15 @@ export const addToCart = async (
   }
 
   const existingItem = cart.items.find((item) => item.productId.toString() === productId);
+
   if (existingItem) {
     existingItem.quantity += quantity;
   } else {
-    cart.items.push({ productId, quantity, price: product.price });
+    cart.items.push({
+      productId: new Types.ObjectId(productId), // ✔ FIX
+      quantity,
+      price: product.price,
+    });
   }
 
   cart.total = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0);

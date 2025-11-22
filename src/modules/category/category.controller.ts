@@ -6,7 +6,7 @@ import {
   updateCategory,
   deleteCategory,
 } from "./category.service";
-import { buildImageUrl } from "../../utils/buildImageUrl";
+import { buildImageUrl } from "@/utils/buildImageUrl";
 
 // Public: GET all (dùng cho cả public/admin list, nhưng admin có thể filter) ?search=phone
 export const getCategoriesController = async (req: Request, res: Response) => {
@@ -22,13 +22,13 @@ export const getCategoriesController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Lấy danh mục thành công",
+      message: "Successfully get categories",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy danh mục",
+      message: "Error get categories",
       error: (error as Error).message,
     });
   }
@@ -39,7 +39,7 @@ export const getCategoryByIdController = async (req: Request, res: Response) => 
   try {
     const category = await getCategoryById(req.params.id);
     if (!category) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy danh mục" });
+      return res.status(404).json({ success: false, message: "Categories not found" });
     }
 
     // Prepend URL
@@ -55,7 +55,7 @@ export const getCategoryByIdController = async (req: Request, res: Response) => 
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy danh mục",
+      message: "Error get category",
       error: (error as Error).message,
     });
   }
@@ -78,13 +78,13 @@ export const createCategoryController = async (req: Request, res: Response) => {
 
     res.status(201).json({
       success: true,
-      message: "Tạo danh mục thành công",
+      message: "Successfully create category",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi tạo danh mục",
+      message: "Error create category",
       error: (error as Error).message,
     });
   }
@@ -107,7 +107,7 @@ export const updateCategoryController = async (req: Request, res: Response) => {
 
     const updatedCategory = await updateCategory(req.params.id, updateData);
     if (!updatedCategory) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy danh mục" });
+      return res.status(404).json({ success: false, message: "Categories not found" });
     }
 
     // Prepend URL
@@ -118,13 +118,13 @@ export const updateCategoryController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Cập nhật danh mục thành công",
+      message: "Successfully update category",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi cập nhật danh mục",
+      message: "Error update category",
       error: (error as Error).message,
     });
   }
@@ -135,16 +135,16 @@ export const deleteCategoryController = async (req: Request, res: Response) => {
   try {
     const deletedCategory = await deleteCategory(req.params.id);
     if (!deletedCategory) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy danh mục" });
+      return res.status(404).json({ success: false, message: "Categories not found" });
     }
     res.json({
       success: true,
-      message: "Xóa danh mục thành công",
+      message: "Successfully delete category",
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi xóa danh mục",
+      message: "Error delete category",
       error: (error as Error).message,
     });
   }

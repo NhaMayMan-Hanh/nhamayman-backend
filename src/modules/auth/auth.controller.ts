@@ -1,10 +1,5 @@
 import { Request, Response } from "express";
-import {
-  register,
-  login,
-  forgotPassword,
-  resetPassword /* logout nếu giữ */,
-} from "./auth.service";
+import { register, login, forgotPassword, resetPassword } from "./auth.service";
 
 export const registerController = async (req: Request, res: Response) => {
   try {
@@ -12,7 +7,7 @@ export const registerController = async (req: Request, res: Response) => {
     const user = await register({ name, username, email, password });
     res.status(201).json({
       success: true,
-      message: "Đăng ký thành công",
+      message: "Successfully register",
       data: {
         user: {
           id: user._id,
@@ -45,7 +40,7 @@ export const loginController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Đăng nhập thành công",
+      message: "Successfully login",
       data: {
         user: {
           id: user._id,
@@ -86,7 +81,7 @@ export const resetPasswordController = async (req: Request, res: Response) => {
     const user = await resetPassword(token, password);
     res.json({
       success: true,
-      message: "Reset mật khẩu thành công. Vui lòng đăng nhập lại.",
+      message: "Reset password successfully",
       data: { userId: user._id, email: user.email },
     });
   } catch (error) {
@@ -97,7 +92,6 @@ export const resetPasswordController = async (req: Request, res: Response) => {
   }
 };
 
-// Logout: Có thể giữ ở đây hoặc di chuyển sang user (vì liên quan token clear)
 export const logoutController = async (req: Request, res: Response) => {
   res.clearCookie("token", { httpOnly: true, sameSite: "strict" });
   res.json({ success: true, message: "Đăng xuất thành công" });

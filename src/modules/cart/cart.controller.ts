@@ -1,4 +1,3 @@
-// src/modules/cart/cart.controller.ts (Cập nhật - map populated items to flat CartItem for FE)
 import { Request, Response } from "express";
 import {
   getCartByUserId,
@@ -41,6 +40,7 @@ export const getCartController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "Successfully get cart",
       data: {
         ...cart.toObject(),
         items: mapItemsToFlat(cart.items), // Map to flat for FE
@@ -65,6 +65,7 @@ export const addToCartController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "The product has been added to your cart",
       data: {
         ...updatedCart.toObject(),
         items: mapItemsToFlat(updatedCart.items),
@@ -92,6 +93,7 @@ export const updateCartItemController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "The product has been updated in your cart",
       data: {
         ...updatedCart.toObject(),
         items: mapItemsToFlat(updatedCart.items),
@@ -119,6 +121,7 @@ export const removeFromCartController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "The product has been removed from your cart",
       data: {
         ...updatedCart.toObject(),
         items: mapItemsToFlat(updatedCart.items),
@@ -143,6 +146,7 @@ export const clearCartController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "Successfully clear cart",
       data: {
         ...updatedCart.toObject(),
         items: [],

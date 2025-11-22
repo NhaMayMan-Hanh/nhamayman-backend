@@ -7,7 +7,7 @@ import {
   updateBlog,
   deleteBlog,
 } from "./blog.service";
-import { buildImageUrl } from "../../utils/buildImageUrl";
+import { buildImageUrl } from "@/utils/buildImageUrl";
 
 // Public: GET list (optional ?search=keyword)
 export const getBlogsController = async (req: Request, res: Response) => {
@@ -26,13 +26,13 @@ export const getBlogsController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Lấy blogs thành công",
+      message: "Successfully get blogs",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy blogs",
+      message: "Error get blogs",
       error: (error as Error).message,
     });
   }
@@ -46,7 +46,7 @@ export const getBlogBySlugController = async (req: Request, res: Response) => {
     if (!blog) {
       return res.status(404).json({
         success: false,
-        message: "Không tìm thấy blog",
+        message: "Blog not found",
       });
     }
 
@@ -57,12 +57,13 @@ export const getBlogBySlugController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "Successfully get blog",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy blog",
+      message: "Error get blog",
       error: (error as Error).message,
     });
   }
@@ -81,12 +82,13 @@ export const getAllBlogsAdminController = async (req: Request, res: Response) =>
 
     res.json({
       success: true,
+      message: "Successfully get blogs",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy danh sách blogs",
+      message: "Error get blogs",
       error: (error as Error).message,
     });
   }
@@ -107,12 +109,13 @@ export const getBlogByIdController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
+      message: "Successfully get blog",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy blog",
+      message: "Error get blog",
       error: (error as Error).message,
     });
   }
@@ -134,13 +137,13 @@ export const createBlogController = async (req: Request, res: Response) => {
 
     res.status(201).json({
       success: true,
-      message: "Tạo blog thành công",
+      message: "Successfully create blog",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi tạo blog",
+      message: "Error create blog",
       error: (error as Error).message,
     });
   }
@@ -163,7 +166,7 @@ export const updateBlogController = async (req: Request, res: Response) => {
 
     const updatedBlog = await updateBlog(req.params.id, updateData);
     if (!updatedBlog) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy blog" });
+      return res.status(404).json({ success: false, message: "Blog not found" });
     }
 
     const responseData = {
@@ -173,13 +176,13 @@ export const updateBlogController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Cập nhật blog thành công",
+      message: "Successfully update blog",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi cập nhật blog",
+      message: "Error update blog",
       error: (error as Error).message,
     });
   }
@@ -190,16 +193,16 @@ export const deleteBlogController = async (req: Request, res: Response) => {
   try {
     const deletedBlog = await deleteBlog(req.params.id);
     if (!deletedBlog) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy blog" });
+      return res.status(404).json({ success: false, message: "Blog not found" });
     }
     res.json({
       success: true,
-      message: "Xóa blog thành công",
+      message: "Successfully delete blog",
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi xóa blog",
+      message: "Error delete blog",
       error: (error as Error).message,
     });
   }

@@ -1,6 +1,5 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-// Interface cho Section
 export interface ISection {
   title: string;
   image: string;
@@ -8,7 +7,6 @@ export interface ISection {
   content: string;
 }
 
-// Interface chính cho About
 export interface IAbout extends Document {
   name: string;
   img: string;
@@ -37,7 +35,6 @@ const sectionSchema: Schema = new Schema(
   { _id: false } // Không tạo _id cho sub-document
 );
 
-// Schema chính cho About
 const aboutSchema: Schema = new Schema(
   {
     name: {
@@ -68,19 +65,15 @@ const aboutSchema: Schema = new Schema(
     introSection: {
       type: String,
     },
-    sections: [sectionSchema], // Array of sections
+    sections: [sectionSchema],
     closingSection: {
       type: String,
     },
     content: {
       type: String,
-    }, // Giữ lại để tương thích với data cũ
+    },
   },
   { timestamps: true }
 );
-
-// Index cho tìm kiếm nhanh
-aboutSchema.index({ slug: 1 });
-aboutSchema.index({ name: 1 });
 
 export default mongoose.model<IAbout>("About", aboutSchema);

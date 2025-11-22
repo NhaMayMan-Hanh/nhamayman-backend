@@ -1,9 +1,10 @@
 import mongoose, { Schema, Document } from "mongoose";
+import { Types } from "mongoose";
 
-export interface ICartItem extends Document {
-  productId: mongoose.Types.ObjectId;
+export interface ICartItem {
+  productId: Types.ObjectId;
   quantity: number;
-  price: number; // Lưu price tại thời điểm add để tránh thay đổi
+  price: number;
 }
 
 export interface ICart extends Document {
@@ -12,11 +13,14 @@ export interface ICart extends Document {
   total: number; // Tính tổng
 }
 
-const cartItemSchema: Schema = new Schema({
-  productId: { type: Schema.Types.ObjectId, ref: "Product", required: true },
-  quantity: { type: Number, required: true, min: 1 },
-  price: { type: Number, required: true },
-});
+const cartItemSchema: Schema = new Schema(
+  {
+    productId: { type: Schema.Types.ObjectId, ref: "Product", required: true },
+    quantity: { type: Number, required: true, min: 1 },
+    price: { type: Number, required: true },
+  },
+  { _id: false }
+);
 
 const cartSchema: Schema = new Schema(
   {

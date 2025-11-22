@@ -9,7 +9,7 @@ import {
 } from "./product.service";
 import { getCategoryBySlug } from "../category/category.service";
 import { IProduct } from "./product.model";
-import { buildImageUrl } from "../../utils/buildImageUrl";
+import { buildImageUrl } from "@/utils/buildImageUrl";
 
 export const getProductsController = async (req: Request, res: Response) => {
   try {
@@ -39,14 +39,14 @@ export const getProductsController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Lấy sản phẩm thành công",
+      message: "Successfully get products",
       categoryName,
       data: responseData, // Shape: _id, name, price, category, image, stock (không description)
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy sản phẩm",
+      message: "Error get products",
       error: (error as Error).message,
     });
   }
@@ -56,9 +56,9 @@ export const getProductByIdController = async (req: Request, res: Response) => {
   try {
     const isAdmin = req.user?.role === "admin";
 
-    const product = await getProductById(req.params.id); // Full fields, không exclude
+    const product = await getProductById(req.params.id);
     if (!product) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy sản phẩm" });
+      return res.status(404).json({ success: false, message: "Product not found" });
     }
 
     let responseData: { product: IProduct; relatedProducts?: IProduct[] } = { product }; // product full (có description)
@@ -74,13 +74,13 @@ export const getProductByIdController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Lấy sản phẩm chi tiết thành công",
+      message: "Successfully get productDetails",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi lấy sản phẩm",
+      message: "Error get productDetails",
       error: (error as Error).message,
     });
   }
@@ -101,13 +101,13 @@ export const createProductController = async (req: Request, res: Response) => {
 
     res.status(201).json({
       success: true,
-      message: "Tạo sản phẩm thành công",
+      message: "Successfully create product",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi tạo product",
+      message: "Error create product",
       error: (error as Error).message,
     });
   }
@@ -129,7 +129,7 @@ export const updateProductController = async (req: Request, res: Response) => {
 
     const updatedProduct = await updateProduct(req.params.id, updateData);
     if (!updatedProduct) {
-      return res.status(404).json({ success: false, message: "Không tìm thấy product" });
+      return res.status(404).json({ success: false, message: "Product not found" });
     }
 
     // Trả full URL
@@ -140,13 +140,13 @@ export const updateProductController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Cập nhật sản phẩm thành công",
+      message: "Successfully update product",
       data: responseData,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi cập nhật product",
+      message: "Error update product",
       error: (error as Error).message,
     });
   }
@@ -157,17 +157,17 @@ export const deleteProductController = async (req: Request, res: Response) => {
     if (!deletedProduct) {
       return res.status(404).json({
         success: false,
-        message: "Không tìm thấy product",
+        message: "Product not found",
       });
     }
     res.json({
       success: true,
-      message: "Xóa product thành công",
+      message: "Successfully delete product",
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Lỗi khi xóa product",
+      message: "Error delete product",
       error: (error as Error).message,
     });
   }
