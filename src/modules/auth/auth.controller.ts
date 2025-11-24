@@ -7,7 +7,7 @@ export const registerController = async (req: Request, res: Response) => {
     const user = await register({ name, username, email, password });
     res.status(201).json({
       success: true,
-      message: "Successfully register",
+      message: "Đăng ký tài khoản thành công",
       data: {
         user: {
           id: user._id,
@@ -40,7 +40,7 @@ export const loginController = async (req: Request, res: Response) => {
 
     res.json({
       success: true,
-      message: "Successfully login",
+      message: "Đăng nhập thành công",
       data: {
         user: {
           id: user._id,

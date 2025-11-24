@@ -17,7 +17,7 @@ export const createOrderSchema = z.object({
     city: z.string().min(2, "Thành phố không hợp lệ"),
     country: z.string().default("Việt Nam"),
   }),
-  paymentMethod: z.enum(["cash", "card", "bank_transfer"], {
+  paymentMethod: z.enum(["cod", "online", "chuyen_khoan"], {
     message: "Phương thức thanh toán không hợp lệ",
   }),
 });
