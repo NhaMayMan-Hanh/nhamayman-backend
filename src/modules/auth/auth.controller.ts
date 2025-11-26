@@ -38,7 +38,6 @@ export const loginController = async (req: Request, res: Response) => {
       secure: true, // ✅ Hoặc process.env.NODE_ENV === "production"
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 ngày
       path: "/", // ✅ Đảm bảo cookie available cho toàn bộ domain
-      domain: "nhamayman-frontend.vercel.app"
     });
     res.json({
       success: true,
