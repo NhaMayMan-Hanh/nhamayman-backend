@@ -7,13 +7,15 @@ import {
   updateOrder,
   deleteOrder,
 } from "./order.service";
+import { clearCart } from "../cart/cart.service";
 
-// User: POST create order
 export const createOrderController = async (req: Request, res: Response) => {
   try {
     const userId = req.user!.id;
     const orderData = { ...req.body, userId };
     const newOrder = await createOrder(orderData);
+
+    await clearCart(userId);
 
     res.status(201).json({
       success: true,

@@ -6,7 +6,7 @@ export const productsData = [
     price: 50000,
     category: "Sản phẩm may",
     image: "/img/products/may/may-1.jpg",
-    stock: 8,
+    stock: 100,
   },
   {
     name: "Áo sơ mi may thủ công",
@@ -14,7 +14,7 @@ export const productsData = [
     price: 80000,
     category: "Sản phẩm may",
     image: "/img/products/may/may-2.jpg",
-    stock: 12,
+    stock: 120,
   },
   {
     name: "Váy đầm linen vintage",
@@ -22,7 +22,7 @@ export const productsData = [
     price: 100000,
     category: "Sản phẩm may",
     image: "/img/products/may/may-3.jpg",
-    stock: 9,
+    stock: 90,
   },
   {
     name: "Túi tote vải canvas cỡ lớn",
@@ -30,7 +30,7 @@ export const productsData = [
     price: 40000,
     category: "Sản phẩm may",
     image: "/img/products/may/may-4.jpg",
-    stock: 25,
+    stock: 250,
   },
   {
     name: "Khăn choàng lụa tơ tằm",
@@ -38,7 +38,7 @@ export const productsData = [
     price: 70000,
     category: "Sản phẩm may",
     image: "/img/products/may/may-5.jpg",
-    stock: 15,
+    stock: 150,
   },
   {
     name: "Quần culottes cotton",
@@ -46,7 +46,7 @@ export const productsData = [
     price: 60000,
     category: "Sản phẩm may",
     image: "/img/products/may/may-6.jpg",
-    stock: 18,
+    stock: 180,
   },
   {
     name: "Áo khoác jean thêu tay",
@@ -54,7 +54,7 @@ export const productsData = [
     price: 100000,
     category: "Sản phẩm may",
     image: "/img/products/may/may-7.jpg",
-    stock: 7,
+    stock: 70,
   },
   {
     name: "Bộ chăn ga gối cotton Tencel",
@@ -62,7 +62,7 @@ export const productsData = [
     price: 100000,
     category: "Sản phẩm may",
     image: "/img/products/may/may-8.jpg",
-    stock: 5,
+    stock: 50,
   },
 
   // Tranh sơn dầu
@@ -74,7 +74,7 @@ export const productsData = [
     price: 100000,
     category: "Tranh sơn dầu",
     image: "/img/products/sondau/tranh-1.jpg",
-    stock: 3,
+    stock: 32,
   },
   {
     name: "Tranh chân dung sơn dầu",
@@ -82,7 +82,7 @@ export const productsData = [
     price: 80000,
     category: "Tranh sơn dầu",
     image: "/img/products/sondau/tranh-2.png",
-    stock: 5,
+    stock: 51,
   },
   {
     name: "Tranh trừu tượng màu sắc",
@@ -90,7 +90,7 @@ export const productsData = [
     price: 95000,
     category: "Tranh sơn dầu",
     image: "/img/products/sondau/tranh-3.png",
-    stock: 4,
+    stock: 42,
   },
   {
     name: "Tranh tĩnh vật hoa ly",
@@ -98,7 +98,7 @@ export const productsData = [
     price: 70000,
     category: "Tranh sơn dầu",
     image: "/img/products/sondau/tranh-4.png",
-    stock: 6,
+    stock: 63,
   },
   {
     name: "Tranh phố cổ Hà Nội",
@@ -106,7 +106,7 @@ export const productsData = [
     price: 100000,
     category: "Tranh sơn dầu",
     image: "/img/products/sondau/tranh-5.png",
-    stock: 2,
+    stock: 24,
   },
   {
     name: "Tranh động vật hoang dã",
@@ -114,7 +114,7 @@ export const productsData = [
     price: 100000,
     category: "Tranh sơn dầu",
     image: "/img/products/sondau/tranh-6.png",
-    stock: 1,
+    stock: 15,
   },
   {
     name: "Tranh phong cảnh biển",
@@ -122,7 +122,7 @@ export const productsData = [
     price: 90000,
     category: "Tranh sơn dầu",
     image: "/img/products/sondau/tranh-7.png",
-    stock: 3,
+    stock: 31,
   },
   {
     name: "Tranh sơn dầu tối giản",
@@ -130,7 +130,7 @@ export const productsData = [
     price: 50000,
     category: "Tranh sơn dầu",
     image: "/img/products/sondau/tranh-8.png",
-    stock: 5,
+    stock: 50,
   },
 
   // Sản phẩm bánh
@@ -140,7 +140,7 @@ export const productsData = [
     price: 100000,
     category: "Sản phẩm bánh",
     image: "/img/products/banh/banh-1.png",
-    stock: 15,
+    stock: 150,
   },
   {
     name: "Bánh quy handmade",
@@ -206,7 +206,7 @@ export const productsData = [
     price: 80000,
     category: "Sản phẩm đá",
     image: "/img/products/mynghe/da-1.png",
-    stock: 7,
+    stock: 70,
   },
   {
     name: "Tượng đá phong thủy",
@@ -222,7 +222,7 @@ export const productsData = [
     price: 100000,
     category: "Sản phẩm đá",
     image: "/img/products/mynghe/da-3.jpg",
-    stock: 15,
+    stock: 30,
   },
   {
     name: "Mặt dây chuyền đá mắt hổ",
@@ -238,7 +238,7 @@ export const productsData = [
     price: 90000,
     category: "Sản phẩm đá",
     image: "/img/products/mynghe/da-5.png",
-    stock: 9,
+    stock: 50,
   },
   {
     name: "Đá thanh tẩy không gian",
@@ -254,7 +254,7 @@ export const productsData = [
     price: 100000,
     category: "Sản phẩm đá",
     image: "/img/products/mynghe/da-7.png",
-    stock: 6,
+    stock: 49,
   },
   {
     name: "Lư hương đá bazan",
@@ -262,6 +262,6 @@ export const productsData = [
     price: 75000,
     category: "Sản phẩm đá",
     image: "/img/products/mynghe/da-8.png",
-    stock: 11,
+    stock: 60,
   },
 ];
