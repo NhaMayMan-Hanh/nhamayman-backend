@@ -94,6 +94,11 @@ export const resetPasswordController = async (req: Request, res: Response) => {
 };
 
 export const logoutController = async (req: Request, res: Response) => {
-  res.clearCookie("token", { httpOnly: true, sameSite: "strict" });
+  res.clearCookie("token", {
+    httpOnly: true,
+    sameSite: "none", // ← PHẢI LÀ "none" như khi login
+    secure: true, // ← PHẢI CÓ secure ở production
+    path: "/", // ← PHẢI CÓ path
+  });
   res.json({ success: true, message: "Đăng xuất thành công" });
 };
