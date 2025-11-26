@@ -19,6 +19,8 @@ export interface IUser extends Document {
   isVerified?: boolean;
   resetPasswordToken?: string;
   resetPasswordExpire?: Date;
+  createdAt?: Date; // thêm dòng này
+  updatedAt?: Date; // nếu cần
 
   comparePassword(enteredPassword: string): Promise<boolean>;
 }
