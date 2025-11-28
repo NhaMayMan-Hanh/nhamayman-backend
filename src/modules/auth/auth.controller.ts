@@ -32,13 +32,17 @@ export const loginController = async (req: Request, res: Response) => {
     const { username, password } = req.body;
     const { user, token } = await login(username, password);
 
+    const isProduction = process.env.NODE_ENV === "production";
+
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "none", // ✅ Bắt buộc với cross-origin
-      secure: true, // ✅ Hoặc process.env.NODE_ENV === "production"
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 ngày
-      path: "/", // ✅ Đảm bảo cookie available cho toàn bộ domain
-       domain: ".nhamayman-hanh.io.vn",
+      sameSite: isProduction ? "none" : "lax",
+      secure: isProduction, // Chỉ bật HTTPS ở production
+      maxAge: 7 * 24 * 60 * 60 * 1000,
+      path: "/",
+      ...(isProduction && {
+        domain: ".nhamayman-hanh.io.vn",
+      }),
     });
     res.json({
       success: true,
@@ -47,7 +51,6 @@ export const loginController = async (req: Request, res: Response) => {
         user: {
           id: user._id,
           name: user.name,
-          username: user.username,
           email: user.email,
           role: user.role,
         },

@@ -1,11 +1,12 @@
 import { Router } from "express";
-import { getProfileController, updateProfileController } from "./user.controller";
+import { getMeController, getProfileController, updateProfileController } from "./user.controller";
 import { authenticate } from "../../middlewares/auth.middleware";
 import { validate } from "../../middlewares/validation.middleware"; // Nếu cần schema cho update
 
 const router = Router();
 router.use(authenticate);
 
+router.get("/me", getMeController);
 router.get("/profile", getProfileController);
 router.put("/profile", updateProfileController);
 

@@ -6,7 +6,33 @@ import {
   createUser,
   updateUser,
   deleteUser,
+  getUserById,
 } from "./user.service";
+
+// Get /api/client/users/me
+export const getMeController = async (req: Request, res: Response) => {
+  try {
+    const userId = req.user?.id;
+    if (!userId) return res.status(401).json({ success: false, message: "Unauthorized" });
+
+    const me = await getUserById(userId);
+    if (!me) return res.status(404).json({ success: false, message: "User không tồn tại" });
+
+    res.json({
+      success: true,
+      data: {
+        id: me._id,
+        username: me.username,
+        name: me.name,
+        email: me.email,
+        avatar: me.avatar,
+        role: me.role,
+      },
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: (error as Error).message });
+  }
+};
 
 // GET /api/client/users/profile
 export const getProfileController = async (req: Request, res: Response) => {

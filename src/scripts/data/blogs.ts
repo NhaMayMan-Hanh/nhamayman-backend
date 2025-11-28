@@ -10,13 +10,13 @@ export const blogsData = [
         <h2 class="text-2xl font-semibold mb-2 py-1">Bệ Phóng Cho Những Ước Mơ</h2>
         <p class="mb-4">Maison Chance không chỉ là một nơi cư ngụ, mà còn là bệ phóng cho những ước mơ. Nơi đây, những người khuyết tật và trẻ em có hoàn cảnh khó khăn tìm thấy không chỉ sự chăm sóc mà còn là nguồn động lực mạnh mẽ để viết lại câu chuyện đời mình bằng lòng kiên trì và tài năng. Sự kiên cường của họ đã chứng minh rằng, khuyết tật về thể chất không thể ngăn cản một ý chí sắt đá.</p>
       </div>
-      <img src="/img/blogs/Blog1-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog1-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Những Bước Chân Không Ngừng Nghỉ</h2>
         <p class="mb-4">Cuộc sống mang đến những thử thách lớn, nhưng tinh thần chiến binh của các học viên Maison Chance chưa bao giờ khuất phục. Hãy tưởng tượng câu chuyện của anh Lâm, một người bị tai nạn lao động khiến anh mất đi khả năng sử dụng đôi tay. Thay vì đầu hàng số phận, anh đã học cách cầm cọ bằng miệng. Anh đã mất gần một năm để làm quen với từng nét vẽ, nhưng giờ đây, tranh của anh đã được trưng bày và bán ra quốc tế, trở thành nguồn thu nhập ổn định và là niềm tự hào của anh.</p>
       </div>
-      <img src="/img/blogs/Blog1-image2.png" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog1-image2.png" alt="Hình ảnh minh họa phần 2" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Quá Trình Đào Tạo Đặc Thù Và Thành Công</h2>
@@ -41,13 +41,13 @@ export const blogsData = [
         <h2 class="text-2xl font-semibold mb-2 py-1">Xây Dựng Tương Lai Bền Vững Giữa Thiên Nhiên</h2>
         <p class="mb-4">Nằm giữa khung cảnh thiên nhiên hùng vĩ, yên bình của tỉnh Đắk Nông, Làng Chăm Mát (Shelter Village) là dự án đầy tham vọng và nhân ái của Maison Chance. Đây không chỉ là một khu nhà ở mà là một mô hình cộng đồng tự cung tự cấp, nơi gần 100 người khuyết tật và trẻ em có hoàn cảnh đặc biệt đang xây dựng lại cuộc đời theo hướng hoàn toàn độc lập và bền vững.</p>
       </div>
-      <img src="/img/blogs/Blog2-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog2-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Tự Cung Tự Cấp: Hướng Tới Độc Lập Tài Chính</h2>
         <p class="mb-4">Dự án Làng Chăm Mát ra đời với mục tiêu cung cấp một môi trường sống chất lượng cao, hòa nhập và thân thiện với thiên nhiên. Khác với các cơ sở ở TP.HCM, Làng Chăm Mát tập trung vào phát triển nông nghiệp hữu cơ và du lịch nhân ái để tạo ra nguồn thu nhập bền vững. Mô hình này giúp giảm thiểu sự phụ thuộc vào các nguồn tài trợ bên ngoài theo thời gian, hướng đến sự tự chủ hoàn toàn.</p>
       </div>
-      <img src="/img/blogs/Blog2-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog2-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Các Trụ Cột Kinh Tế và Xã hội</h2>
@@ -77,7 +77,7 @@ export const blogsData = [
         <h2 class="text-2xl font-semibold mb-2 py-1">Ngôi Nhà Chung Đa Văn Hóa</h2>
         <p class="mb-4">Maison Chance tự hào là một môi trường đa văn hóa, nơi tình yêu thương vượt qua mọi rào cản địa lý và ngôn ngữ. Hàng năm, chúng tôi chào đón hàng trăm Tình Nguyện Viên Quốc tế (TNV) từ khắp các châu lục. Họ mang theo không chỉ lòng nhiệt thành mà còn là kiến thức, kỹ năng chuyên môn cao để chia sẻ với cộng đồng, tạo nên một sự trao đổi văn hóa và tri thức vô cùng giá trị.</p>
       </div>
-      <img src="/img/blogs/Blog3-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog3-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Những Đóng Góp Chuyên Môn Sâu Sắc</h2>
@@ -88,7 +88,7 @@ export const blogsData = [
           <li><strong>Hỗ trợ Kỹ thuật & Sản xuất:</strong> Các kỹ sư, thợ thủ công lành nghề tham gia vào xưởng mộc và xưởng may để cải tiến quy trình sản xuất, nâng cao chất lượng sản phẩm theo tiêu chuẩn quốc tế.</li>
         </ul>
       </div>
-      <img src="/img/blogs/Blog3-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog3-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Gắn Kết và Thấu Hiểu</h2>
@@ -112,7 +112,7 @@ export const blogsData = [
         <h2 class="text-2xl font-semibold mb-2 py-1">Đối Tác Của Lòng Nhân Ái</h2>
         <p class="mb-4">Maison Chance hoạt động và phát triển dựa trên một nền tảng duy nhất: Sự tin tưởng và ủng hộ vô điều kiện từ các cá nhân, doanh nghiệp và tổ chức trên toàn thế giới. Các nhà tài trợ không chỉ cung cấp tài chính mà còn là những đối tác chiến lược, giúp chúng tôi duy trì các hoạt động cứu trợ, giáo dục và đào tạo nghề một cách liên tục và chất lượng cao.</p>
       </div>
-      <img src="/img/blogs/Blog4-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog4-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Phân Tích Chi Phí: Nguồn Sống Của Tổ Chức</h2>
@@ -124,7 +124,7 @@ export const blogsData = [
           <li><strong>Hỗ trợ Vận hành Bếp ăn ($150/ngày):</strong> Cung cấp 3 bữa ăn dinh dưỡng đầy đủ và an toàn vệ sinh thực phẩm cho hơn 300 người trong cộng đồng.</li>
         </ul>
       </div>
-      <img src="/img/blogs/Blog4-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog4-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Đối Tác CSR và Cam Kết Minh Bạch</h2>
@@ -149,7 +149,7 @@ export const blogsData = [
         <h2 class="text-2xl font-semibold mb-2 py-1">Liệu Pháp Tinh Thần và Sinh Kế Bền Vững</h2>
         <p class="mb-4">Tại Maison Chance, việc dạy nghề không chỉ là cách tạo ra thu nhập mà còn là liệu pháp tinh thần, là con đường để các học viên bộc lộ tài năng và cảm xúc sau những biến cố cuộc đời. Những đôi tay, thậm chí là đôi chân hay khuôn miệng, đã tạo nên những tác phẩm nghệ thuật có giá trị thẩm mỹ và nhân văn sâu sắc.</p>
       </div>
-      <img src="/img/blogs/Blog5-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog5-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Nghệ Thuật Của Sự Kiên Trì</h2>
@@ -160,7 +160,7 @@ export const blogsData = [
           <li><strong>Xưởng May Mặc & Túi Xách:</strong> Tạo ra các sản phẩm thời trang và phụ kiện chất lượng cao từ vải thổ cẩm, da, hoặc chất liệu tái chế, đạt tiêu chuẩn thị trường.</li>
         </ul>
       </div>
-      <img src="/img/blogs/Blog5-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog5-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Mua Sắm Có Ý Nghĩa: Ủng Hộ Lòng Tự Trọng</h2>
@@ -185,7 +185,7 @@ export const blogsData = [
         <h2 class="text-2xl font-semibold mb-2 py-1">Nhu Cầu Cấp Bách Hàng Ngày</h2>
         <p class="mb-4">Bạn đã đọc những câu chuyện truyền cảm hứng về sự kiên cường tại Maison Chance. Giờ đây, chúng tôi cần bạn giúp chúng tôi viết tiếp những câu chuyện đó. Sự sống còn và phát triển của Maison Chance hoàn toàn phụ thuộc vào sự ủng hộ từ những tấm lòng hảo tâm như bạn. Mỗi đồng tiền của bạn là một sự đầu tư vào nhân phẩm, sự tự chủ và tương lai.</p>
       </div>
-      <img src="/img/blogs/Blog6-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog6-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">🆘 Chi Tiết Các Khoản Chi Tiêu Thiết Yếu</h2>
@@ -196,7 +196,7 @@ export const blogsData = [
           <li><strong>Giáo dục và Học nghề:</strong> Đảm bảo lớp học, sách vở, đồng phục và nguyên vật liệu cho các lớp dạy nghề luôn đầy đủ.</li>
         </ul>
       </div>
-      <img src="/img/blogs/Blog6-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog6-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">🔍 Minh Bạch Là Nền Tảng Của Niềm Tin</h2>
@@ -222,7 +222,7 @@ export const blogsData = [
         <h2 class="text-2xl font-semibold mb-2 py-1">Hành Trình Vĩ Đại Từ Một Trái Tim Lớn</h2>
         <p class="mb-4">Maison Chance là một dự án vĩ đại, và đằng sau nó là một câu chuyện còn vĩ đại hơn: câu chuyện về Cô Tim Aline Rebeaud, một phụ nữ Thụy Sĩ đã dành trọn hơn ba thập kỷ cuộc đời để cống hiến tại Việt Nam. Sự hy sinh và tầm nhìn xa của cô không chỉ tạo ra một tổ chức, mà còn kiến tạo nên một mô hình nhân đạo độc đáo và bền vững trên mảnh đất này.</p>
       </div>
-      <img src="/img/blogs/Blog7-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog7-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Từ Người Lữ Khách Đến Người Mẹ Của Những Số Phận</h2>
@@ -235,7 +235,7 @@ export const blogsData = [
           <li><strong>Tôn trọng:</strong> Đảm bảo nhân phẩm và sự tôn trọng tuyệt đối. Cộng đồng được xây dựng trên sự đoàn kết và bình đẳng.</li>
         </ol>
       </div>
-      <img src="/img/blogs/Blog7-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog7-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Ngọn Hải Đăng Của Lòng Nhân Ái</h2>
@@ -259,7 +259,7 @@ export const blogsData = [
         <h2 class="text-2xl font-semibold mb-2 py-1">Nghệ Thuật Của Sự Hồi Sinh</h2>
         <p class="mb-4">Maison Chance không chỉ là trung tâm bảo trợ xã hội; chúng tôi còn là một học viện nghệ thuật và thủ công đặc biệt. Các sản phẩm đặc trưng tại đây, từ những bức tranh sơn dầu đầy cảm xúc đến các món đồ gỗ mỹ nghệ tinh xảo, mang một giá trị nghệ thuật thực thụ và là minh chứng cho sự hồi sinh của những cuộc đời.</p>
       </div>
-      <img src="/img/blogs/Blog8-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog8-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Tranh Vẽ: Sắc Màu Từ Nội Tâm và Kỹ Thuật Đặc Biệt</h2>
@@ -269,7 +269,7 @@ export const blogsData = [
           <li><strong>Tranh Trừu tượng:</strong> Thể hiện cảm xúc mạnh mẽ, là liệu pháp tinh thần giúp các nghệ nhân vượt qua nỗi đau thể xác, bộc lộ nội tâm thông qua màu sắc và hình khối.</li>
         </ul>
       </div>
-      <img src="/img/blogs/Blog8-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog8-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Đồ Gỗ: Tinh Hoa của Sự Tỉ Mỉ và Ứng Dụng</h2>
@@ -298,7 +298,7 @@ export const blogsData = [
         <h2 class="text-2xl font-semibold mb-2 py-1">Nơi Ước Mơ Bắt Đầu</h2>
         <p class="mb-4">Giáo dục là chìa khóa mở ra tương lai, và tại Maison Chance, chúng tôi tin rằng mọi đứa trẻ đều xứng đáng có được chì khóa đó, bất kể hoàn cảnh hay khiếm khuyết thể chất. Hàng ngày, tại lớp học nhỏ nhưng ấm cúng của chúng tôi, những đứa trẻ mồ côi, trẻ em khuyết tật và trẻ em nghèo từ các khu vực lân cận đang viết nên câu chuyện về Hy vọng, Kiến thức và Sự thay đổi.</p>
       </div>
-      <img src="/img/blogs/Blog10-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog10-image1.jpg" alt="Hình ảnh minh họa phần 1" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Chương Trình Giáo Dục Toàn Diện và Hòa Nhập</h2>
@@ -309,7 +309,7 @@ export const blogsData = [
           <li><strong>Ngoại ngữ & Tin học:</strong> Các lớp tiếng Anh và tin học được chú trọng, đây là những kỹ năng thiết yếu giúp các em có lợi thế cạnh tranh khi tìm kiếm việc làm sau này.</li>
         </ul>
       </div>
-      <img src="/img/blogs/Blog10-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full h-48 rounded-lg mb-4 object-cover">
+      <img src="/img/blogs/Blog10-image2.jpg" alt="Hình ảnh minh họa phần 2" class="w-full **h-48** lg:**h-[70%]** rounded-lg mb-4 object-cover">
 
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Tạo Ra Tương Lai Bền Vững</h2>

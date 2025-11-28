@@ -3,18 +3,12 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
-// XÓA dòng này: import { fileURLToPath } from "url";
 import { swaggerUi, swaggerSpec } from "./config/swagger";
 import { connectDB } from "./config/db";
 import clientRoutes from "./routes/client/client.routes";
 import adminRoutes from "./routes/admin/admin.routes";
 
 dotenv.config();
-
-// Trong CommonJS, __dirname có sẵn, không cần import.meta.url
-// XÓA 2 dòng này:
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
 
 const app = express();
 
