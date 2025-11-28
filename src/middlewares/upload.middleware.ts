@@ -54,4 +54,5 @@ export const handleMulterError = (error: any, req: Request, res: Response, next:
   }
 
   next(error);
+  
 };
