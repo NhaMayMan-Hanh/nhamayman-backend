@@ -98,11 +98,17 @@ export const resetPasswordController = async (req: Request, res: Response) => {
 };
 
 export const logoutController = async (req: Request, res: Response) => {
+  const isProduction = process.env.NODE_ENV === "production";
+
   res.clearCookie("token", {
     httpOnly: true,
-    sameSite: "none", // ← PHẢI LÀ "none" như khi login
-    secure: true, // ← PHẢI CÓ secure ở production
-    path: "/", // ← PHẢI CÓ path
+    sameSite: isProduction ? "none" : "lax",
+    secure: isProduction,
+    path: "/",
+    ...(isProduction && {
+      domain: ".nhamayman-hanh.io.vn",
+    }),
   });
+
   res.json({ success: true, message: "Đăng xuất thành công" });
 };
