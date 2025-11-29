@@ -29,22 +29,22 @@ export const blogsData = [
         <table class="min-w-full divide-y divide-gray-200 mb-4">
           <thead>
             <tr class="bg-gray-50">
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Giải Thưởng</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Giá Trị</th>
+              <th class="text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Giải Thưởng</th>
+              <th class="text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Giá Trị</th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
             <tr>
-              <td class="px-6 py-4 whitespace-nowrap font-medium">Giải Nhất</td>
-              <td class="px-6 py-4 whitespace-nowrap">300.000 VNĐ + Thú thủ công</td>
+              <td class=" whitespace-nowrap font-medium">Giải Nhất</td>
+              <td class=" whitespace-nowrap">300.000 VNĐ + Thú thủ công</td>
             </tr>
             <tr>
-              <td class="px-6 py-4 whitespace-nowrap font-medium">Giải Nhì</td>
-              <td class="px-6 py-4 whitespace-nowrap">200.000 VNĐ + Thú thủ công</td>
+              <td class=" whitespace-nowrap font-medium">Giải Nhì</td>
+              <td class=" whitespace-nowrap">200.000 VNĐ + Thú thủ công</td>
             </tr>
             <tr>
-              <td class="px-6 py-4 whitespace-nowrap font-medium">Giải Ấn Tượng</td>
-              <td class="px-6 py-4 whitespace-nowrap">100.000 VNĐ + Móc khoá thủ công</td>
+              <td class=" whitespace-nowrap font-medium">Giải Ấn Tượng</td>
+              <td class=" whitespace-nowrap">100.000 VNĐ + Móc khoá thủ công</td>
             </tr>
           </tbody>
         </table>
