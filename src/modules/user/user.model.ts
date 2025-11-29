@@ -8,6 +8,13 @@ export interface IUser extends Document {
   password: string;
   avatar?: string;
   role: string;
+  phone?: string;
+  address?: {
+    tinh_thanh?: string;
+    quan_huyen?: string;
+    phuong_xa?: string;
+    dia_chi_chi_tiet?: string;
+  };
   verifyEmailToken?: string;
   isVerified?: boolean;
   resetPasswordToken?: string;
@@ -24,6 +31,13 @@ const userSchema: Schema = new Schema(
     password: { type: String, required: true },
     avatar: { type: String, default: "/img/default-avatar.jpg" },
     role: { type: String, enum: ["user", "admin"], default: "user" },
+    phone: { type: String },
+    address: {
+      tinh_thanh: { type: String },
+      quan_huyen: { type: String },
+      phuong_xa: { type: String },
+      dia_chi_chi_tiet: { type: String },
+    },
     verifyEmailToken: { type: String },
     isVerified: { type: Boolean, default: false },
     resetPasswordToken: { type: String },

@@ -1,23 +1,27 @@
 import { Router } from "express";
-import productPublicRoutes from "../../modules/product/productPublic.routes.ts";
-import categoryPublicRoutes from "../../modules/category/categoryPublic.routes";
-import blogPublicRoutes from "../../modules/blog/blogPublic.routes";
-import cartRoutes from "../../modules/cart/cart.routes.ts";
-import orderPublicRoutes from "../../modules/order/orderPublic.routes.ts";
-import authPublicRoutes from "../../modules/auth/authPublic.routes.ts";
-import authProtectedRoutes from "../../modules/auth/authProtected.routes.ts";
-import aboutPublicRouter from "../../modules/about/aboutPublic.routes";
-import userProtectedRoutes from "../../modules/user/userProtected.routes";
-import { getAllCategories } from "../../modules/category/category.service";
-import { getAllProducts } from "../../modules/product/product.service";
+import productPublicRoutes from "@/modules/product/productPublic.routes";
+import categoryPublicRoutes from "@/modules/category/categoryPublic.routes";
+import blogPublicRoutes from "@/modules/blog/blogPublic.routes";
+import cartPublicRoutes from "@/modules/cart/cart.routes";
+import orderPublicRoutes from "@/modules/order/orderPublic.routes";
+import authPublicRoutes from "@/modules/auth/authPublic.routes";
+import authProtectedRoutes from "@/modules/auth/authProtected.routes";
+import aboutPublicRouter from "@/modules/about/aboutPublic.routes";
+import userProtectedRoutes from "@/modules/user/userProtected.routes";
+import { getAllCategories } from "@/modules/category/category.service";
+import { getAllProducts } from "@/modules/product/product.service";
 
 const router = Router();
+
+router.get("/", (req, res) => {
+  res.json("Hello from client routes");
+});
 
 router.use("/products", productPublicRoutes);
 router.use("/categories", categoryPublicRoutes);
 router.use("/blogs", blogPublicRoutes);
 router.use("/about", aboutPublicRouter);
-router.use("/cart", cartRoutes);
+router.use("/cart", cartPublicRoutes);
 router.use("/orders", orderPublicRoutes);
 router.use("/auth/logout", authProtectedRoutes);
 router.use("/auth", authPublicRoutes);

@@ -7,7 +7,7 @@
 export const buildImageUrl = (path: string | undefined): string => {
   if (!path) return "";
 
-  if (path.startsWith("http")) return path; // URL tuyệt đối → giữ nguyên
+  if (path.startsWith("http")) return path;
   if (path.startsWith("/uploads")) {
     return `${process.env.ASSET_BASE_URL}${path}`; // ảnh upload từ BE
   }

@@ -6,11 +6,8 @@ import {
    updateCategory,
    deleteCategory,
 } from "./category.service";
-import { buildImageUrl } from "../../utils/buildImageUrl";
-
+import { buildImageUrl } from "@/utils/buildImageUrl";
 import fs from "fs";
-import path from "path";
-
 // Public: GET all (dùng cho cả public/admin list, nhưng admin có thể filter) ?search=phone
 export const getCategoriesController = async (req: Request, res: Response) => {
    try {
@@ -25,13 +22,13 @@ export const getCategoriesController = async (req: Request, res: Response) => {
 
       res.json({
          success: true,
-         message: "Lấy danh mục thành công",
+         message: "Successfully get categories",
          data: responseData,
       });
    } catch (error) {
       res.status(500).json({
          success: false,
-         message: "Lỗi khi lấy danh mục",
+         message: "Error get categories",
          error: (error as Error).message,
       });
    }
@@ -47,7 +44,7 @@ export const getCategoryByIdController = async (
       if (!category) {
          return res
             .status(404)
-            .json({ success: false, message: "Không tìm thấy danh mục" });
+            .json({ success: false, message: "Categories not found" });
       }
 
       // Prepend URL
@@ -63,7 +60,7 @@ export const getCategoryByIdController = async (
    } catch (error) {
       res.status(500).json({
          success: false,
-         message: "Lỗi khi lấy danh mục",
+         message: "Error get category",
          error: (error as Error).message,
       });
    }
@@ -82,17 +79,18 @@ export const createCategoryController = async (req: Request, res: Response) => {
       // Prepend URL cho response
       const responseData = {
          ...newCategory.toObject(),
-         img: `${BASE_URL || ""}${newCategory.img}`,
+         img: `${process.env.ASSET_BASE_URL || ""}${newCategory.img}`,
       };
+
       res.status(201).json({
          success: true,
-         message: "Tạo danh mục thành công",
+         message: "Successfully create category",
          data: responseData,
       });
    } catch (error) {
       res.status(500).json({
          success: false,
-         message: "Lỗi khi tạo danh mục",
+         message: "Error create category",
          error: (error as Error).message,
       });
    }
@@ -101,44 +99,43 @@ export const createCategoryController = async (req: Request, res: Response) => {
 // Admin: PUT update (với upload optional, xóa img cũ nếu có file mới)
 export const updateCategoryController = async (req: Request, res: Response) => {
    try {
-      const updateData: any = { ...req.body };
-
-      // Nếu có upload ảnh mới → xóa ảnh cũ + lưu ảnh mới
+      let updateData = req.body;
       if (req.file) {
+         // Xóa img cũ
          const oldCategory = await getCategoryById(req.params.id);
-
          if (
             oldCategory?.img &&
             oldCategory.img.startsWith("/uploads/categories/")
          ) {
-            const oldPath = path.join(process.cwd(), oldCategory.img); // đúng đường dẫn tuyệt đối
-            if (fs.existsSync(oldPath)) {
-               await fs.promises.unlink(oldPath); // async + await → an toàn, không lỗi
-               console.log("Đã xóa ảnh cũ:", oldPath);
-            }
+            const oldPath = `.${oldCategory.img}`;
+            if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
          }
          updateData.img = `/uploads/categories/${req.file.filename}`;
       }
-      // Nếu KHÔNG có req.file → giữ nguyên ảnh cũ (tự động)
+
       const updatedCategory = await updateCategory(req.params.id, updateData);
       if (!updatedCategory) {
          return res
             .status(404)
-            .json({ success: false, message: "Không tìm thấy danh mục" });
+            .json({ success: false, message: "Categories not found" });
       }
 
-      // Trả về dữ liệu sạch sẽ, không prepend URL (frontend tự xử lý)
+      // Prepend URL
+      const responseData = {
+         ...updatedCategory.toObject(),
+         img: `${process.env.ASSET_BASE_URL || ""}${updatedCategory.img}`,
+      };
+
       res.json({
          success: true,
-         message: "Cập nhật danh mục thành công",
-         data: updatedCategory.toObject(), // img vẫn là "/uploads/categories/xxx.jpg"
+         message: "Successfully update category",
+         data: responseData,
       });
    } catch (error) {
-      console.error("Lỗi update danh mục:", error);
       res.status(500).json({
          success: false,
-         message: "Lỗi server khi cập nhật",
-         error: error instanceof Error ? error.message : "Unknown error",
+         message: "Error update category",
+         error: (error as Error).message,
       });
    }
 };
@@ -150,16 +147,16 @@ export const deleteCategoryController = async (req: Request, res: Response) => {
       if (!deletedCategory) {
          return res
             .status(404)
-            .json({ success: false, message: "Không tìm thấy danh mục" });
+            .json({ success: false, message: "Categories not found" });
       }
       res.json({
          success: true,
-         message: "Xóa danh mục thành công",
+         message: "Successfully delete category",
       });
    } catch (error) {
       res.status(500).json({
          success: false,
-         message: "Lỗi khi xóa danh mục",
+         message: "Error delete category",
          error: (error as Error).message,
       });
    }

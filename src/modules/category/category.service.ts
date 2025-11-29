@@ -1,16 +1,13 @@
 import Category from "./category.model";
 import { ICategory } from "./category.model";
 import fs from "fs";
-export const getAllCategories = async (
-   query: { search?: string } = {}
-): Promise<ICategory[]> => {
-   let filter: any = {};
-   if (query.search) {
-      filter.name = { $regex: query.search, $options: "i" };
-   }
-   return Category.find(filter)
-      .select("-createdAt -updatedAt")
-      .sort({ createdAt: -1 });
+
+export const getAllCategories = async (query: { search?: string } = {}): Promise<ICategory[]> => {
+  let filter: any = {};
+  if (query.search) {
+    filter.name = { $regex: query.search, $options: "i" };
+  }
+  return Category.find(filter).select("-createdAt -updatedAt").sort({ createdAt: -1 });
 };
 
 export const getCategoryBySlug = async (
@@ -40,11 +37,13 @@ export const updateCategory = async (
 };
 
 export const deleteCategory = async (id: string): Promise<ICategory | null> => {
-   // Optional: Xóa ảnh cũ nếu có
-   const category = await getCategoryById(id);
-   if (category?.img && category.img.startsWith("/uploads/categories/")) {
-      const oldPath = `.${category.img}`;
-      if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
-   }
-   return Category.findByIdAndDelete(id);
+  // Optional: Xóa ảnh cũ nếu có
+  const category = await getCategoryById(id);
+
+  if (category?.img && category.img.startsWith("/uploads/categories/")) {
+    const oldPath = `.${category.img}`;
+    if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
+  }
+
+  return Category.findByIdAndDelete(id);
 };

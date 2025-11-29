@@ -6,9 +6,9 @@ import {
   updateBlogController,
   deleteBlogController,
 } from "./blog.controller";
-import { authenticate, isAdmin } from "../../middlewares/auth.middleware";
-import { handleMulterError, uploadBlogImage } from "../../middlewares/upload.middleware";
-import { validate, validateParams } from "../../middlewares/validation.middleware";
+import { authenticate, isAdmin } from "@/middlewares/auth.middleware";
+import { handleMulterError, uploadBlogImage } from "@/middlewares/upload.middleware";
+import { validate, validateParams } from "@/middlewares/validation.middleware";
 import { createBlogSchema, updateBlogSchema, blogIdSchema } from "./validation.schemas";
 
 const router = Router();

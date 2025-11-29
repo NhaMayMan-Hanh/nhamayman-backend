@@ -5,7 +5,7 @@ import {
   forgotPasswordController,
   resetPasswordController,
 } from "./auth.controller";
-import { validate } from "../../middlewares/validation.middleware";
+import { validate } from "@/middlewares/validation.middleware";
 import { registerSchema, loginSchema, forgotSchema, resetSchema } from "./validation.schemas";
 
 const router = Router();

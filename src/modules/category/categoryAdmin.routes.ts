@@ -1,19 +1,18 @@
 import { Router } from "express";
 import {
-  getCategoriesController, // Reuse list (admin cũng dùng)
+  getCategoriesController,
   getCategoryByIdController,
   createCategoryController,
   updateCategoryController,
   deleteCategoryController,
 } from "./category.controller";
-import { authenticate, isAdmin } from "../../middlewares/auth.middleware";
-import { handleMulterError, uploadCategoryImage } from "../../middlewares/upload.middleware";
-import { validate, validateParams } from "../../middlewares/validation.middleware";
+import { authenticate, isAdmin } from "@/middlewares/auth.middleware";
+import { handleMulterError, uploadCategoryImage } from "@/middlewares/upload.middleware";
+import { validate, validateParams } from "@/middlewares/validation.middleware";
 import { createCategorySchema, updateCategorySchema, categoryIdSchema } from "./validation.schemas";
 
 const router = Router();
 
-// Auth + Admin middleware cho toàn bộ
 router.use(authenticate, isAdmin);
 
 // GET /api/admin/categories (list, reuse public controller)

@@ -1,4 +1,3 @@
-// src/modules/order/order.model.ts (Model cho order - từ cart)
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface IOrderItem extends Document {

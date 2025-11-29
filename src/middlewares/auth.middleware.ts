@@ -21,7 +21,7 @@ declare global {
 // Middleware xác thực token
 export const authenticate = (req: Request, res: Response, next: NextFunction) => {
   try {
-    console.log("Cookies received:", req.cookies);
+    // console.log("Cookies received:", req.cookies);
     const token = req.cookies.token;
     
     if (!token) {
@@ -35,7 +35,7 @@ export const authenticate = (req: Request, res: Response, next: NextFunction) =>
       role: decoded.role || "user",
     };
 
-    console.log("Authenticated user:", req.user);
+    // console.log("Authenticated user:", req.user);
 
     next();
   } catch (error) {

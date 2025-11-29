@@ -4,10 +4,10 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
-import { swaggerUi, swaggerSpec } from "./config/swagger";
-import { connectDB } from "./config/db.ts";
-import clientRoutes from "./routes/client/client.routes.ts";
-import adminRoutes from "./routes/admin/admin.routes.ts";
+import { swaggerUi, swaggerSpec } from "@/config/swagger";
+import { connectDB } from "@/config/db";
+import clientRoutes from "@/routes/client/client.routes";
+import adminRoutes from "@/routes/admin/admin.routes";
 
 dotenv.config();
 
