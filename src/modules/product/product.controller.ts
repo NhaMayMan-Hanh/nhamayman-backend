@@ -61,11 +61,10 @@ export const getProductByIdController = async (req: Request, res: Response) => {
       return res.status(404).json({ success: false, message: "Product not found" });
     }
 
-    let responseData: { product: IProduct; relatedProducts?: IProduct[] } = { product }; // product full (có description)
+    let responseData: { product: IProduct; relatedProducts?: IProduct[] } = { product };
 
-    // Chỉ thêm related cho client (và related exclude description để nhẹ)
     if (!isAdmin) {
-      const related = await getRelatedProducts(product.category, product._id as string, {
+      const related = await getRelatedProducts(product.category, product._id.toString(), {
         excludeFields: ["description", "detailedDescription"],
         limit: 4,
       });
