@@ -45,7 +45,7 @@
 
 /**
  * @swagger
- * /api/client/products:
+ * /api/admin/products:
  *   post:
  *     summary: Tạo sản phẩm mới
  *     tags: [Products]
@@ -62,7 +62,7 @@
 
 /**
  * @swagger
- * /api/client/products/{id}:
+ * /api/admin/products/{id}:
  *   put:
  *     summary: Cập nhật sản phẩm
  *     tags: [Products]
@@ -85,7 +85,7 @@
 
 /**
  * @swagger
- * /api/client/products/{id}:
+ * /api/admin/products/{id}:
  *   delete:
  *     summary: Xóa sản phẩm
  *     tags: [Products]

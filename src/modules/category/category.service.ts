@@ -10,24 +10,30 @@ export const getAllCategories = async (query: { search?: string } = {}): Promise
   return Category.find(filter).select("-createdAt -updatedAt").sort({ createdAt: -1 });
 };
 
-export const getCategoryBySlug = async (slug: string): Promise<ICategory | null> => {
-  return Category.findOne({ slug });
+export const getCategoryBySlug = async (
+   slug: string
+): Promise<ICategory | null> => {
+   return Category.findOne({ slug });
 };
 
-export const getCategoryById = async (id: string): Promise<ICategory | null> => {
-  return Category.findById(id);
+export const getCategoryById = async (
+   id: string
+): Promise<ICategory | null> => {
+   return Category.findById(id);
 };
 
-export const createCategory = async (categoryData: Partial<ICategory>): Promise<ICategory> => {
-  const newCategory = new Category(categoryData);
-  return newCategory.save();
+export const createCategory = async (
+   categoryData: Partial<ICategory>
+): Promise<ICategory> => {
+   const newCategory = new Category(categoryData);
+   return newCategory.save();
 };
 
 export const updateCategory = async (
-  id: string,
-  categoryData: Partial<ICategory>
+   id: string,
+   categoryData: Partial<ICategory>
 ): Promise<ICategory | null> => {
-  return Category.findByIdAndUpdate(id, categoryData, { new: true });
+   return Category.findByIdAndUpdate(id, categoryData, { new: true });
 };
 
 export const deleteCategory = async (id: string): Promise<ICategory | null> => {

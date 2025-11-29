@@ -10,7 +10,7 @@ import {
 import { getCategoryBySlug } from "../category/category.service";
 import { IProduct } from "./product.model";
 import { buildImageUrl } from "@/utils/buildImageUrl";
-
+import fs from "fs";
 export const getProductsController = async (req: Request, res: Response) => {
   try {
     const { category: slug, search } = req.query;
@@ -120,7 +120,6 @@ export const updateProductController = async (req: Request, res: Response) => {
       // Optional: Xóa file cũ nếu có product cũ
       const oldProduct = await getProductById(req.params.id);
       if (oldProduct?.image && oldProduct.image.startsWith("/uploads/products/")) {
-        const fs = require("fs");
         const oldPath = `.${oldProduct.image}`; // Full server path
         if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath); // Xóa file cũ
       }
