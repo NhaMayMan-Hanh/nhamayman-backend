@@ -1,6 +1,6 @@
 import { Router } from "express";
 import {
-  getCategoriesController,
+  getCategoriesAdminController,
   getCategoryByIdController,
   createCategoryController,
   updateCategoryController,
@@ -16,7 +16,7 @@ const router = Router();
 router.use(authenticate, isAdmin);
 
 // GET /api/admin/categories (list, reuse public controller)
-router.get("/", getCategoriesController);
+router.get("/", getCategoriesAdminController);
 
 // GET /api/admin/categories/:id
 router.get("/:id", validateParams(categoryIdSchema), getCategoryByIdController);

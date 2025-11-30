@@ -1,5 +1,6 @@
 import Product from "./product.model";
 import { IProduct } from "./product.model";
+import Order from "../order/order.model";
 
 interface ProductQuery {
   category?: string;
@@ -68,6 +69,33 @@ export const updateProduct = async (
   return Product.findByIdAndUpdate(id, productData, { new: true });
 };
 
-export const deleteProduct = async (id: string): Promise<IProduct | null> => {
-  return Product.findByIdAndDelete(id);
+export const deleteProduct = async (
+  id: string
+): Promise<{
+  success: boolean;
+  message: string;
+}> => {
+  const product = await Product.findById(id);
+  if (!product) {
+    return { success: false, message: "Sản phẩm không tồn tại" };
+  }
+
+  const activeOrder = await Order.findOne({
+    "items.productId": id,
+    status: { $nin: ["delivered", "cancelled"] },
+  });
+
+  if (activeOrder) {
+    return {
+      success: false,
+      message: `Không thể xóa sản phẩm "${product.name}" vì còn đơn hàng đang xử lý`,
+    };
+  }
+
+  await Product.findByIdAndDelete(id);
+
+  return {
+    success: true,
+    message: "Xóa sản phẩm thành công",
+  };
 };

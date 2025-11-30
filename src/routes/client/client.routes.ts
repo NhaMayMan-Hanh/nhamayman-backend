@@ -8,7 +8,7 @@ import authPublicRoutes from "@/modules/auth/authPublic.routes";
 import authProtectedRoutes from "@/modules/auth/authProtected.routes";
 import aboutPublicRouter from "@/modules/about/aboutPublic.routes";
 import userProtectedRoutes from "@/modules/user/userProtected.routes";
-import { getAllCategories } from "@/modules/category/category.service";
+import { getActiveCategories } from "@/modules/category/category.service";
 import { getAllProducts } from "@/modules/product/product.service";
 
 const router = Router();
@@ -29,7 +29,7 @@ router.use("/users", userProtectedRoutes);
 
 router.get("/home", async (req, res) => {
   try {
-    const categories = await getAllCategories();
+    const categories = await getActiveCategories();
     const allProducts = await getAllProducts({});
 
     // Group products by category name (limit 8 each)

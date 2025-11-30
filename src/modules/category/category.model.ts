@@ -5,6 +5,7 @@ export interface ICategory extends Document {
   img: string;
   slug: string;
   description?: string;
+  status: boolean;
 }
 
 const categorySchema: Schema = new Schema(
@@ -13,6 +14,7 @@ const categorySchema: Schema = new Schema(
     img: { type: String, required: true },
     slug: { type: String, required: true, unique: true, lowercase: true, trim: true },
     description: { type: String },
+    status: { type: Boolean },
   },
   { timestamps: true }
 );

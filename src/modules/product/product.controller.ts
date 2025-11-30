@@ -151,22 +151,24 @@ export const updateProductController = async (req: Request, res: Response) => {
 };
 export const deleteProductController = async (req: Request, res: Response) => {
   try {
-    const deletedProduct = await deleteProduct(req.params.id);
-    if (!deletedProduct) {
-      return res.status(404).json({
+    const result = await deleteProduct(req.params.id);
+
+    if (!result.success) {
+      return res.status(400).json({
         success: false,
-        message: "Product not found",
+        message: result.message,
       });
     }
+
     res.json({
       success: true,
-      message: "Successfully delete product",
+      message: result.message,
     });
   } catch (error) {
+    console.error("Lỗi xóa sản phẩm:", error);
     res.status(500).json({
       success: false,
-      message: "Error delete product",
-      error: (error as Error).message,
+      message: "Lỗi server khi xóa sản phẩm",
     });
   }
 };

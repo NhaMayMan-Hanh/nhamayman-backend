@@ -268,8 +268,8 @@ export const aboutData = [
         </div>
         <div class="text-center mt-8">
           <p class="font-semibold text-gray-800">Liên hệ với chúng tôi:</p>
-          <p class="text-gray-600 mt-2">Email: info@nhamayman-hanh.com | Hotline: 0123 456 789</p>
-          <p class="text-gray-600">Địa chỉ: TP. Hồ Chí Minh, Việt Nam</p>
+          <p class="text-gray-600 mt-2">Email: hanh.together1@gmail.com | Hotline: +84 813115895 ( Kim Thanh )</p>
+          <p class="text-gray-600">Địa chỉ: QTSC 9 Building, Đ. Tô Ký, Tân Chánh Hiệp, Quận 12, Hồ Chí Minh, Vietnam</p>
         </div>
       </div>
     `,

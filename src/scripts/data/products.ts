@@ -1,7 +1,7 @@
 export const productsData = [
   // Sản phẩm may - Thú nhồi bông handmade 12 con giáp & kỳ lân
   {
-    name: "Con Chuột handmade",
+    name: "Chuột handmade",
     description:
       "Thú nhồi bông Con Chuột (Tý) may hoàn toàn thủ công từ vải cotton cao cấp mềm mịn, nhồi bông gòn bi cao cấp an toàn cho trẻ nhỏ. Thiết kế dễ thương với đôi tai tròn xoe, chiếc đuôi dài cong cong và đôi mắt thêu tỉ mỉ, mang ý nghĩa phong thủy tài lộc đầu năm mới. Kích thước khoảng 20cm, món quà ý nghĩa dành cho bé tuổi Tý hoặc làm vật trang trí kệ sách, góc học tập cực xinh xắn.",
     price: 50000,
@@ -10,7 +10,7 @@ export const productsData = [
     stock: 100,
   },
   {
-    name: "Con trâu handmade",
+    name: "Trâu handmade",
     description:
       "Thú nhồi bông Con Trâu (Sửu) được may thủ công tinh xảo, chất liệu vải nhung mềm mại kết hợp cotton, nhồi bông căng tròn, chắc chắn. Đôi sừng cong đặc trưng, khuôn mặt hiền lành chăm chỉ tượng trưng cho sự cần cù và thịnh vượng. Kích thước 25cm – món quà tuyệt vời cho người tuổi Sửu hoặc để decor bàn làm việc mang năng lượng tích cực.",
     price: 80000,
@@ -19,7 +19,7 @@ export const productsData = [
     stock: 120,
   },
   {
-    name: "Con cọp handmade",
+    name: "Cọp handmade",
     description:
       "Con Cọp (Dần) uy phong mạnh mẽ phiên bản nhồi bông siêu cute! May từ vải lông mịn cao cấp, sọc vằn thêu tay tỉ mỉ, đôi mắt sáng lấp lánh. Mang ý nghĩa trừ tà, bảo vệ gia chủ, đặc biệt hợp với người tuổi Dần. Kích thước 28cm, có thể làm gối ôm nhỏ hoặc trưng bày trên xe hơi cực ngầu.",
     price: 100000,
@@ -28,7 +28,7 @@ export const productsData = [
     stock: 90,
   },
   {
-    name: "Con mèo handmade",
+    name: "Mèo handmade",
     description:
       "Thú nhồi bông Con Mèo (Mão) dễ thương hết nấc với bộ lông trắng muốt hoặc xám khói (tùy lô), may từ vải cotton và nhung siêu mềm. Đôi tai nhọn, râu mèo thêu nổi, đuôi dài uốn lượn. Hợp mệnh người tuổi Mão, mang lại sự khéo léo và may mắn trong tình duyên. Bé nào cũng mê!",
     price: 40000,
@@ -37,7 +37,7 @@ export const productsData = [
     stock: 250,
   },
   {
-    name: "Con kỳ lân handmade",
+    name: "Kỳ lân handmade",
     description:
       "Kỳ lân thần thú phiên bản nhồi bông cầu vồng lung linh! May thủ công 100% với chất liệu vải nhung 7 màu óng ánh, sừng và móng ánh kim tuyến, bờm lông siêu mềm. Biểu tượng của sự cao quý, may mắn và thịnh vượng. Kích thước 30cm – món quà phong thủy cực kỳ ý nghĩa cho trẻ em và người lớn.",
     price: 70000,
@@ -46,7 +46,7 @@ export const productsData = [
     stock: 150,
   },
   {
-    name: "Con kỳ lân xanh handmade",
+    name: "Kỳ lân xanh handmade",
     description:
       "Phiên bản Kỳ Lân Xanh Ngọc Bích – biểu tượng của sự bình an và tài lộc dồi dào. Toàn bộ thân kỳ lân được may từ vải nhung xanh ngọc bảo kết hợp chỉ thêu ánh kim, mắt đính đá lấp lánh. Nhồi bông căng tròn, đứng vững làm vật trấn trạch hoặc quà tặng tân gia cực sang trọng.",
     price: 60000,
@@ -55,7 +55,7 @@ export const productsData = [
     stock: 180,
   },
   {
-    name: "Con rắn handmade",
+    name: "Rắn handmade",
     description:
       "Con Rắn (Tỵ) phiên bản nhồi bông siêu cool & huyền bí! May từ vải cotton pha nhung bóng, họa tiết vảy rắn thêu tay tinh xảo, phần đầu có mào nhỏ dễ thương. Mang năng lượng trí tuệ, linh hoạt và tài lộc ngầm. Rất hợp làm quà sinh nhật người tuổi Tỵ.",
     price: 100000,
@@ -64,7 +64,7 @@ export const productsData = [
     stock: 70,
   },
   {
-    name: "Con ngựa handmade",
+    name: "Ngựa handmade",
     description:
       "Con Ngựa (Ngọ) phi nước đại phiên bản nhồi bông cực kỳ sinh động! Bờm và đuôi làm từ lông giả mềm mại tung bay, chất liệu vải cotton cao cấp, màu sắc rực rỡ. Tượng trưng cho sự tự do, thành công và thăng tiến. Kích thước lớn 35cm, có thể làm gối ôm hoặc trưng bày phòng khách.",
     price: 100000,
