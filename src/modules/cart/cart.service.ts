@@ -32,7 +32,7 @@ export const addToCart = async (
     existingItem.quantity += quantity;
   } else {
     cart.items.push({
-      productId: new Types.ObjectId(productId), // ✔ FIX
+      productId: new Types.ObjectId(productId),
       quantity,
       price: product.price,
     });
@@ -78,6 +78,26 @@ export const removeFromCart = async (userId: string, productId: string): Promise
   if (!cart) return null;
 
   cart.items = cart.items.filter((item) => item.productId.toString() !== productId);
+  cart.total = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  return cart.save();
+};
+
+// NEW: Xóa nhiều items cùng lúc (tránh race condition)
+export const removeMultipleFromCart = async (
+  userId: string,
+  productIds: string[]
+): Promise<ICart | null> => {
+  if (userId === "guest") {
+    throw new Error("Guest cart handled in frontend");
+  }
+
+  const cart = await Cart.findOne({ userId });
+  if (!cart) return null;
+
+  // Lọc bỏ tất cả items có productId trong danh sách
+  cart.items = cart.items.filter((item) => !productIds.includes(item.productId.toString()));
+
   cart.total = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return cart.save();

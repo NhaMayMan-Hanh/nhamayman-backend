@@ -4,6 +4,7 @@ import {
   addToCart,
   updateCartItem,
   removeFromCart,
+  removeMultipleFromCart,
   clearCart,
 } from "./cart.service";
 
@@ -19,7 +20,7 @@ const mapItemsToFlat = (items: any[]): CartItemFlat[] => {
   return items.map((item) => ({
     _id: item.productId._id.toString(),
     name: item.productId.name,
-    price: item.price, // Item price (snapshot)
+    price: item.price,
     image: item.productId.image,
     quantity: item.quantity,
   }));
@@ -43,7 +44,7 @@ export const getCartController = async (req: Request, res: Response) => {
       message: "Successfully get cart",
       data: {
         ...cart.toObject(),
-        items: mapItemsToFlat(cart.items), // Map to flat for FE
+        items: mapItemsToFlat(cart.items),
       },
     });
   } catch (error) {
@@ -122,6 +123,42 @@ export const removeFromCartController = async (req: Request, res: Response) => {
     res.json({
       success: true,
       message: "The product has been removed from your cart",
+      data: {
+        ...updatedCart.toObject(),
+        items: mapItemsToFlat(updatedCart.items),
+      },
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: (error as Error).message,
+    });
+  }
+};
+
+// ✅ NEW: Xóa nhiều items cùng lúc
+export const removeMultipleFromCartController = async (req: Request, res: Response) => {
+  try {
+    const { productIds } = req.body; // Expect array of product IDs
+    const userId = req.user!.id;
+
+    if (!Array.isArray(productIds) || productIds.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: "productIds must be a non-empty array",
+      });
+    }
+
+    const updatedCart = await removeMultipleFromCart(userId, productIds);
+    if (!updatedCart) {
+      return res.status(404).json({ success: false, message: "Giỏ hàng không tồn tại" });
+    }
+
+    await updatedCart.populate("items.productId", "name price image");
+
+    res.json({
+      success: true,
+      message: `Đã xóa ${productIds.length} sản phẩm khỏi giỏ hàng`,
       data: {
         ...updatedCart.toObject(),
         items: mapItemsToFlat(updatedCart.items),

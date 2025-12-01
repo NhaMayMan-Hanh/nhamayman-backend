@@ -27,9 +27,9 @@ const seedDB = async () => {
     await Product.deleteMany({});
     await Blog.deleteMany({});
     await About.deleteMany({});
-    // await User.deleteMany({});
-    // await Order.deleteMany({});
-    // await Cart.deleteMany({});
+    await User.deleteMany({});
+    await Order.deleteMany({});
+    await Cart.deleteMany({});
     console.log("🗑️ Cleared existing data");
 
     const categories = await Category.insertMany(categoriesData);
@@ -44,8 +44,8 @@ const seedDB = async () => {
     const about = await About.insertMany(aboutData);
     console.log(`✅ Inserted ${about.length} abouts`);
 
-    // const users = await User.insertMany(usersData);
-    // console.log(`✅ Inserted ${users.length} users`);
+    const users = await User.insertMany(usersData);
+    console.log(`✅ Inserted ${users.length} users`);
 
     console.log("🎉 Seeding completed successfully!");
     process.exit(0);
