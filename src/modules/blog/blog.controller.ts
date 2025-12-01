@@ -6,6 +6,8 @@ import {
    createBlog,
    updateBlog,
    deleteBlog,
+   toggleLikeBlog,
+   addCommentToBlog,
 } from "./blog.service";
 import { buildImageUrl } from "@/utils/buildImageUrl";
 import fs from "fs";
@@ -212,6 +214,85 @@ export const deleteBlogController = async (req: Request, res: Response) => {
          success: false,
          message: "Error delete blog",
          error: (error as Error).message,
+      });
+   }
+};
+
+export const handleToggleLikeBlog = async (req: Request, res: Response) => {
+   const { blogId, userId } = req.body;
+
+   try {
+      const result = await toggleLikeBlog(blogId, userId);
+
+      if (!result) {
+         return res.status(404).json({
+            success: false,
+            message: "Blog not found",
+         });
+      }
+
+      // ✅ Trả về đúng format ApiResponse<Blog>
+      return res.status(200).json({
+         success: true,
+         data: result.blog, // ← Lấy blog từ result
+         message: result.hasLiked ? "Đã thích bài viết" : "Đã bỏ thích",
+      });
+   } catch (error) {
+      console.error("Error in handleToggleLikeBlog:", error);
+
+      res.status(500).json({
+         success: false,
+         message: "Error like blog",
+         error: (error as Error).message,
+      });
+   }
+};
+
+export const handleAddComment = async (
+   req: Request,
+   res: Response
+): Promise<void> => {
+   const { id } = req.params;
+   const { content, parentPath, userId, userName, userAvatar } = req.body; // ← Lấy từ body
+
+   // Validation
+   if (!userId) {
+      res.status(401).json({
+         success: false,
+         message: "Bạn cần đăng nhập để bình luận",
+      });
+      return;
+   }
+
+   if (!content || content.trim().length === 0) {
+      res.status(400).json({
+         success: false,
+         message: "Nội dung không được để trống",
+      });
+      return;
+   }
+
+   try {
+      const blog = await addCommentToBlog(
+         id,
+         {
+            _id: userId,
+            name: userName || "Anonymous",
+            avatar: userAvatar,
+         },
+         content,
+         parentPath || []
+      );
+
+      res.status(200).json({
+         success: true,
+         data: blog,
+         message: "Bình luận thành công!",
+      });
+   } catch (error: any) {
+      res.status(400).json({
+         success: false,
+         message: error.message || "Lỗi khi bình luận",
       });
    }
 };

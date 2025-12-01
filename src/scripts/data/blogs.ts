@@ -1,11 +1,14 @@
 export const blogsData = [
-  {
-    name: "CUỘC THI ẢNH “NGƯỢC DÒNG”",
-    img: "/img/blogs/baiviet1/image2.jpg",
-    slug: "cuoc-thi-anh-nguoc-dong",
-    description:
-      "“Ngược Dòng” là nơi để bạn ghi lại một khoảnh khắc đời thường nhưng đầy sức mạnh của những người khuyết tật đang bền bỉ mưu sinh, lao động.",
-    content: `
+   {
+      name: "CUỘC THI ẢNH “NGƯỢC DÒNG”",
+      img: "/img/blogs/baiviet1/image2.jpg",
+      slug: "cuoc-thi-anh-nguoc-dong",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "“Ngược Dòng” là nơi để bạn ghi lại một khoảnh khắc đời thường nhưng đầy sức mạnh của những người khuyết tật đang bền bỉ mưu sinh, lao động.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">📸 CUỘC THI ẢNH “NGƯỢC DÒNG”</h2>
         <p class="mb-4">Giữa dòng đời đầy thử thách, có những con người vẫn bền bỉ mưu sinh, làm nghề bằng tất cả nghị lực. **“Ngược Dòng”** là nơi để bạn ghi lại một khoảnh khắc đời thường nhưng đầy sức mạnh ấy, lan tỏa những câu chuyện về ý chí vươn lên không ngừng nghỉ.</p>
@@ -87,14 +90,17 @@ export const blogsData = [
 <img src="/img/blogs/baiviet1/image17.jpg" alt="Hình ảnh minh họa phần 17" class="img-blog mx-auto rounded-lg mb-4 object-cover">
 <img src="/img/blogs/baiviet1/image18.jpg" alt="Hình ảnh minh họa phần 18" class="img-blog mx-auto rounded-lg mb-4 object-cover">
     `,
-  },
-  {
-    name: "WORKSHOP “MAISON TOUR”: CHUYẾN ĐI Ý NGHĨA KHÉP LẠI",
-    img: "/img/blogs/baiviet2/image1.jpg",
-    slug: "workshop-maison-tour-khep-lai",
-    description:
-      "Lời cảm ơn chân thành gửi đến Á hậu Kiều Hằng, Nhà May Mắn và toàn thể khách tham dự đã đồng hành cùng workshop ý nghĩa “Maison Tour”.",
-    content: `
+   },
+   {
+      name: "WORKSHOP “MAISON TOUR”: CHUYẾN ĐI Ý NGHĨA KHÉP LẠI",
+      img: "/img/blogs/baiviet2/image1.jpg",
+      slug: "workshop-maison-tour-khep-lai",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Lời cảm ơn chân thành gửi đến Á hậu Kiều Hằng, Nhà May Mắn và toàn thể khách tham dự đã đồng hành cùng workshop ý nghĩa “Maison Tour”.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">💖 Chuyến Đi Ý Nghĩa Khép Lại</h2>
         <p class="mb-4">Workshop **"Maison Tour"** đã khép lại với thật nhiều cảm xúc và ý nghĩa. Đây không chỉ là một chuyến tham quan, mà còn là hành trình kết nối trái tim, nơi mọi người cùng lắng nghe những câu chuyện nghị lực và lan tỏa niềm hy vọng.</p>
@@ -130,14 +136,17 @@ export const blogsData = [
       <img src="/img/blogs/baiviet2/image3.jpg" alt="Hình ảnh minh họa phần 3" class="img-blog mx-auto rounded-lg mb-4 object-cover">
       <img src="/img/blogs/baiviet2/image4.jpg" alt="Hình ảnh minh họa phần 4" class="img-blog mx-auto rounded-lg mb-4 object-cover">
     `,
-  },
-  {
-    name: "💖 CÂU CHUYỆN VƯỢT KHÓ: TỪ NẠN NHÂN TRỞ THÀNH NGHỆ NHÂN",
-    img: "/img/blogs/Blog1-image1.jpg",
-    slug: "cau-chuyen-vuot-kho-tu-nan-nhan-tro-thanh-nghe-nhan",
-    description:
-      "Bệ Phóng Cho Những Ước Mơ – Nơi những người khuyết tật và trẻ em khó khăn tìm thấy động lực để vượt lên chính mình và viết lại câu chuyện đời.",
-    content: `
+   },
+   {
+      name: "💖 CÂU CHUYỆN VƯỢT KHÓ: TỪ NẠN NHÂN TRỞ THÀNH NGHỆ NHÂN",
+      img: "/img/blogs/Blog1-image1.jpg",
+      slug: "cau-chuyen-vuot-kho-tu-nan-nhan-tro-thanh-nghe-nhan",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Bệ Phóng Cho Những Ước Mơ – Nơi những người khuyết tật và trẻ em khó khăn tìm thấy động lực để vượt lên chính mình và viết lại câu chuyện đời.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Bệ Phóng Cho Những Ước Mơ</h2>
         <p class="mb-4">Maison Chance không chỉ là một nơi cư ngụ, mà còn là bệ phóng cho những ước mơ. Nơi đây, những người khuyết tật và trẻ em có hoàn cảnh khó khăn tìm thấy không chỉ sự chăm sóc mà còn là nguồn động lực mạnh mẽ để viết lại câu chuyện đời mình bằng lòng kiên trì và tài năng. Sự kiên cường của họ đã chứng minh rằng, khuyết tật về thể chất không thể ngăn cản một ý chí sắt đá.</p>
@@ -161,14 +170,17 @@ export const blogsData = [
         <p class="mb-4">Bạn muốn trở thành một phần của những câu chuyện phi thường này? Hãy ủng hộ ngay hôm nay để Maison Chance có thêm nguồn lực tiếp tục hỗ trợ các học viên và mang đến ánh sáng hy vọng cho nhiều cuộc đời hơn nữa!</p>
       </div>
     `,
-  },
-  {
-    name: "🏞️ DỰ ÁN LÀNG CHĂM MÁT ĐẮK NÔNG: MÔ HÌNH CỘNG ĐỒNG TỰ CHỦ",
-    img: "/img/blogs/Blog2-image1.jpg",
-    slug: "du-an-lang-cham-mat-dak-nong-mo-hinh-cong-dong-tu-chu",
-    description:
-      "Xây Dựng Tương Lai Bền Vững Giữa Thiên Nhiên – Mô hình cộng đồng tự cung tự cấp tại Đắk Nông, nơi người khuyết tật và trẻ em khó khăn hướng tới độc lập tài chính qua nông nghiệp hữu cơ và du lịch nhân ái.",
-    content: `
+   },
+   {
+      name: "🏞️ DỰ ÁN LÀNG CHĂM MÁT ĐẮK NÔNG: MÔ HÌNH CỘNG ĐỒNG TỰ CHỦ",
+      img: "/img/blogs/Blog2-image1.jpg",
+      slug: "du-an-lang-cham-mat-dak-nong-mo-hinh-cong-dong-tu-chu",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Xây Dựng Tương Lai Bền Vững Giữa Thiên Nhiên – Mô hình cộng đồng tự cung tự cấp tại Đắk Nông, nơi người khuyết tật và trẻ em khó khăn hướng tới độc lập tài chính qua nông nghiệp hữu cơ và du lịch nhân ái.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Xây Dựng Tương Lai Bền Vững Giữa Thiên Nhiên</h2>
         <p class="mb-4">Nằm giữa khung cảnh thiên nhiên hùng vĩ, yên bình của tỉnh Đắk Nông, Làng Chăm Mát (Shelter Village) là dự án đầy tham vọng và nhân ái của Maison Chance. Đây không chỉ là một khu nhà ở mà là một mô hình cộng đồng tự cung tự cấp, nơi gần 100 người khuyết tật và trẻ em có hoàn cảnh đặc biệt đang xây dựng lại cuộc đời theo hướng hoàn toàn độc lập và bền vững.</p>
@@ -197,14 +209,17 @@ export const blogsData = [
         <p class="mb-4">Hãy đến thăm Làng Chăm Mát Đắk Nông để tận mắt chứng kiến mô hình bền vững này! Bạn có thể nghỉ lại tại khách sạn của Làng hoặc mua sắm sản phẩm. Sự hiện diện và chi tiêu của bạn chính là nguồn vốn trực tiếp giúp duy trì mô hình tự chủ này.</p>
       </div>
     `,
-  },
-  {
-    name: "🌍 TÌNH NGUYỆN VIÊN QUỐC TẾ: NHỮNG TRÁI TIM KHÔNG BIÊN GIỚI",
-    img: "/img/blogs/Blog3-image1.jpg",
-    slug: "tinh-nguyen-vien-quoc-te-nhung-trai-tim-khong-bien-gioi",
-    description:
-      "Ngôi Nhà Chung Đa Văn Hóa – Maison Chance chào đón tình nguyện viên quốc tế từ khắp nơi, mang kiến thức và lòng nhiệt thành để hỗ trợ y tế, giáo dục và kỹ thuật cho cộng đồng khuyết tật.",
-    content: `
+   },
+   {
+      name: "🌍 TÌNH NGUYỆN VIÊN QUỐC TẾ: NHỮNG TRÁI TIM KHÔNG BIÊN GIỚI",
+      img: "/img/blogs/Blog3-image1.jpg",
+      slug: "tinh-nguyen-vien-quoc-te-nhung-trai-tim-khong-bien-gioi",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Ngôi Nhà Chung Đa Văn Hóa – Maison Chance chào đón tình nguyện viên quốc tế từ khắp nơi, mang kiến thức và lòng nhiệt thành để hỗ trợ y tế, giáo dục và kỹ thuật cho cộng đồng khuyết tật.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Ngôi Nhà Chung Đa Văn Hóa</h2>
         <p class="mb-4">Maison Chance tự hào là một môi trường đa văn hóa, nơi tình yêu thương vượt qua mọi rào cản địa lý và ngôn ngữ. Hàng năm, chúng tôi chào đón hàng trăm Tình Nguyện Viên Quốc tế (TNV) từ khắp các châu lục. Họ mang theo không chỉ lòng nhiệt thành mà còn là kiến thức, kỹ năng chuyên môn cao để chia sẻ với cộng đồng, tạo nên một sự trao đổi văn hóa và tri thức vô cùng giá trị.</p>
@@ -232,14 +247,17 @@ export const blogsData = [
         <p class="mb-4">Bạn có kỹ năng, thời gian và lòng nhiệt thành? Hãy đăng ký làm Tình nguyện viên và trải nghiệm sự khác biệt mà bạn có thể tạo ra tại Maison Chance! Thông tin chi tiết về các vị trí đang tuyển và yêu cầu tối thiểu được đăng tải trên trang web chính thức của chúng tôi.</p>
       </div>
     `,
-  },
-  {
-    name: "🤝 NHÀ TÀI TRỢ: NỀN TẢNG CỦA NIỀM TIN VÀ SỰ PHÁT TRIỂN",
-    img: "/img/blogs/Blog4-image1.jpg",
-    slug: "nha-tai-tro-nen-tang-cua-niem-tin-va-su-phat-trien",
-    description:
-      "Đối Tác Của Lòng Nhân Ái – Maison Chance phát triển nhờ sự ủng hộ từ nhà tài trợ toàn cầu, với cam kết minh bạch và các chương trình CSR ý nghĩa để hỗ trợ giáo dục, y tế và vận hành cộng đồng.",
-    content: `
+   },
+   {
+      name: "🤝 NHÀ TÀI TRỢ: NỀN TẢNG CỦA NIỀM TIN VÀ SỰ PHÁT TRIỂN",
+      img: "/img/blogs/Blog4-image1.jpg",
+      slug: "nha-tai-tro-nen-tang-cua-niem-tin-va-su-phat-trien",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Đối Tác Của Lòng Nhân Ái – Maison Chance phát triển nhờ sự ủng hộ từ nhà tài trợ toàn cầu, với cam kết minh bạch và các chương trình CSR ý nghĩa để hỗ trợ giáo dục, y tế và vận hành cộng đồng.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Đối Tác Của Lòng Nhân Ái</h2>
         <p class="mb-4">Maison Chance hoạt động và phát triển dựa trên một nền tảng duy nhất: Sự tin tưởng và ủng hộ vô điều kiện từ các cá nhân, doanh nghiệp và tổ chức trên toàn thế giới. Các nhà tài trợ không chỉ cung cấp tài chính mà còn là những đối tác chiến lược, giúp chúng tôi duy trì các hoạt động cứu trợ, giáo dục và đào tạo nghề một cách liên tục và chất lượng cao.</p>
@@ -269,14 +287,17 @@ export const blogsData = [
         <p class="mb-4">Hãy cùng chúng tôi xây dựng một tương lai bền vững. Liên hệ với chúng tôi để thiết lập quan hệ đối tác CSR lâu dài và ý nghĩa! Mọi sự đóng góp, dù lớn hay nhỏ, đều là nguồn sức mạnh to lớn giúp chúng tôi duy trì hoạt động.</p>
       </div>
     `,
-  },
-  {
-    name: "✨ SẢN PHẨM THỦ CÔNG: KHI NGHỊ LỰC HÓA THÀNH NGHỆ THUẬT",
-    img: "/img/blogs/Blog5-image1.jpg",
-    slug: "san-pham-thu-cong-khi-nghi-luc-hoa-thanh-nghe-thuat",
-    description:
-      "Liệu Pháp Tinh Thần và Sinh Kế Bền Vững – Các sản phẩm thủ công từ Maison Chance không chỉ là nghệ thuật mà còn là câu chuyện kiên trì của những nghệ nhân khuyết tật, mang lại thu nhập độc lập và giá trị nhân văn.",
-    content: `
+   },
+   {
+      name: "✨ SẢN PHẨM THỦ CÔNG: KHI NGHỊ LỰC HÓA THÀNH NGHỆ THUẬT",
+      img: "/img/blogs/Blog5-image1.jpg",
+      slug: "san-pham-thu-cong-khi-nghi-luc-hoa-thanh-nghe-thuat",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Liệu Pháp Tinh Thần và Sinh Kế Bền Vững – Các sản phẩm thủ công từ Maison Chance không chỉ là nghệ thuật mà còn là câu chuyện kiên trì của những nghệ nhân khuyết tật, mang lại thu nhập độc lập và giá trị nhân văn.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Liệu Pháp Tinh Thần và Sinh Kế Bền Vững</h2>
         <p class="mb-4">Tại Maison Chance, việc dạy nghề không chỉ là cách tạo ra thu nhập mà còn là liệu pháp tinh thần, là con đường để các học viên bộc lộ tài năng và cảm xúc sau những biến cố cuộc đời. Những đôi tay, thậm chí là đôi chân hay khuôn miệng, đã tạo nên những tác phẩm nghệ thuật có giá trị thẩm mỹ và nhân văn sâu sắc.</p>
@@ -305,14 +326,17 @@ export const blogsData = [
         <p class="mb-4">Hãy khám phá bộ sưu tập sản phẩm nghệ thuật độc đáo của chúng tôi! Mua sắm tại Maison Chance không chỉ là tiêu dùng mà còn là một hành động nhân ái trực tiếp và bền vững. Bạn có thể mua hàng trực tuyến hoặc ghé thăm cửa hàng tại cơ sở của chúng tôi.</p>
       </div>
     `,
-  },
-  {
-    name: "❤️ KÊU GỌI QUYÊN GÓP: SỰ SỐNG CÒN NẰM TRONG LÒNG TỐT CỦA BẠN",
-    img: "/img/blogs/Blog6-image1.jpg",
-    slug: "keu-goi-quyen-gop-su-song-con-nam-trong-long-tot-cua-ban",
-    description:
-      "Nhu Cầu Cấp Bách Hàng Ngày – Hãy ủng hộ Maison Chance để duy trì bữa ăn, y tế và giáo dục cho hơn 300 người khuyết tật và trẻ em khó khăn, với cam kết minh bạch tuyệt đối.",
-    content: `
+   },
+   {
+      name: "❤️ KÊU GỌI QUYÊN GÓP: SỰ SỐNG CÒN NẰM TRONG LÒNG TỐT CỦA BẠN",
+      img: "/img/blogs/Blog6-image1.jpg",
+      slug: "keu-goi-quyen-gop-su-song-con-nam-trong-long-tot-cua-ban",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Nhu Cầu Cấp Bách Hàng Ngày – Hãy ủng hộ Maison Chance để duy trì bữa ăn, y tế và giáo dục cho hơn 300 người khuyết tật và trẻ em khó khăn, với cam kết minh bạch tuyệt đối.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Nhu Cầu Cấp Bách Hàng Ngày</h2>
         <p class="mb-4">Bạn đã đọc những câu chuyện truyền cảm hứng về sự kiên cường tại Maison Chance. Giờ đây, chúng tôi cần bạn giúp chúng tôi viết tiếp những câu chuyện đó. Sự sống còn và phát triển của Maison Chance hoàn toàn phụ thuộc vào sự ủng hộ từ những tấm lòng hảo tâm như bạn. Mỗi đồng tiền của bạn là một sự đầu tư vào nhân phẩm, sự tự chủ và tương lai.</p>
@@ -342,14 +366,17 @@ export const blogsData = [
         <p class="mb-4">Xin đừng chần chừ. Sự giúp đỡ của bạn hôm nay sẽ quyết định bữa ăn, chăm sóc y tế và tương lai học tập của một ai đó ngày mai. Hãy hành động ngay bây giờ để mang lại sự khác biệt thực sự!</p>
       </div>
     `,
-  },
-  {
-    name: "💡 NGƯỜI SÁNG LẬP: CÔ TIM ALINE REBEAUD – NGỌN HẢI ĐĂNG CỦA LÒNG NHÂN ÁI",
-    img: "/img/blogs/Blog7-image1.jpg",
-    slug: "nguoi-sang-lap-co-tim-aline-rebeaud-ngon-hai-dang-cua-long-nhan-ai",
-    description:
-      "Hành Trình Vĩ Đại Từ Một Trái Tim Lớn – Câu chuyện về Cô Tim Aline Rebeaud, người sáng lập Maison Chance, với triết lý 'Tự chủ' giúp biến nạn nhân thành nghệ nhân và xây dựng cộng đồng bền vững.",
-    content: `
+   },
+   {
+      name: "💡 NGƯỜI SÁNG LẬP: CÔ TIM ALINE REBEAUD – NGỌN HẢI ĐĂNG CỦA LÒNG NHÂN ÁI",
+      img: "/img/blogs/Blog7-image1.jpg",
+      slug: "nguoi-sang-lap-co-tim-aline-rebeaud-ngon-hai-dang-cua-long-nhan-ai",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Hành Trình Vĩ Đại Từ Một Trái Tim Lớn – Câu chuyện về Cô Tim Aline Rebeaud, người sáng lập Maison Chance, với triết lý 'Tự chủ' giúp biến nạn nhân thành nghệ nhân và xây dựng cộng đồng bền vững.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Hành Trình Vĩ Đại Từ Một Trái Tim Lớn</h2>
         <p class="mb-4">Maison Chance là một dự án vĩ đại, và đằng sau nó là một câu chuyện còn vĩ đại hơn: câu chuyện về Cô Tim Aline Rebeaud, một phụ nữ Thụy Sĩ đã dành trọn hơn ba thập kỷ cuộc đời để cống hiến tại Việt Nam. Sự hy sinh và tầm nhìn xa của cô không chỉ tạo ra một tổ chức, mà còn kiến tạo nên một mô hình nhân đạo độc đáo và bền vững trên mảnh đất này.</p>
@@ -379,14 +406,17 @@ export const blogsData = [
         <p class="mb-4">Để tiếp nối tầm nhìn của Cô Tim và đảm bảo Maison Chance tiếp tục hoạt động, chúng tôi cần sự đồng hành vững chắc của bạn. Hãy cùng nhau xây dựng di sản này bằng cách ủng hộ tài chính hoặc tham gia tình nguyện.</p>
       </div>
     `,
-  },
-  {
-    name: "🎨 SẢN PHẨM ĐẶC TRƯNG: TRANH VẼ VÀ ĐỒ GỖ - KHI NGHỊ LỰC LÀ CHẤT LIỆU NGHỆ THUẬT",
-    img: "/img/blogs/Blog8-image1.jpg",
-    slug: "san-pham-dac-trung-tranh-ve-va-do-go-khi-nghi-luc-la-chat-lieu-nghe-thuat",
-    description:
-      "Nghệ Thuật Của Sự Hồi Sinh – Khám phá tranh vẽ bằng miệng/chân và đồ gỗ mỹ nghệ từ Maison Chance, nơi nghị lực biến thành tác phẩm nghệ thuật độc đáo, mang giá trị nhân văn và hỗ trợ sinh kế bền vững.",
-    content: `
+   },
+   {
+      name: "🎨 SẢN PHẨM ĐẶC TRƯNG: TRANH VẼ VÀ ĐỒ GỖ - KHI NGHỊ LỰC LÀ CHẤT LIỆU NGHỆ THUẬT",
+      img: "/img/blogs/Blog8-image1.jpg",
+      slug: "san-pham-dac-trung-tranh-ve-va-do-go-khi-nghi-luc-la-chat-lieu-nghe-thuat",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Nghệ Thuật Của Sự Hồi Sinh – Khám phá tranh vẽ bằng miệng/chân và đồ gỗ mỹ nghệ từ Maison Chance, nơi nghị lực biến thành tác phẩm nghệ thuật độc đáo, mang giá trị nhân văn và hỗ trợ sinh kế bền vững.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Nghệ Thuật Của Sự Hồi Sinh</h2>
         <p class="mb-4">Maison Chance không chỉ là trung tâm bảo trợ xã hội; chúng tôi còn là một học viện nghệ thuật và thủ công đặc biệt. Các sản phẩm đặc trưng tại đây, từ những bức tranh sơn dầu đầy cảm xúc đến các món đồ gỗ mỹ nghệ tinh xảo, mang một giá trị nghệ thuật thực thụ và là minh chứng cho sự hồi sinh của những cuộc đời.</p>
@@ -418,14 +448,17 @@ export const blogsData = [
         <p class="mb-4">Hãy khám phá những tác phẩm nghệ thuật độc đáo này. Mua sắm một sản phẩm của Maison Chance là cách bạn mang yêu thương về nhà, sở hữu một món đồ đẹp và lan tỏa ánh sáng của sự kiên cường.</p>
       </div>
     `,
-  },
-  {
-    name: "📚 GIÁO DỤC LÀ ÁNH SÁNG: PHÁ VỠ CHU KỲ NGHÈO ĐÓI",
-    img: "/img/blogs/Blog10-image1.jpg",
-    slug: "giao-duc-la-anh-sang-pha-vo-chu-ky-ngheo-doi",
-    description:
-      "Nơi Ước Mơ Bắt Đầu – Giáo dục tại Maison Chance là chìa khóa phá vỡ chu kỳ nghèo đói, mang đến chương trình toàn diện, hòa nhập cho trẻ em khuyết tật và nghèo khó, thắp sáng tương lai qua kiến thức và kỹ năng sống.",
-    content: `
+   },
+   {
+      name: "📚 GIÁO DỤC LÀ ÁNH SÁNG: PHÁ VỠ CHU KỲ NGHÈO ĐÓI",
+      img: "/img/blogs/Blog10-image1.jpg",
+      slug: "giao-duc-la-anh-sang-pha-vo-chu-ky-ngheo-doi",
+      like: 0,
+      likedBy: [],
+      comments: [],
+      description:
+         "Nơi Ước Mơ Bắt Đầu – Giáo dục tại Maison Chance là chìa khóa phá vỡ chu kỳ nghèo đói, mang đến chương trình toàn diện, hòa nhập cho trẻ em khuyết tật và nghèo khó, thắp sáng tương lai qua kiến thức và kỹ năng sống.",
+      content: `
       <div class="py-4 mb-4 text-gray-700 leading-relaxed">
         <h2 class="text-2xl font-semibold mb-2 py-1">Nơi Ước Mơ Bắt Đầu</h2>
         <p class="mb-4">Giáo dục là chìa khóa mở ra tương lai, và tại Maison Chance, chúng tôi tin rằng mọi đứa trẻ đều xứng đáng có được chì khóa đó, bất kể hoàn cảnh hay khiếm khuyết thể chất. Hàng ngày, tại lớp học nhỏ nhưng ấm cúng của chúng tôi, những đứa trẻ mồ côi, trẻ em khuyết tật và trẻ em nghèo từ các khu vực lân cận đang viết nên câu chuyện về Hy vọng, Kiến thức và Sự thay đổi.</p>
@@ -453,5 +486,5 @@ export const blogsData = [
         <p class="mb-4">Chỉ với một khoản hỗ trợ nhỏ hàng tháng (ví dụ: $30 USD), bạn có thể giúp một em nhỏ có đầy đủ sách vở, dụng cụ học tập và đảm bảo em được đi học đều đặn. Hãy trở thành người bảo trợ giáo dục và thắp sáng tương lai cho các em!</p>
       </div>
     `,
-  },
+   },
 ];

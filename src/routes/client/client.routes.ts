@@ -10,11 +10,13 @@ import aboutPublicRouter from "@/modules/about/aboutPublic.routes";
 import userProtectedRoutes from "@/modules/user/userProtected.routes";
 import { getActiveCategories } from "@/modules/category/category.service";
 import { getAllProducts } from "@/modules/product/product.service";
+import feedbackRoutes from "@/modules/feedback/feedback.routes";
+import notificationRoutes from "@/modules/notification/notification.routes";
 
 const router = Router();
 
 router.get("/", (req, res) => {
-  res.json("Hello from client routes");
+   res.json("Hello from client routes");
 });
 
 router.use("/products", productPublicRoutes);
@@ -26,42 +28,44 @@ router.use("/orders", orderPublicRoutes);
 router.use("/auth/logout", authProtectedRoutes);
 router.use("/auth", authPublicRoutes);
 router.use("/users", userProtectedRoutes);
+router.use("/feedback", feedbackRoutes);
+router.use("/notification", notificationRoutes);
 
 router.get("/home", async (req, res) => {
-  try {
-    const categories = await getActiveCategories();
-    const allProducts = await getAllProducts({});
+   try {
+      const categories = await getActiveCategories();
+      const allProducts = await getAllProducts({});
 
-    // Group products by category name (limit 8 each)
-    const productsByCategory: { [key: string]: any[] } = {};
-    allProducts.forEach((product: any) => {
-      const catName = product.category;
+      // Group products by category name (limit 8 each)
+      const productsByCategory: { [key: string]: any[] } = {};
+      allProducts.forEach((product: any) => {
+         const catName = product.category;
 
-      if (!productsByCategory[catName]) {
-        productsByCategory[catName] = [];
-      }
+         if (!productsByCategory[catName]) {
+            productsByCategory[catName] = [];
+         }
 
-      // Chỉ push nếu chưa quá 8 sản phẩm
-      if (productsByCategory[catName].length < 8) {
-        productsByCategory[catName].push(product);
-      }
-    });
+         // Chỉ push nếu chưa quá 8 sản phẩm
+         if (productsByCategory[catName].length < 8) {
+            productsByCategory[catName].push(product);
+         }
+      });
 
-    res.json({
-      success: true,
-      message: "Successfully get data home",
-      data: {
-        categories,
-        productsByCategory,
-      },
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: "Failed to get data home",
-      error: (error as Error).message,
-    });
-  }
+      res.json({
+         success: true,
+         message: "Successfully get data home",
+         data: {
+            categories,
+            productsByCategory,
+         },
+      });
+   } catch (error) {
+      res.status(500).json({
+         success: false,
+         message: "Failed to get data home",
+         error: (error as Error).message,
+      });
+   }
 });
 
 export default router;
