@@ -7,10 +7,26 @@ import { swaggerUi, swaggerSpec } from "./config/swagger";
 import { connectDB } from "./config/db";
 import clientRoutes from "./routes/client/client.routes";
 import adminRoutes from "./routes/admin/admin.routes";
+import rateLimit from "express-rate-limit";
 
 dotenv.config();
 
 const app = express();
+
+const limiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 phút
+  max: 100, // Tối đa 100 request / phút / IP
+  // windowMs: 10 * 1000, // 10 giây
+  // max: 3,
+  message: {
+    success: false,
+    message: "Temporarily unavailable. Please try later.",
+  },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.use(limiter);
 
 app.use(express.json());
 app.use(cookieParser());

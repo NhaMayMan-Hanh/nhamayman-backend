@@ -27,9 +27,9 @@ const seedDB = async () => {
     await Product.deleteMany({});
     await Blog.deleteMany({});
     await About.deleteMany({});
-    await User.deleteMany({});
-    await Order.deleteMany({});
-    await Cart.deleteMany({});
+    // await User.deleteMany({});
+    // await Order.deleteMany({});
+    // await Cart.deleteMany({});
     console.log("🗑️ Cleared existing data");
 
     const categories = await Category.insertMany(categoriesData);

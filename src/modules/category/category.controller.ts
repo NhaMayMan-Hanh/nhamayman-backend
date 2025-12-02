@@ -71,7 +71,7 @@ export const getCategoryByIdController = async (req: Request, res: Response) => 
     // Prepend URL
     const responseData = {
       ...category.toObject(),
-      img: `${process.env.ASSET_BASE_URL || ""}${category.img}`,
+      img: buildImageUrl(category.img),
     };
 
     res.json({
