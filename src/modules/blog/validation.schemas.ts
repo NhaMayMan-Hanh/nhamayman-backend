@@ -17,6 +17,7 @@ const baseBlogSchema = z.object({
       .string()
       .min(1, "Nội dung không được rỗng")
       .max(1000000000, "Nội dung quá dài (max 10k chars)"), // HTML content
+   like: z.number().int().nonnegative().default(0), // Thêm field like
 });
 
 // Create: Required name/slug/content
@@ -25,6 +26,7 @@ export const createBlogSchema = baseBlogSchema.pick({
    slug: true,
    description: true,
    content: true,
+   like: true,
 });
 
 // Update: Partial

@@ -15,7 +15,10 @@ import { aboutData } from "./data/about";
 import { usersData } from "./data/users";
 import { ordersData } from "./data/orders";
 import { cartData } from "./data/cart";
-
+import { feedbackData } from "./data/feedback";
+import feedback from "@/modules/feedback/feedback.model";
+import notification from "@/modules/notification/notification.model";
+import { notificationData } from "./data/notifications";
 dotenv.config();
 
 const seedDB = async () => {
@@ -27,6 +30,8 @@ const seedDB = async () => {
     await Product.deleteMany({});
     await Blog.deleteMany({});
     await About.deleteMany({});
+    await feedback.deleteMany({});
+    await notification.deleteMany({});
     // await User.deleteMany({});
     // await Order.deleteMany({});
     // await Cart.deleteMany({});
@@ -44,8 +49,14 @@ const seedDB = async () => {
     const about = await About.insertMany(aboutData);
     console.log(`✅ Inserted ${about.length} abouts`);
 
-    const users = await User.insertMany(usersData);
-    console.log(`✅ Inserted ${users.length} users`);
+    // const users = await User.insertMany(usersData);
+    // console.log(`✅ Inserted ${users.length} users`);
+
+    const feedbacks = await feedback.insertMany(feedbackData);
+    console.log(`✅ Inserted ${feedbacks.length} feedbacks`);
+
+    const notifications = await notification.insertMany(notificationData);
+    console.log(`✅ Inserted ${notifications.length} notifications`);
 
     console.log("🎉 Seeding completed successfully!");
     process.exit(0);

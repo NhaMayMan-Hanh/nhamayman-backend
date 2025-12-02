@@ -13,7 +13,9 @@ import fs from "fs";
 export const getCategoriesController = async (req: Request, res: Response) => {
   try {
     const { search } = req.query;
-    const categories = await getActiveCategories({ search: search as string });
+    const categories = await getActiveCategories({
+      search: search as string,
+    });
 
     // Prepend ASSET_BASE_URL cho img (full URL cho client)
     const responseData = categories.map((cat) => ({
@@ -38,7 +40,9 @@ export const getCategoriesController = async (req: Request, res: Response) => {
 export const getCategoriesAdminController = async (req: Request, res: Response) => {
   try {
     const { search } = req.query;
-    const categories = await adminGetAllCategories({ search: search as string });
+    const categories = await adminGetAllCategories({
+      search: search as string,
+    });
 
     // Prepend ASSET_BASE_URL cho img (full URL cho client)
     const responseData = categories.map((cat) => ({
