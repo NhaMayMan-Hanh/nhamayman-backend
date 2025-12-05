@@ -12,6 +12,7 @@ declare global {
     interface Request {
       user?: {
         id: string;
+        name: string;
         role: string;
       };
     }
@@ -23,15 +24,17 @@ export const authenticate = (req: Request, res: Response, next: NextFunction) =>
   try {
     // console.log("Cookies received:", req.cookies);
     const token = req.cookies.token;
-    
+
     if (!token) {
       return res.status(401).json({ success: false, message: "Không có token" });
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET!) as DecodedToken;
+    // console.log(decoded);
 
     req.user = {
       id: decoded.id,
+      name: decoded.name,
       role: decoded.role || "user",
     };
 

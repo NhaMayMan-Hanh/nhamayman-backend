@@ -19,6 +19,7 @@ import { feedbackData } from "./data/feedback";
 import feedback from "@/modules/feedback/feedback.model";
 import notification from "@/modules/notification/notification.model";
 import { notificationData } from "./data/notifications";
+import { commentsData } from "./data/comments";
 dotenv.config();
 
 const seedDB = async () => {
@@ -34,7 +35,7 @@ const seedDB = async () => {
     await notification.deleteMany({});
     // await User.deleteMany({});
     // await Order.deleteMany({});
-    // await Cart.deleteMany({});
+    await Cart.deleteMany({});
     console.log("🗑️ Cleared existing data");
 
     const categories = await Category.insertMany(categoriesData);
@@ -49,8 +50,8 @@ const seedDB = async () => {
     const about = await About.insertMany(aboutData);
     console.log(`✅ Inserted ${about.length} abouts`);
 
-    // const users = await User.insertMany(usersData);
-    // console.log(`✅ Inserted ${users.length} users`);
+    const users = await User.insertMany(usersData);
+    console.log(`✅ Inserted ${users.length} users`);
 
     const feedbacks = await feedback.insertMany(feedbackData);
     console.log(`✅ Inserted ${feedbacks.length} feedbacks`);
