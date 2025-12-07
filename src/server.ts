@@ -13,34 +13,28 @@ dotenv.config();
 
 const app = express();
 
-const limiter = rateLimit({
-  windowMs: 1 * 60 * 1000, // 1 phút
-  max: 100, // Tối đa 100 request / phút / IP
-  // windowMs: 10 * 1000, // 10 giây
-  // max: 3,
-  message: {
-    success: false,
-    message: "Temporarily unavailable. Please try later.",
-  },
-  standardHeaders: true,
-  legacyHeaders: false,
-});
-
-app.use(limiter);
+app.use(
+   cors({
+      origin: process.env.CLIENT_URL,
+      credentials: true,
+      methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+      allowedHeaders: ["Content-Type", "Authorization", "Cookie"],
+   })
+);
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization", "Cookie"],
-  })
-);
-
+const maxRequests = process.env.NODE_ENV === "development" ? 10000 : 100;
+const limiter = rateLimit({
+   windowMs: 60 * 1000,
+   max: maxRequests,
+   message: {
+      success: false,
+      message: "Temporarily unavailable. Please try later.",
+   },
+});
+app.use(limiter);
 connectDB();
-
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
@@ -48,12 +42,12 @@ app.use("/api/client", clientRoutes);
 app.use("/api/admin", adminRoutes);
 
 app.get("/", (req, res) => {
-  res.json({ message: "NhaMayMan-Hanh Backend is running!" });
+   res.json({ message: "NhaMayMan-Hanh Backend is running!" });
 });
 
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running at http://localhost:${PORT}`);
-  console.log(`✔️ Swagger: http://localhost:${PORT}/api-docs`);
+   console.log(`🚀 Server is running at http://localhost:${PORT}`);
+   console.log(`✔️ Swagger: http://localhost:${PORT}/api-docs`);
 });

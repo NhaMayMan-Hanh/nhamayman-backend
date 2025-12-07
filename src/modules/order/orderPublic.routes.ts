@@ -1,5 +1,9 @@
 import { Router } from "express";
-import { createOrderController, getOrdersController } from "./order.controller";
+import {
+   cancelOrderController,
+   createOrderController,
+   getOrdersController,
+} from "./order.controller";
 import { authenticate } from "@/middlewares/auth.middleware";
 import { validate, validateQuery } from "@/middlewares/validation.middleware";
 import { createOrderSchema, getOrdersQuerySchema } from "./validation.schemas";
@@ -13,5 +17,6 @@ router.post("/", validate(createOrderSchema), createOrderController);
 
 // GET /orders (user's orders, optional ?status=pending&search=John)
 router.get("/", validateQuery(getOrdersQuerySchema), getOrdersController);
-
+// PATCH /orders/:id/cancel (cancel order - user only)
+router.patch("/:id/cancel", cancelOrderController);
 export default router;

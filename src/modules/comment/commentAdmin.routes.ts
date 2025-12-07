@@ -8,10 +8,20 @@ const router = Router();
 
 router.use(authenticate, isAdmin);
 
+router.get("/", commentController.getAllComments);
+
 // Tạo bình luận thủ công (case admin nhập)
-router.post("/", validate(createCommentSchema), commentController.createComment);
+router.post(
+   "/",
+   validate(createCommentSchema),
+   commentController.createComment
+);
 
 // Xóa bình luận
-router.delete("/:id", validateParams(deleteCommentSchema), commentController.deleteComment);
+router.delete(
+   "/:id",
+   validateParams(deleteCommentSchema),
+   commentController.deleteComment
+);
 
 export default router;

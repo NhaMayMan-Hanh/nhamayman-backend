@@ -9,6 +9,10 @@ const router = Router();
 router.use(authenticate, isAdmin);
 
 // [ADMIN] Xóa bất kỳ review nào
-router.delete("/:id", validateParams(reviewIdSchema), reviewController.deleteReviewAdmin);
-
+router.delete(
+   "/:id",
+   validateParams(reviewIdSchema),
+   reviewController.deleteReviewAdmin
+);
+router.get("/products", reviewController.getAllReviewAdmin);
 export default router;
