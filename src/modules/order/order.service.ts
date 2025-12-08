@@ -1,4 +1,5 @@
 import Order, { IOrder } from "./order.model";
+import notificationService from "../notification/notification.service";
 
 export const createOrder = async (
    orderData: Partial<IOrder>
@@ -29,11 +30,9 @@ export const getOrdersByUserId = async (
 // Helper: Tìm đơn hàng theo ID
 const findOrderById = async (orderId: string): Promise<IOrder> => {
    const order = await Order.findById(orderId);
-
    if (!order) {
       throw new Error("Đơn hàng không tồn tại");
    }
-
    return order;
 };
 
@@ -65,17 +64,26 @@ export const cancelOrder = async (
    orderId: string,
    userId: string
 ): Promise<IOrder | null> => {
-   // Tìm đơn hàng
    const order = await findOrderById(orderId);
-
-   // Kiểm tra quyền sở hữu
    verifyOrderOwnership(order, userId);
-
-   // Kiểm tra trạng thái có thể hủy
    validateCancellableStatus(order);
 
-   // Cập nhật trạng thái thành cancelled
-   return markOrderAsCancelled(order);
+   const cancelledOrder = await markOrderAsCancelled(order);
+
+   // 🔔 Gửi thông báo khi user tự hủy đơn
+   try {
+      await notificationService.notifyOrderStatus(
+         orderId,
+         userId,
+         null,
+         "cancelled",
+         { cancelledBy: "user" }
+      );
+   } catch (notifError) {
+      console.error("Lỗi khi gửi thông báo:", notifError);
+   }
+
+   return cancelledOrder;
 };
 
 // Admin: Get all orders
@@ -103,20 +111,61 @@ export const getOrderById = async (id: string): Promise<IOrder | null> => {
    return Order.findById(id).populate("items.productId", "name price image");
 };
 
-// Admin: Update order (e.g., status)
+// 🔔 Admin: Update order - TỰ ĐỘNG GỬI NOTIFICATION KHI ĐỔI STATUS
 export const updateOrder = async (
    id: string,
    updateData: Partial<IOrder>
 ): Promise<IOrder | null> => {
-   return Order.findByIdAndUpdate(id, updateData, { new: true }).populate(
-      "items.productId",
-      "name price image"
-   );
+   const currentOrder = await Order.findById(id);
+
+   if (!currentOrder) {
+      throw new Error("Đơn hàng không tồn tại");
+   }
+
+   const oldStatus = currentOrder.status;
+
+   // Cập nhật đơn hàng
+   const updatedOrder = await Order.findByIdAndUpdate(id, updateData, {
+      new: true,
+   }).populate("items.productId", "name price image");
+
+   if (!updatedOrder) {
+      return null;
+   }
+
+   // 🔔 TỰ ĐỘNG GỬI NOTIFICATION nếu có thay đổi status
+   if (updateData.status && updateData.status !== oldStatus) {
+      const notificationStatuses = [
+         "confirmed",
+         "shipping",
+         "delivered",
+         "cancelled",
+      ];
+
+      if (notificationStatuses.includes(updateData.status)) {
+         try {
+            await notificationService.notifyOrderStatus(
+               id,
+               updatedOrder.userId.toString(),
+               null,
+               updateData.status as
+                  | "confirmed"
+                  | "shipping"
+                  | "delivered"
+                  | "cancelled",
+               { previousStatus: oldStatus, updatedBy: "admin" }
+            );
+         } catch (notifError) {
+            console.error("Lỗi khi gửi thông báo:", notifError);
+         }
+      }
+   }
+
+   return updatedOrder;
 };
 
 // Admin: Delete/cancel order
 export const deleteOrder = async (id: string): Promise<IOrder | null> => {
-   // Kiểm tra đơn hàng tồn tại
    const order = await Order.findById(id);
 
    if (!order) {

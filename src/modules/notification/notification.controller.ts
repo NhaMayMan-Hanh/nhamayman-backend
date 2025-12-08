@@ -13,7 +13,6 @@ export default {
                : req.query.isRead === "false"
                ? false
                : undefined;
-
          const result = await notificationService.getByUser(userId, email, {
             page,
             limit,
