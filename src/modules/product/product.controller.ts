@@ -31,7 +31,7 @@ export const getProductsController = async (req: Request, res: Response) => {
       // Luôn exclude cho list (nhẹ)
       const products = await getAllProducts(
          { category: categoryName, search: search as string },
-         { excludeFields: ["description", "detailedDescription"] }
+         { excludeFields: ["detailedDescription"] }
       );
 
       const responseData = products.map((p) => ({
