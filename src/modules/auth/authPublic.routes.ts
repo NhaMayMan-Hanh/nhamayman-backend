@@ -4,9 +4,17 @@ import {
   loginController,
   forgotPasswordController,
   resetPasswordController,
+  changePasswordController,
 } from "./auth.controller";
 import { validate } from "@/middlewares/validation.middleware";
-import { registerSchema, loginSchema, forgotSchema, resetSchema } from "./validation.schemas";
+import { authenticate, isAdmin } from "@/middlewares/auth.middleware";
+import {
+  registerSchema,
+  loginSchema,
+  forgotSchema,
+  resetSchema,
+  changePasswordSchema,
+} from "./validation.schemas";
 
 import rateLimit from "express-rate-limit";
 
@@ -26,6 +34,13 @@ const loginLimiter = rateLimit({
 
 // APPLY LIMITER TO LOGIN
 router.post("/login", loginLimiter, validate(loginSchema), loginController);
+
+router.put(
+  "/change-password",
+  authenticate,
+  validate(changePasswordSchema),
+  changePasswordController
+);
 
 router.post("/register", validate(registerSchema), registerController);
 router.post("/forgot", validate(forgotSchema), forgotPasswordController);

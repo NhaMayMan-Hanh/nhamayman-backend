@@ -7,6 +7,10 @@ import About from "../modules/about/about.model";
 import User from "../modules/user/user.model";
 import Order from "../modules/order/order.model";
 import Cart from "../modules/cart/cart.model";
+import feedback from "@/modules/feedback/feedback.model";
+import notification from "@/modules/notification/notification.model";
+import Comment from "../modules/comment/comment.model";
+import Review from "../modules/review/review.model";
 
 import { categoriesData } from "./data/categories";
 import { productsData } from "./data/products";
@@ -16,8 +20,7 @@ import { usersData } from "./data/users";
 import { ordersData } from "./data/orders";
 import { cartData } from "./data/cart";
 import { feedbackData } from "./data/feedback";
-import feedback from "@/modules/feedback/feedback.model";
-import notification from "@/modules/notification/notification.model";
+
 import { notificationData } from "./data/notifications";
 import { commentsData } from "./data/comments";
 dotenv.config();
@@ -27,37 +30,39 @@ const seedDB = async () => {
     await mongoose.connect(process.env.MONGODB_URI!);
     console.log("✅ Connected to MongoDB for seeding");
 
-    await Category.deleteMany({});
-    await Product.deleteMany({});
-    await Blog.deleteMany({});
-    await About.deleteMany({});
-    await feedback.deleteMany({});
-    await notification.deleteMany({});
+    // await Category.deleteMany({});
+    // await Product.deleteMany({});
+    // await Blog.deleteMany({});
+    // await About.deleteMany({});
+    // await feedback.deleteMany({});
+    // await notification.deleteMany({});
+    await Comment.deleteMany({});
+    await Review.deleteMany({});
     // await User.deleteMany({});
     // await Order.deleteMany({});
-    await Cart.deleteMany({});
+    // await Cart.deleteMany({});
     console.log("🗑️ Cleared existing data");
 
-    const categories = await Category.insertMany(categoriesData);
-    console.log(`✅ Inserted ${categories.length} categories`);
+    // const categories = await Category.insertMany(categoriesData);
+    // console.log(`✅ Inserted ${categories.length} categories`);
 
-    const products = await Product.insertMany(productsData);
-    console.log(`✅ Inserted ${products.length} products`);
+    // const products = await Product.insertMany(productsData);
+    // console.log(`✅ Inserted ${products.length} products`);
 
-    const blogs = await Blog.insertMany(blogsData);
-    console.log(`✅ Inserted ${blogs.length} blogs`);
+    // const blogs = await Blog.insertMany(blogsData);
+    // console.log(`✅ Inserted ${blogs.length} blogs`);
 
-    const about = await About.insertMany(aboutData);
-    console.log(`✅ Inserted ${about.length} abouts`);
+    // const about = await About.insertMany(aboutData);
+    // console.log(`✅ Inserted ${about.length} abouts`);
 
-    const users = await User.insertMany(usersData);
-    console.log(`✅ Inserted ${users.length} users`);
+    // const users = await User.insertMany(usersData);
+    // console.log(`✅ Inserted ${users.length} users`);
 
-    const feedbacks = await feedback.insertMany(feedbackData);
-    console.log(`✅ Inserted ${feedbacks.length} feedbacks`);
+    // const feedbacks = await feedback.insertMany(feedbackData);
+    // console.log(`✅ Inserted ${feedbacks.length} feedbacks`);
 
-    const notifications = await notification.insertMany(notificationData);
-    console.log(`✅ Inserted ${notifications.length} notifications`);
+    // const notifications = await notification.insertMany(notificationData);
+    // console.log(`✅ Inserted ${notifications.length} notifications`);
 
     console.log("🎉 Seeding completed successfully!");
     process.exit(0);

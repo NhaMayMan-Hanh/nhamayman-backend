@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { register, login, forgotPassword, resetPassword } from "./auth.service";
+import { register, login, forgotPassword, resetPassword, changePassword } from "./auth.service";
 
 export const registerController = async (req: Request, res: Response) => {
   try {
@@ -111,4 +111,31 @@ export const logoutController = async (req: Request, res: Response) => {
   });
 
   res.json({ success: true, message: "Đăng xuất thành công" });
+};
+
+export const changePasswordController = async (req: Request, res: Response) => {
+  try {
+    const userId = req.user?.id;
+
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized",
+      });
+    }
+
+    const { currentPassword, newPassword } = req.body;
+
+    await changePassword(userId, currentPassword, newPassword);
+
+    res.json({
+      success: true,
+      message: "Thay đổi mật khẩu thành công",
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: (error as Error).message,
+    });
+  }
 };
