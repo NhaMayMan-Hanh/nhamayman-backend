@@ -42,7 +42,7 @@ export const validateStockAvailability = async (
     if (stockErrors.length > 0) {
       return res.status(400).json({
         success: false,
-        message: "Một số sản phẩm không đủ hàng",
+        message: "Xin lỗi sản phẩm vừa hết hàng. Vui lòng quay lại sau!",
         errors: stockErrors,
       });
     }
