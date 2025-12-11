@@ -119,7 +119,9 @@ export const getOrdersByUserId = async (
       { _id: { $regex: query.search, $options: "i" } },
     ];
   }
-  return Order.find(filter).sort({ createdAt: -1 }).populate("items.productId", "name price image");
+  return Order.find(filter)
+    .sort({ createdAt: -1 })
+    .populate("items.productId", "name slug price image");
 };
 
 // Helper: Tìm đơn hàng theo ID
