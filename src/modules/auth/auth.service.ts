@@ -62,7 +62,7 @@ export const forgotPassword = async (email: string) => {
   await user.save();
 
   // Tạo reset URL
-  const resetUrl = `${process.env.ASSET_BASE_URL}/reset-password?token=${token}`;
+  const resetUrl = `${process.env.CLIENT_URL}/reset-password?token=${token}`;
 
   // Cấu hình transporter
   const transporter = nodemailer.createTransport({
