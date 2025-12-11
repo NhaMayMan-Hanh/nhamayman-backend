@@ -1,1 +1,1 @@
-export const ordersData = [{}];
+export const ordersData = [];

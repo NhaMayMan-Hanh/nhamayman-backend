@@ -7,7 +7,7 @@ import {
   updateProduct,
   deleteProduct,
 } from "./product.service";
-import { getCategoryBySlug } from "../category/category.service";
+import { getCategoryBySlug, getProductBySlug } from "../category/category.service";
 import { IProduct } from "./product.model";
 import { buildImageUrl } from "@/utils/buildImageUrl";
 import fs from "fs";
@@ -64,6 +64,40 @@ export const getProductByIdController = async (req: Request, res: Response) => {
     let responseData: { product: IProduct; relatedProducts?: IProduct[] } = {
       product,
     };
+
+    if (!isAdmin) {
+      const related = await getRelatedProducts(product.category, product._id.toString(), {
+        excludeFields: ["description", "detailedDescription"],
+        limit: 4,
+      });
+      responseData.relatedProducts = related;
+    }
+
+    res.json({
+      success: true,
+      message: "Successfully get productDetails",
+      data: responseData,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Error get productDetails",
+      error: (error as Error).message,
+    });
+  }
+};
+
+export const getProductBySlugController = async (req: Request, res: Response) => {
+  try {
+    const isAdmin = req.user?.role === "admin";
+    const slug = req.params.slug;
+
+    const product = await getProductBySlug(slug);
+    if (!product) {
+      return res.status(404).json({ success: false, message: "Product not found" });
+    }
+
+    let responseData: { product: IProduct; relatedProducts?: IProduct[] } = { product };
 
     if (!isAdmin) {
       const related = await getRelatedProducts(product.category, product._id.toString(), {

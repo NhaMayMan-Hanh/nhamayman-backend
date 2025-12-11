@@ -1,9 +1,13 @@
 import Category from "./category.model";
 import { ICategory } from "./category.model";
-import Product from "../product/product.model";
+import Product, { IProduct } from "../product/product.model";
 import path from "path";
 import fs from "fs";
 import mongoose from "mongoose";
+
+export const getProductBySlug = async (slug: string): Promise<IProduct | null> => {
+  return Product.findOne({ slug }).select("-createdAt -updatedAt");
+};
 
 export const getActiveCategories = async (
   query: { search?: string } = {}

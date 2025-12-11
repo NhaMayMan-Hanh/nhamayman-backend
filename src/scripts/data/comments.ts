@@ -1,1 +1,1 @@
-export const commentsData = [{}];
+export const commentsData = [];

@@ -1,5 +1,8 @@
 export const categoriesData = [
   {
+    _id: {
+      $oid: "692e8261d7f1868db19dd30e",
+    },
     name: "Sản phẩm may",
     img: "/img/categories/may-1.jpg",
     slug: "san-pham-may",
@@ -7,13 +10,19 @@ export const categoriesData = [
     status: true,
   },
   {
-    name: "Tranh sơn dầu",
-    img: "/img/categories/tranh-1.png",
-    slug: "tranh-son-dau",
+    _id: {
+      $oid: "692e8261d7f1868db19dd30f",
+    },
+    name: "Tranh độc đáo",
+    img: "/img/categories/tranh-1.jpg",
+    slug: "tranh-doc-dao",
     description: "Tranh sơn dầu nghệ thuật độc đáo",
     status: true,
   },
   {
+    _id: {
+      $oid: "692e8261d7f1868db19dd310",
+    },
     name: "Sản phẩm bánh",
     img: "/img/categories/banh-1.png",
     slug: "san-pham-banh",
@@ -21,6 +30,9 @@ export const categoriesData = [
     status: true,
   },
   {
+    _id: {
+      $oid: "692e8261d7f1868db19dd311",
+    },
     name: "Sản phẩm đá",
     img: "/img/categories/da-1.jpg",
     slug: "san-pham-da",
