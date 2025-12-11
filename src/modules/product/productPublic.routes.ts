@@ -11,8 +11,7 @@ const router = Router();
 
 router.get("/", validateQuery(getProductsQuerySchema), getProductsController);
 
-router.get("/:slug", getProductBySlugController);
-
-// router.get("/:id", validateParams(productIdSchema), getProductByIdController);
+router.get("/id/:id", validateParams(productIdSchema), getProductByIdController);
+router.get("/slug/:slug", getProductBySlugController);
 
 export default router;
